@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stm32f10x.h": "c",
+        "stm32f10x_gpio.h": "c",
+        "led.h": "c",
+        "delay.h": "c",
+        "stm32f10x_rcc.h": "c",
+        "stm32f10x_exti.h": "c",
+        "oled.h": "c",
+        "misc.h": "c",
+        "stm32f10x_conf.h": "c"
+    }
+}

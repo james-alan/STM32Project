@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "stm32f10x.h": "c",
+        "stm32f10x_gpio.h": "c",
+        "led.h": "c",
+        "delay.h": "c",
+        "oled.h": "c",
+        "misc.h": "c",
+        "stm32f10x_conf.h": "c",
+        "timer.h": "c",
+        "stm32f10x_rcc.h": "c",
+        "pwm.h": "c",
+        "stm32f10x_tim.h": "c",
+        "servo.h": "c",
+        "key.h": "c"
+    }
+}

@@ -1,0 +1,28 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+.\Hardware\Key.h(4): warning:  #1295-D: Deprecated declaration Key_init - give arg types
+  void Key_init();
+.\Hardware\Key.h(5): warning:  #1295-D: Deprecated declaration Key_GetNum - give arg types
+  uint8_t Key_GetNum();
+.\Hardware\Key.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\Hardware\LED.h(4): warning:  #1295-D: Deprecated declaration LED_init - give arg types
+  void LED_init();
+.\Hardware\LED.h(5): warning:  #1295-D: Deprecated declaration LED2_ON - give arg types
+  void LED2_ON();
+.\Hardware\LED.h(6): warning:  #1295-D: Deprecated declaration LED1_OFF - give arg types
+  void LED1_OFF();
+.\Hardware\LED.h(7): warning:  #1295-D: Deprecated declaration LED2_OFF - give arg types
+  void LED2_OFF();
+.\Hardware\LED.h(8): warning:  #1295-D: Deprecated declaration LED1_turn - give arg types
+  void LED1_turn();
+.\Hardware\LED.h(9): warning:  #1295-D: Deprecated declaration LED2_turn - give arg types
+  void LED2_turn();
+.\Hardware\LED.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.c: 10 warnings, 0 errors
+linking...
+Program Size: Code=1416 RO-data=268 RW-data=4 ZI-data=1636  
+".\Objects\Project.axf" - 0 Error(s), 10 Warning(s).
+Build Time Elapsed:  00:00:01
