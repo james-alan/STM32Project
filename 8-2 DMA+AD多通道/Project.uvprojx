@@ -1,6 +1,3 @@
-
-
-
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
 
@@ -665,16 +662,6 @@
               <FileType>5</FileType>
               <FilePath>.\System\Delay.h</FilePath>
             </File>
-            <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\System\Timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>Timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\System\Timer.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -736,24 +723,14 @@
               <FilePath>.\Hardware\OLED_Font.h</FilePath>
             </File>
             <File>
-              <FileName>PWM.c</FileName>
+              <FileName>AD.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\PWM.c</FilePath>
+              <FilePath>.\Hardware\AD.c</FilePath>
             </File>
             <File>
-              <FileName>PWM.h</FileName>
+              <FileName>AD.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\PWM.h</FilePath>
-            </File>
-            <File>
-              <FileName>Servo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\Servo.c</FilePath>
-            </File>
-            <File>
-              <FileName>Servo.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\Servo.h</FilePath>
+              <FilePath>.\Hardware\AD.h</FilePath>
             </File>
           </Files>
         </Group>
