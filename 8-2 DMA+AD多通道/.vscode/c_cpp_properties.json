@@ -13,6 +13,7 @@
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
+                "STM32F10X_MD",
                 "__CC_ARM",
                 "__arm__",
                 "__align(x)=",

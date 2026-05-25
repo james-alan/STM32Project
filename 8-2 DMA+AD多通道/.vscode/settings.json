@@ -1,8 +1,17 @@
-{
+﻿{
     "files.associations": {
         "stm32f10x.h": "c",
         "stm32f10x_gpio.h": "c",
         "led.h": "c",
-        "delay.h": "c"
+        "delay.h": "c",
+        "*.h": "c"
+    },
+    "C_Cpp.default.configurationProvider": "",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.workspaceParsingPriority": "highest",
+    "C_Cpp.codeAnalysis.exclude": {
+        "**/Start/core_cm3.c": true
     }
 }

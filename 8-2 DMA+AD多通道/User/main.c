@@ -12,6 +12,8 @@ OLED_ShowString(2,1,"Hello world");
 OLED_ShowNum(3,1,12345,5);
 
 
+
+
 	while (1)
 	{
 
