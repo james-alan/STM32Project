@@ -1,0 +1,2856 @@
+
+=== P32 start 2026-05-25T16:30:11 ===
+
+$ videocaptioner download https://www.bilibili.com/video/BV1th411z7sn?p=32 -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1th411z7sn?p=32
+[BiliBili] 1th411z7sn: Downloading webpage
+
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[BiliBili] BV1th411z7sn: Extracting videos in anthology
+
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[BiliBili] BV1th411z7sn: Downloading wbi sign
+
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[BiliBili] BV1th411z7sn: Downloading video formats for cid 908251181
+
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[BiliBili] Format(s) 1080P ����, 720P ׼���� are missing; you have to become a premium member to download them. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+[BiliBili] 206940155: Extracting chapters
+[info] BV1th411z7sn_p32: Downloading 1 format(s): 100023+30280
+
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.f100023.mp4
+
+[download]   0.0% of   33.26MiB at  Unknown B/s ETA Unknown
+[download]   0.0% of   33.26MiB at    1.87MiB/s ETA 00:17  
+[download]   0.0% of   33.26MiB at    4.36MiB/s ETA 00:07
+[download]   0.0% of   33.26MiB at    9.35MiB/s ETA 00:03
+[download]   0.1% of   33.26MiB at   11.76MiB/s ETA 00:02
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]   0.2% of   33.26MiB at    3.62MiB/s ETA 00:09
+[download]   0.4% of   33.26MiB at    3.82MiB/s ETA 00:08
+[download]   0.7% of   33.26MiB at    4.93MiB/s ETA 00:06
+[download]   1.5% of   33.26MiB at    7.28MiB/s ETA 00:04
+[download]   3.0% of   33.26MiB at   11.49MiB/s ETA 00:02
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]   6.0% of   33.26MiB at   16.97MiB/s ETA 00:01
+[download]  12.0% of   33.26MiB at   25.03MiB/s ETA 00:01
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  24.1% of   33.26MiB at   32.87MiB/s ETA 00:00
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  36.1% of   33.26MiB at   27.42MiB/s ETA 00:00
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  48.1% of   33.26MiB at   22.60MiB/s ETA 00:00
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  60.1% of   33.26MiB at   20.91MiB/s ETA 00:00
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  72.2% of   33.26MiB at   21.86MiB/s ETA 00:00
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  84.2% of   33.26MiB at   22.51MiB/s ETA 00:00
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  96.2% of   33.26MiB at   24.08MiB/s ETA 00:00
+[download] 100.0% of   33.26MiB at   24.47MiB/s ETA 00:00
+[download] 100% of   33.26MiB in 00:00:01 at 22.01MiB/s  
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.f30280.m4a
+
+[download]   0.0% of   65.79MiB at  447.54KiB/s ETA 02:30
+[download]   0.0% of   65.79MiB at    1.06MiB/s ETA 01:02
+[download]   0.0% of   65.79MiB at    2.08MiB/s ETA 00:31
+[download]   0.0% of   65.79MiB at  314.68KiB/s ETA 03:34
+[download]   0.0% of   65.79MiB at  472.14KiB/s ETA 02:22
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]   0.1% of   65.79MiB at  611.63KiB/s ETA 01:50
+[download]   0.2% of   65.79MiB at  878.78KiB/s ETA 01:16
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]   0.4% of   65.79MiB at    1.31MiB/s ETA 00:50
+[download]   0.8% of   65.79MiB at    2.09MiB/s ETA 00:31
+[download]   1.5% of   65.79MiB at    3.41MiB/s ETA 00:19
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]   3.0% of   65.79MiB at    5.77MiB/s ETA 00:11
+[download]   6.1% of   65.79MiB at   10.10MiB/s ETA 00:06
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  12.2% of   65.79MiB at   11.57MiB/s ETA 00:04
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  18.2% of   65.79MiB at   16.68MiB/s ETA 00:03
+[download]  24.3% of   65.79MiB at   21.31MiB/s ETA 00:02
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  30.4% of   65.79MiB at   23.24MiB/s ETA 00:01
+[download]  36.5% of   65.79MiB at   25.97MiB/s ETA 00:01
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  42.6% of   65.79MiB at   26.41MiB/s ETA 00:01
+[download]  48.6% of   65.79MiB at   29.04MiB/s ETA 00:01
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  54.7% of   65.79MiB at   29.04MiB/s ETA 00:01
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  60.8% of   65.79MiB at   29.35MiB/s ETA 00:00
+[download]  66.9% of   65.79MiB at   31.56MiB/s ETA 00:00
+[download]  73.0% of   65.79MiB at   33.15MiB/s ETA 00:00
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  79.0% of   65.79MiB at   34.08MiB/s ETA 00:00
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download]  85.1% of   65.79MiB at   33.47MiB/s ETA 00:00
+[download]  91.2% of   65.79MiB at   34.83MiB/s ETA 00:00
+[download]  97.3% of   65.79MiB at   36.29MiB/s ETA 00:00
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+[download] 100.0% of   65.79MiB at   36.48MiB/s ETA 00:00
+[download] 100% of   65.79MiB in 00:00:02 at 32.07MiB/s  
+[Merger] Merging formats into "C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4"
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[K
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=32[KDeleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.f30280.m4a (pass -k to keep)
+Deleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.f100023.mp4 (pass -k to keep)
+
+[K\u2713 Downloaded to C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32/
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmp5802w3_m.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K2026-05-25 16:30:35 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:35 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe failed once, retrying: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:30:34 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K2026-05-25 16:30:35 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:35 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpku59ezi0.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K2026-05-25 16:30:50 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+
+\u280b Transcribing [bijian][K2026-05-25 16:30:50 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:50 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:30:50 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:30:51 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:30:51 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+=== P32 start 2026-05-25T16:34:27 ===
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpjoolrsjd.wav
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+
+\u2826 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe failed once, retrying: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+8 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+
+\u2826 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:43 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpn2bpxty8.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe retry failed, using split fallback: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+9 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:34:59 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:35:00 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ ffmpeg -y -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 -vn -ac 1 -ar 16000 -f segment -segment_time 480 -reset_timestamps 1 C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a
+ffmpeg version 8.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 15.2.0 (Rev13, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60. 26.101 / 60. 26.101
+  libavcodec     62. 28.101 / 62. 28.101
+  libavformat    62. 12.101 / 62. 12.101
+  libavdevice    62.  3.101 / 62.  3.101
+  libavfilter    11. 14.101 / 11. 14.101
+  libswscale      9.  5.101 /  9.  5.101
+  libswresample   6.  3.101 /  6.  3.101
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    encoder         : Lavf62.12.101
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+  Duration: 00:50:26.62, start: 0.000000, bitrate: 275 kb/s
+  Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 852x480 [SAR 1:1 DAR 71:40], 91 kb/s, SAR 640:639 DAR 16:9, 12.50 fps, 12.50 tbr, 16k tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 180 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a' for writing
+Output #0, segment, to 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+    encoder         : Lavf62.12.101
+  Stream #0:0(und): Audio: aac (LC), 16000 Hz, mono, fltp, 69 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.101 aac
+      handler_name    : SoundHandler
+size=N/A time=00:01:42.59 bitrate=N/A speed= 200x elapsed=0:00:00.51    
+size=N/A time=00:03:19.16 bitrate=N/A speed= 194x elapsed=0:00:01.02    
+size=N/A time=00:04:58.17 bitrate=N/A speed= 193x elapsed=0:00:01.54    
+size=N/A time=00:06:26.94 bitrate=N/A speed= 188x elapsed=0:00:02.06    
+size=N/A time=00:07:44.89 bitrate=N/A speed= 181x elapsed=0:00:02.57    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_001.m4a' for writing
+size=N/A time=00:08:56.25 bitrate=N/A speed= 173x elapsed=0:00:03.09    
+size=N/A time=00:10:21.50 bitrate=N/A speed= 172x elapsed=0:00:03.60    
+size=N/A time=00:11:23.45 bitrate=N/A speed= 165x elapsed=0:00:04.13    
+size=N/A time=00:12:32.44 bitrate=N/A speed= 162x elapsed=0:00:04.64    
+size=N/A time=00:13:52.06 bitrate=N/A speed= 161x elapsed=0:00:05.16    
+size=N/A time=00:15:01.11 bitrate=N/A speed= 159x elapsed=0:00:05.68    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_002.m4a' for writing
+size=N/A time=00:16:09.47 bitrate=N/A speed= 157x elapsed=0:00:06.19    
+size=N/A time=00:17:33.95 bitrate=N/A speed= 157x elapsed=0:00:06.70    
+size=N/A time=00:18:50.87 bitrate=N/A speed= 157x elapsed=0:00:07.22    
+size=N/A time=00:19:58.78 bitrate=N/A speed= 155x elapsed=0:00:07.74    
+size=N/A time=00:21:15.32 bitrate=N/A speed= 154x elapsed=0:00:08.25    
+size=N/A time=00:21:41.18 bitrate=N/A speed= 148x elapsed=0:00:08.77    
+size=N/A time=00:21:58.46 bitrate=N/A speed= 142x elapsed=0:00:09.28    
+size=N/A time=00:22:46.65 bitrate=N/A speed= 139x elapsed=0:00:09.80    
+size=N/A time=00:23:46.43 bitrate=N/A speed= 138x elapsed=0:00:10.31    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_003.m4a' for writing
+size=N/A time=00:24:51.45 bitrate=N/A speed= 138x elapsed=0:00:10.83    
+size=N/A time=00:25:56.41 bitrate=N/A speed= 137x elapsed=0:00:11.34    
+size=N/A time=00:26:51.83 bitrate=N/A speed= 136x elapsed=0:00:11.85    
+size=N/A time=00:27:53.08 bitrate=N/A speed= 135x elapsed=0:00:12.37    
+size=N/A time=00:28:59.83 bitrate=N/A speed= 135x elapsed=0:00:12.89    
+size=N/A time=00:29:57.50 bitrate=N/A speed= 134x elapsed=0:00:13.40    
+size=N/A time=00:30:52.86 bitrate=N/A speed= 133x elapsed=0:00:13.92    
+size=N/A time=00:31:53.27 bitrate=N/A speed= 133x elapsed=0:00:14.43    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_004.m4a' for writing
+size=N/A time=00:32:55.87 bitrate=N/A speed= 132x elapsed=0:00:14.95    
+size=N/A time=00:34:06.71 bitrate=N/A speed= 132x elapsed=0:00:15.47    
+size=N/A time=00:35:16.67 bitrate=N/A speed= 132x elapsed=0:00:15.99    
+size=N/A time=00:36:28.35 bitrate=N/A speed= 133x elapsed=0:00:16.50    
+size=N/A time=00:37:28.95 bitrate=N/A speed= 132x elapsed=0:00:17.02    
+size=N/A time=00:38:39.10 bitrate=N/A speed= 132x elapsed=0:00:17.54    
+size=N/A time=00:39:40.22 bitrate=N/A speed= 132x elapsed=0:00:18.05    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_005.m4a' for writing
+size=N/A time=00:40:27.19 bitrate=N/A speed= 131x elapsed=0:00:18.56    
+size=N/A time=00:41:34.65 bitrate=N/A speed= 131x elapsed=0:00:19.08    
+size=N/A time=00:42:44.54 bitrate=N/A speed= 131x elapsed=0:00:19.59    
+size=N/A time=00:43:59.87 bitrate=N/A speed= 131x elapsed=0:00:20.11    
+size=N/A time=00:45:12.76 bitrate=N/A speed= 131x elapsed=0:00:20.63    
+size=N/A time=00:46:27.58 bitrate=N/A speed= 132x elapsed=0:00:21.14    
+size=N/A time=00:47:41.05 bitrate=N/A speed= 132x elapsed=0:00:21.65    
+[segment @ 0000026d521fd000] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_006.m4a' for writing
+size=N/A time=00:48:48.63 bitrate=N/A speed= 132x elapsed=0:00:22.17    
+size=N/A time=00:49:57.95 bitrate=N/A speed= 132x elapsed=0:00:22.69    
+[out#0/segment @ 0000026d521b0b00] video:0KiB audio:26556KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:50:26.62 bitrate=N/A speed= 132x elapsed=0:00:22.94    
+[aac @ 0000026d5271e4c0] Qavg: 39751.309
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\srt_000
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��ʱ��: 480.1s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ���ڷֿ鳤�ȣ�ֱ��ת¼
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:35:27 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+=== P32 start 2026-05-25T16:36:56 ===
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpjc7u8nv9.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+
+\u280f Transcribing [bijian][K2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2834 Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe failed once, retrying: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+4 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+
+\u280f Transcribing [bijian][K2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:37:11 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2834 Transcribing [bijian][K2026-05-25 16:37:12 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpzto_0gol.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+
+\u280b Transcribing [bijian][K��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:37:29 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K2026-05-25 16:37:29 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe retry failed, using split fallback: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+8 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+
+\u280b Transcribing [bijian][K��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K2026-05-25 16:37:28 - asr - WARNING - BcutASR duration limit exceeded
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:37:29 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K2026-05-25 16:37:29 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ ffmpeg -y -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 -vn -ac 1 -ar 16000 -f segment -segment_time 300 -reset_timestamps 1 C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a
+ffmpeg version 8.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 15.2.0 (Rev13, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60. 26.101 / 60. 26.101
+  libavcodec     62. 28.101 / 62. 28.101
+  libavformat    62. 12.101 / 62. 12.101
+  libavdevice    62.  3.101 / 62.  3.101
+  libavfilter    11. 14.101 / 11. 14.101
+  libswscale      9.  5.101 /  9.  5.101
+  libswresample   6.  3.101 /  6.  3.101
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    encoder         : Lavf62.12.101
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+  Duration: 00:50:26.62, start: 0.000000, bitrate: 275 kb/s
+  Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 852x480 [SAR 1:1 DAR 71:40], 91 kb/s, SAR 640:639 DAR 16:9, 12.50 fps, 12.50 tbr, 16k tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 180 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a' for writing
+Output #0, segment, to 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+    encoder         : Lavf62.12.101
+  Stream #0:0(und): Audio: aac (LC), 16000 Hz, mono, fltp, 69 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.101 aac
+      handler_name    : SoundHandler
+size=N/A time=00:01:41.24 bitrate=N/A speed= 197x elapsed=0:00:00.51    
+size=N/A time=00:03:05.98 bitrate=N/A speed= 181x elapsed=0:00:01.02    
+size=N/A time=00:04:33.34 bitrate=N/A speed= 175x elapsed=0:00:01.55    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_001.m4a' for writing
+size=N/A time=00:06:05.56 bitrate=N/A speed= 176x elapsed=0:00:02.07    
+size=N/A time=00:07:35.23 bitrate=N/A speed= 176x elapsed=0:00:02.58    
+size=N/A time=00:08:59.26 bitrate=N/A speed= 174x elapsed=0:00:03.09    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_002.m4a' for writing
+size=N/A time=00:10:21.31 bitrate=N/A speed= 172x elapsed=0:00:03.60    
+size=N/A time=00:11:22.55 bitrate=N/A speed= 165x elapsed=0:00:04.13    
+size=N/A time=00:12:37.88 bitrate=N/A speed= 163x elapsed=0:00:04.64    
+size=N/A time=00:13:53.40 bitrate=N/A speed= 161x elapsed=0:00:05.16    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_003.m4a' for writing
+size=N/A time=00:15:07.83 bitrate=N/A speed= 160x elapsed=0:00:05.67    
+size=N/A time=00:16:13.43 bitrate=N/A speed= 157x elapsed=0:00:06.19    
+size=N/A time=00:17:35.23 bitrate=N/A speed= 157x elapsed=0:00:06.70    
+size=N/A time=00:18:41.08 bitrate=N/A speed= 155x elapsed=0:00:07.22    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_004.m4a' for writing
+size=N/A time=00:20:01.15 bitrate=N/A speed= 155x elapsed=0:00:07.73    
+size=N/A time=00:21:15.39 bitrate=N/A speed= 155x elapsed=0:00:08.25    
+size=N/A time=00:22:14.71 bitrate=N/A speed= 152x elapsed=0:00:08.76    
+size=N/A time=00:23:19.87 bitrate=N/A speed= 151x elapsed=0:00:09.28    
+size=N/A time=00:24:29.88 bitrate=N/A speed= 150x elapsed=0:00:09.79    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_005.m4a' for writing
+size=N/A time=00:25:44.44 bitrate=N/A speed= 150x elapsed=0:00:10.30    
+size=N/A time=00:26:54.97 bitrate=N/A speed= 149x elapsed=0:00:10.83    
+size=N/A time=00:28:15.10 bitrate=N/A speed= 149x elapsed=0:00:11.34    
+size=N/A time=00:29:09.69 bitrate=N/A speed= 147x elapsed=0:00:11.86    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_006.m4a' for writing
+size=N/A time=00:30:26.23 bitrate=N/A speed= 148x elapsed=0:00:12.37    
+size=N/A time=00:31:21.72 bitrate=N/A speed= 146x elapsed=0:00:12.88    
+size=N/A time=00:32:11.00 bitrate=N/A speed= 144x elapsed=0:00:13.40    
+size=N/A time=00:33:23.77 bitrate=N/A speed= 144x elapsed=0:00:13.91    
+size=N/A time=00:34:27.32 bitrate=N/A speed= 143x elapsed=0:00:14.44    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_007.m4a' for writing
+size=N/A time=00:35:36.38 bitrate=N/A speed= 143x elapsed=0:00:14.96    
+size=N/A time=00:36:48.70 bitrate=N/A speed= 143x elapsed=0:00:15.47    
+size=N/A time=00:38:07.29 bitrate=N/A speed= 143x elapsed=0:00:15.98    
+size=N/A time=00:39:25.95 bitrate=N/A speed= 143x elapsed=0:00:16.50    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_008.m4a' for writing
+size=N/A time=00:40:32.25 bitrate=N/A speed= 143x elapsed=0:00:17.01    
+size=N/A time=00:41:26.78 bitrate=N/A speed= 142x elapsed=0:00:17.53    
+size=N/A time=00:42:32.76 bitrate=N/A speed= 141x elapsed=0:00:18.04    
+size=N/A time=00:43:54.94 bitrate=N/A speed= 142x elapsed=0:00:18.56    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_009.m4a' for writing
+size=N/A time=00:45:19.29 bitrate=N/A speed= 143x elapsed=0:00:19.08    
+size=N/A time=00:46:37.11 bitrate=N/A speed= 143x elapsed=0:00:19.59    
+size=N/A time=00:48:03.64 bitrate=N/A speed= 143x elapsed=0:00:20.11    
+size=N/A time=00:49:04.25 bitrate=N/A speed= 143x elapsed=0:00:20.62    
+[segment @ 000001df76ed6700] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_010.m4a' for writing
+size=N/A time=00:50:08.38 bitrate=N/A speed= 142x elapsed=0:00:21.14    
+[out#0/segment @ 000001df74ef2a80] video:0KiB audio:26556KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:50:26.62 bitrate=N/A speed= 142x elapsed=0:00:21.33    
+[aac @ 000001df76e23bc0] Qavg: 39751.309
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\srt_000
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��ʱ��: 300.0s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K��Ƶ���ڷֿ鳤�ȣ�ֱ��ת¼
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K2026-05-25 16:37:53 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+=== P32 start 2026-05-25T16:43:05 ===
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpanc3n4rh.wav
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe failed once, retrying: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+6 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 16:43:22 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:23 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmp0ncmrh0s.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:43:43 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:43 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe retry failed, using split fallback: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+6 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:43:42 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 16:43:43 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 16:43:43 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ ffmpeg -y -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 -vn -ac 1 -ar 16000 -f segment -segment_time 180 -reset_timestamps 1 C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a
+ffmpeg version 8.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 15.2.0 (Rev13, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60. 26.101 / 60. 26.101
+  libavcodec     62. 28.101 / 62. 28.101
+  libavformat    62. 12.101 / 62. 12.101
+  libavdevice    62.  3.101 / 62.  3.101
+  libavfilter    11. 14.101 / 11. 14.101
+  libswscale      9.  5.101 /  9.  5.101
+  libswresample   6.  3.101 /  6.  3.101
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    encoder         : Lavf62.12.101
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+  Duration: 00:50:26.62, start: 0.000000, bitrate: 275 kb/s
+  Stream #0:0[0x1](und): Video: av1 (libaom-av1) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 852x480 [SAR 1:1 DAR 71:40], 91 kb/s, SAR 640:639 DAR 16:9, 12.50 fps, 12.50 tbr, 16k tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 180 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a' for writing
+Output #0, segment, to 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_%03d.m4a':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    description     : Bilibili VXCode Swarm Transcoder v0.7.46
+    encoder         : Lavf62.12.101
+  Stream #0:0(und): Audio: aac (LC), 16000 Hz, mono, fltp, 69 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.101 aac
+      handler_name    : SoundHandler
+size=N/A time=00:01:17.31 bitrate=N/A speed= 150x elapsed=0:00:00.51    
+size=N/A time=00:02:44.86 bitrate=N/A speed= 160x elapsed=0:00:01.03    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_001.m4a' for writing
+size=N/A time=00:04:18.43 bitrate=N/A speed= 167x elapsed=0:00:01.54    
+size=N/A time=00:05:34.91 bitrate=N/A speed= 163x elapsed=0:00:02.06    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_002.m4a' for writing
+size=N/A time=00:06:47.67 bitrate=N/A speed= 158x elapsed=0:00:02.57    
+size=N/A time=00:07:51.29 bitrate=N/A speed= 152x elapsed=0:00:03.10    
+size=N/A time=00:08:49.53 bitrate=N/A speed= 146x elapsed=0:00:03.61    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_003.m4a' for writing
+size=N/A time=00:10:03.45 bitrate=N/A speed= 146x elapsed=0:00:04.13    
+size=N/A time=00:11:06.11 bitrate=N/A speed= 143x elapsed=0:00:04.64    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_004.m4a' for writing
+size=N/A time=00:12:07.16 bitrate=N/A speed= 141x elapsed=0:00:05.16    
+size=N/A time=00:13:07.45 bitrate=N/A speed= 139x elapsed=0:00:05.66    
+size=N/A time=00:14:23.23 bitrate=N/A speed= 139x elapsed=0:00:06.19    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_005.m4a' for writing
+size=N/A time=00:15:32.86 bitrate=N/A speed= 139x elapsed=0:00:06.70    
+size=N/A time=00:16:28.35 bitrate=N/A speed= 137x elapsed=0:00:07.21    
+size=N/A time=00:17:32.09 bitrate=N/A speed= 136x elapsed=0:00:07.73    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_006.m4a' for writing
+size=N/A time=00:18:28.73 bitrate=N/A speed= 134x elapsed=0:00:08.25    
+size=N/A time=00:19:23.00 bitrate=N/A speed= 133x elapsed=0:00:08.76    
+size=N/A time=00:20:29.31 bitrate=N/A speed= 132x elapsed=0:00:09.27    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_007.m4a' for writing
+size=N/A time=00:21:26.59 bitrate=N/A speed= 131x elapsed=0:00:09.79    
+size=N/A time=00:22:35.83 bitrate=N/A speed= 132x elapsed=0:00:10.30    
+size=N/A time=00:23:38.94 bitrate=N/A speed= 131x elapsed=0:00:10.82    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_008.m4a' for writing
+size=N/A time=00:24:32.31 bitrate=N/A speed= 130x elapsed=0:00:11.34    
+size=N/A time=00:25:33.63 bitrate=N/A speed= 129x elapsed=0:00:11.85    
+size=N/A time=00:26:40.83 bitrate=N/A speed= 129x elapsed=0:00:12.37    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_009.m4a' for writing
+size=N/A time=00:27:55.71 bitrate=N/A speed= 130x elapsed=0:00:12.89    
+size=N/A time=00:28:53.50 bitrate=N/A speed= 129x elapsed=0:00:13.41    
+size=N/A time=00:29:45.21 bitrate=N/A speed= 128x elapsed=0:00:13.92    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_010.m4a' for writing
+size=N/A time=00:30:35.45 bitrate=N/A speed= 127x elapsed=0:00:14.43    
+size=N/A time=00:31:38.23 bitrate=N/A speed= 127x elapsed=0:00:14.94    
+size=N/A time=00:32:43.96 bitrate=N/A speed= 127x elapsed=0:00:15.47    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_011.m4a' for writing
+size=N/A time=00:33:37.98 bitrate=N/A speed= 126x elapsed=0:00:15.99    
+size=N/A time=00:34:33.02 bitrate=N/A speed= 126x elapsed=0:00:16.50    
+size=N/A time=00:35:42.07 bitrate=N/A speed= 126x elapsed=0:00:17.02    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_012.m4a' for writing
+size=N/A time=00:36:40.83 bitrate=N/A speed= 125x elapsed=0:00:17.53    
+size=N/A time=00:37:57.82 bitrate=N/A speed= 126x elapsed=0:00:18.05    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_013.m4a' for writing
+size=N/A time=00:39:04.95 bitrate=N/A speed= 126x elapsed=0:00:18.56    
+size=N/A time=00:40:07.80 bitrate=N/A speed= 126x elapsed=0:00:19.08    
+size=N/A time=00:41:06.87 bitrate=N/A speed= 126x elapsed=0:00:19.59    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_014.m4a' for writing
+size=N/A time=00:42:20.79 bitrate=N/A speed= 126x elapsed=0:00:20.11    
+size=N/A time=00:43:22.04 bitrate=N/A speed= 126x elapsed=0:00:20.62    
+size=N/A time=00:44:22.59 bitrate=N/A speed= 126x elapsed=0:00:21.14    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_015.m4a' for writing
+size=N/A time=00:45:33.05 bitrate=N/A speed= 126x elapsed=0:00:21.65    
+size=N/A time=00:46:46.27 bitrate=N/A speed= 127x elapsed=0:00:22.17    
+size=N/A time=00:47:49.18 bitrate=N/A speed= 126x elapsed=0:00:22.68    
+[segment @ 0000023c00dedd00] Opening 'C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_016.m4a' for writing
+size=N/A time=00:48:48.06 bitrate=N/A speed= 126x elapsed=0:00:23.20    
+size=N/A time=00:49:45.59 bitrate=N/A speed= 126x elapsed=0:00:23.72    
+[out#0/segment @ 0000023c00da0940] video:0KiB audio:26556KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:50:26.62 bitrate=N/A speed= 126x elapsed=0:00:24.05    
+[aac @ 0000023c0291e4c0] Qavg: 39751.309
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\part_000.m4a --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\_split_asr\srt_000
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K��Ƶ��ʱ��: 180.0s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K��Ƶ���ڷֿ鳤�ȣ�ֱ��ת¼
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K2026-05-25 16:44:10 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+=== P32 start 2026-05-25T17:11:34 ===
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpnyma_8ir.wav
+
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe failed once, retrying: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+6 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 17:11:53 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p32 [10-2] MPU6050���.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmp38vqbcjv.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K��Ƶ��ʱ��: 3026.6s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 17:12:11 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K2026-05-25 17:12:11 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+transcribe retry failed, using faster-whisper fallback: command failed (5): videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32
+7 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K��Ƶ��Ϊ 6 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/6 (offset=0ms)
+��ʼת¼ chunk 2/6 (offset=590000ms)
+��ʼת¼ chunk 3/6 (offset=1180000ms)
+
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 4/6 (offset=1770000ms)
+2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+��ʼת¼ chunk 5/6 (offset=2360000ms)
+��ʼת¼ chunk 6/6 (offset=2950000ms)
+
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K2026-05-25 17:12:10 - asr - WARNING - BcutASR duration limit exceeded
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K2026-05-25 17:12:11 - asr - WARNING - BcutASR duration limit exceeded
+
+\u2827 Transcribing [bijian][K2026-05-25 17:12:11 - asr - WARNING - BcutASR duration limit exceeded
+
+[K\u2717 Error: BcutASR duration limit exceeded
+
+starting faster-whisper fallback model=tiny
+faster-whisper complete -> C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.srt (1229 segments)
+
+$ C:\Users\Xch\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Xch\.workbuddy\skills\bilibili-to-notes\scripts\extract_srt.py C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.srt C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\transcript.txt
+Extracted 13723 characters �� C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\transcript.txt
+deleted mp4: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p32\STM32入门教程-2023版 细致讲解 中文字幕 p32 [10-2] MPU6050简介.mp4

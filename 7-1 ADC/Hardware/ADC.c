@@ -40,10 +40,25 @@ void AD_Init(void)
 }
 
 //读取函数
-
+//改内容是单次转换 非扫描模式
 uint16_t AD_GetValue(void){
     ADC_SoftwareStartConvCmd(ADC1,ENABLE);
     while (ADC_GetFlagStatus(ADC1,ADC_FLAG_EOC)==SET);
     return ADC_GetConversionValue(ADC1);
     
 }
+
+//还可以使用 连续转换 非扫描模式
+
+/*
+uint16_t AD_GetValue(uint8_t ADC_Channel){
+
+    //手动填写通道数
+    ADC_RegularChannelConfig(ADC1, ADC_Channel, 1, ADC_SampleTime_55Cycles5); // 通道0 序列1
+    ADC_SoftwareStartConvCmd(ADC1,ENABLE);
+    while (ADC_GetFlagStatus(ADC1,ADC_FLAG_EOC)==SET);
+    return ADC_GetConversionValue(ADC1);
+    
+}
+
+*/

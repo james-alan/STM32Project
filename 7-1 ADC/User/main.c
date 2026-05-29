@@ -27,5 +27,18 @@ int main(void)
 
 		Delay_ms(100);
 
+
+
+		/*
+		连续转换 非扫描模式
+		AD0=AD_GetValue(ADC_Channel_0);
+		AD1=AD_GetValue(ADC_Channel_1);
+		AD2=AD_GetValue(ADC_Channel_2);
+		AD3=AD_GetValue(ADC_Channel_3);
+
+		再一一显示上去 
+
+		*/
+
 	}
 }

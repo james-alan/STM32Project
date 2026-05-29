@@ -1,0 +1,229 @@
+
+=== P28 start 2026-05-25T16:28:27 ===
+
+$ videocaptioner download https://www.bilibili.com/video/BV1th411z7sn?p=28 -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1th411z7sn?p=28
+[BiliBili] 1th411z7sn: Downloading webpage
+
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[BiliBili] BV1th411z7sn: Extracting videos in anthology
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[BiliBili] BV1th411z7sn: Downloading wbi sign
+[BiliBili] BV1th411z7sn: Downloading video formats for cid 799365361
+
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[BiliBili] Format(s) 1080P ����, 720P ׼���� are missing; you have to become a premium member to download them. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+[BiliBili] 206940155: Extracting chapters
+
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[info] BV1th411z7sn_p28: Downloading 1 format(s): 30032+30280
+
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.f30032.mp4
+
+[download]   0.0% of    8.98MiB at  616.45KiB/s ETA 00:14
+[download]   0.0% of    8.98MiB at    1.81MiB/s ETA 00:04
+[download]   0.1% of    8.98MiB at    4.21MiB/s ETA 00:02
+[download]   0.2% of    8.98MiB at    4.83MiB/s ETA 00:01
+[download]   0.3% of    8.98MiB at    9.99MiB/s ETA 00:00
+[download]   0.7% of    8.98MiB at    3.97MiB/s ETA 00:02
+[download]   1.4% of    8.98MiB at    3.86MiB/s ETA 00:02
+[download]   2.8% of    8.98MiB at    4.97MiB/s ETA 00:01
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]   5.6% of    8.98MiB at    7.15MiB/s ETA 00:01
+[download]  11.1% of    8.98MiB at   11.24MiB/s ETA 00:00
+[download]  22.3% of    8.98MiB at   16.78MiB/s ETA 00:00
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]  44.5% of    8.98MiB at   23.76MiB/s ETA 00:00
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]  89.1% of    8.98MiB at   29.01MiB/s ETA 00:00
+[download] 100.0% of    8.98MiB at   27.84MiB/s ETA 00:00
+[download] 100% of    8.98MiB in 00:00:00 at 19.24MiB/s  
+
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.f30280.m4a
+
+[download]   0.0% of   18.85MiB at  319.96KiB/s ETA 01:00
+[download]   0.0% of   18.85MiB at  959.87KiB/s ETA 00:20
+[download]   0.0% of   18.85MiB at    1.66MiB/s ETA 00:11
+[download]   0.1% of   18.85MiB at  602.84KiB/s ETA 00:32
+[download]   0.2% of   18.85MiB at  902.02KiB/s ETA 00:21
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]   0.3% of   18.85MiB at    1.12MiB/s ETA 00:16
+[download]   0.7% of   18.85MiB at    1.63MiB/s ETA 00:11
+[download]   1.3% of   18.85MiB at    2.43MiB/s ETA 00:07
+[download]   2.6% of   18.85MiB at    3.93MiB/s ETA 00:04
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]   5.3% of   18.85MiB at    6.32MiB/s ETA 00:02
+[download]  10.6% of   18.85MiB at   10.46MiB/s ETA 00:01
+[download]  21.2% of   18.85MiB at   17.19MiB/s ETA 00:00
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]  42.4% of   18.85MiB at   22.78MiB/s ETA 00:00
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]  63.6% of   18.85MiB at   27.82MiB/s ETA 00:00
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download]  84.9% of   18.85MiB at   31.10MiB/s ETA 00:00
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+[download] 100.0% of   18.85MiB at   32.10MiB/s ETA 00:00
+[download] 100% of   18.85MiB in 00:00:00 at 27.31MiB/s  
+[Merger] Merging formats into "C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.mp4"
+
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[KDeleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.f30032.mp4 (pass -k to keep)
+
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=28[KDeleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.f30280.m4a (pass -k to keep)
+
+[K\u2713 Downloaded to C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28/
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32入门教程-2023版 细致讲解 中文字幕 p28 [9-4] USART串口数据包.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmp8l73vl57.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K��Ƶ��ʱ��: 1228.3s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K��Ƶ��Ϊ 3 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/3 (offset=0ms)
+��ʼת¼ chunk 2/3 (offset=590000ms)
+��ʼת¼ chunk 3/3 (offset=1180000ms)
+
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian] 3/3: uploading [3%][K
+\u2839 Transcribing [bijian] 3/3: uploading [3%][K
+\u2838 Transcribing [bijian] 3/3: uploading [3%][K
+\u283c Transcribing [bijian] 3/3: uploading [3%][K
+\u2834 Transcribing [bijian] 3/3: creating_task [13%][K
+\u2826 Transcribing [bijian] 2/3: uploading [26%][K
+\u2827 Transcribing [bijian] 2/3: uploading [26%][K
+\u2807 Transcribing [bijian] 2/3: uploading [26%][K
+\u280f Transcribing [bijian] 2/3: uploading [26%][K
+\u280b Transcribing [bijian] 2/3: uploading [26%][K
+\u2819 Transcribing [bijian] 2/3: uploading [26%][K
+\u2839 Transcribing [bijian] 1/3: creating_task [36%][K
+\u2838 Transcribing [bijian] 1/3: transcribing [43%][K
+\u283c Transcribing [bijian] 1/3: transcribing [43%][K
+\u2834 Transcribing [bijian] 1/3: transcribing [43%][K
+\u2826 Transcribing [bijian] 1/3: transcribing [43%][K
+\u2827 Transcribing [bijian] 2/3: transcribing [60%][K
+\u2807 Transcribing [bijian] 2/3: transcribing [60%][K
+\u280f Transcribing [bijian] 2/3: transcribing [60%][K
+\u280b Transcribing [bijian] 2/3: transcribing [60%][K
+\u2819 Transcribing [bijian] 2/3: transcribing [60%][K
+\u2839 Transcribing [bijian] 2/3: transcribing [60%][K
+\u2838 Transcribing [bijian] 2/3: transcribing [60%][K
+\u283c Transcribing [bijian] 2/3: transcribing [60%][K
+\u2834 Transcribing [bijian] 2/3: transcribing [60%][K
+\u2826 Transcribing [bijian] 2/3: transcribing [60%][K
+\u2827 Transcribing [bijian] 2/3: transcribing [60%][KChunk 3/3 ת¼��ɣ���� 22 ��Ƭ��
+
+\u2807 Transcribing [bijian] 3/3: completed [73%][K
+\u280f Transcribing [bijian] 3/3: completed [73%][K
+\u280b Transcribing [bijian] 3/3: completed [73%][K
+\u2819 Transcribing [bijian] 3/3: completed [73%][K
+\u2839 Transcribing [bijian] 3/3: completed [73%][K
+\u2838 Transcribing [bijian] 3/3: completed [73%][K
+\u283c Transcribing [bijian] 3/3: completed [73%][K
+\u2834 Transcribing [bijian] 3/3: completed [73%][K
+\u2826 Transcribing [bijian] 3/3: completed [73%][K
+\u2827 Transcribing [bijian] 3/3: completed [73%][K
+\u2807 Transcribing [bijian] 3/3: completed [73%][K
+\u280f Transcribing [bijian] 3/3: completed [73%][K
+\u280b Transcribing [bijian] 3/3: completed [73%][K
+\u2819 Transcribing [bijian] 3/3: completed [73%][K
+\u2839 Transcribing [bijian] 3/3: completed [73%][K
+\u2838 Transcribing [bijian] 3/3: completed [73%][KChunk 1/3 ת¼��ɣ���� 243 ��Ƭ��
+
+\u283c Transcribing [bijian] 1/3: completed [86%][K
+\u2834 Transcribing [bijian] 1/3: completed [86%][K
+\u2826 Transcribing [bijian] 1/3: completed [86%][K
+\u2827 Transcribing [bijian] 1/3: completed [86%][KChunk 2/3 ת¼��ɣ���� 246 ��Ƭ��
+���� 3 ����ת¼���
+��⵽���Ӽ�ʱ�����ʹ��ģ��ƥ�䣨��ֵ=0.7��
+�ϲ� chunk 0 �� chunk 1
+�ҵ����ƥ��: 4 ����, �ص�����=[0:4] vs [1:5], �зֵ�: left[:240] + right[3:]
+�ϲ� chunk 1 �� chunk 2
+�ҵ����ƥ��: 5 ����, �ص�����=[0:5] vs [0:5], �зֵ�: left[:479] + right[2:]
+�ϲ���ɣ���Ƭ����: 499
+�ֿ�ת¼��ɣ��� 499 ��Ƭ��
+
+\u2807 Transcribing [bijian] 2/3: completed [100%][K
+[K\u2713 Transcription complete -> C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p28 [9-4] USART�������ݰ�.srt (499 segments)
+
+$ C:\Users\Xch\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Xch\.workbuddy\skills\bilibili-to-notes\scripts\extract_srt.py C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32入门教程-2023版 细致讲解 中文字幕 p28 [9-4] USART串口数据包.srt C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\transcript.txt
+Extracted 6029 characters �� C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\transcript.txt
+deleted mp4: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p28\STM32入门教程-2023版 细致讲解 中文字幕 p28 [9-4] USART串口数据包.mp4
