@@ -1,6 +1,36 @@
 {
     "configurations": [
         {
+            "name": "STM32F103C8",
+            "compilerPath": "C:/MinGW/bin/gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "windows-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Start",
+                "${workspaceFolder}/User",
+                "${workspaceFolder}/Library",
+                "${workspaceFolder}/System",
+                "${workspaceFolder}/Hardware",
+                "C:/Keil_v5/ARM/ARMCC/include"
+            ],
+            "defines": [
+                "STM32F10X_MD",
+                "USE_STDPERIPH_DRIVER",
+                "__CC_ARM"
+            ],
+            "forcedInclude": [
+                "${workspaceFolder}/Start/stm32f10x.h"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C:/Keil_v5/ARM/ARMCC/include"
+                ]
+            }
+        },
+        {
             "name": "Target 1",
             "includePath": [
                 "c:\\Users\\Xch\\Documents\\STM32Project\\8-2 DMA+AD多通道\\Start",
