@@ -40,3 +40,7 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Build output directories
+Objects/
+Listings/
