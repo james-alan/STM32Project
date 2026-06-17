@@ -1,0 +1,42 @@
+﻿# Keil MDK build outputs
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.elf
+*.lst
+*.map
+*.build_log.htm
+*.lnp
+*.sct
+*.dep
+*.iex
+
+# Keil project user settings
+*.uvguix.*
+*.uvoptx
+*.uv4.log
+*.uv4.log.lock
+
+# JLink
+JLinkLog.txt
+JLinkSettings.ini
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office temp files
+~$*.pptx
+~$*.docx
+~$*.xlsx
+
+# Python
+__pycache__/
+*.pyc
