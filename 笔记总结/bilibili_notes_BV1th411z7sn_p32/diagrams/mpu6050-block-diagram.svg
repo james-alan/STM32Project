@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="100%" role="img">
+  <title>MPU6050 内部结构框图</title>
+  <desc>MPU6050 internal block diagram showing sensors, ADC, registers, DMP, FIFO, and communication interfaces</desc>
+  <rect x="0" y="0" width="680" height="520" fill="#FAFAFA" rx="12"/>
+  
+  <!-- Title -->
+  <text x="340" y="22" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a">MPU6050 芯片内部结构</text>
+  
+  <!-- Clock -->
+  <rect x="40" y="38" width="140" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7"/>
+  <text x="110" y="57" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3C3489">时钟系统</text>
+  
+  <!-- Sensors section -->
+  <rect x="40" y="80" width="260" height="100" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="170" y="98" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0C447C">传感器阵列</text>
+  
+  <rect x="55" y="108" width="72" height="28" rx="5" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="91" y="126" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">加速度计</text>
+  
+  <rect x="135" y="108" width="72" height="28" rx="5" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="171" y="126" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">陀螺仪</text>
+  
+  <rect x="215" y="108" width="72" height="28" rx="5" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="251" y="126" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">温度传感器</text>
+  
+  <text x="170" y="162" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#0C447C">X/Y/Z 三轴 × 2 + 1</text>
+  
+  <!-- ADC -->
+  <rect x="120" y="195" width="100" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7"/>
+  <text x="170" y="213" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3C3489">ADC 模数转换</text>
+  
+  <!-- Arrow sensors to ADC -->
+  <line x1="170" y1="180" x2="170" y2="193" stroke="#185FA5" stroke-width="1.5"/>
+  <polygon points="165,193 170,200 175,193" fill="#185FA5"/>
+  
+  <!-- Registers -->
+  <rect x="40" y="240" width="260" height="32" rx="6" fill="#FAEEDA" stroke="#BA7517"/>
+  <text x="170" y="260" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#854F0B">数据寄存器（每轴 16 位）</text>
+  
+  <!-- Arrow ADC to Regs -->
+  <line x1="170" y1="223" x2="170" y2="238" stroke="#534AB7" stroke-width="1.5"/>
+  <polygon points="165,238 170,245 175,238" fill="#534AB7"/>
+  
+  <!-- FIFO & DMP row -->
+  <rect x="40" y="290" width="120" height="30" rx="6" fill="#EAF3DE" stroke="#639922"/>
+  <text x="100" y="309" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3B6D11">FIFO (1024B)</text>
+  
+  <rect x="180" y="290" width="120" height="30" rx="6" fill="#EAF3DE" stroke="#639922"/>
+  <text x="240" y="309" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3B6D11">DMP 处理器</text>
+  
+  <!-- Arrows to FIFO/DMP -->
+  <line x1="100" y1="272" x2="100" y2="288" stroke="#BA7517" stroke-width="1.5"/>
+  <polygon points="95,288 100,295 105,288" fill="#BA7517"/>
+  <line x1="240" y1="272" x2="240" y2="288" stroke="#BA7517" stroke-width="1.5"/>
+  <polygon points="235,288 240,295 245,288" fill="#BA7517"/>
+  
+  <!-- Charge pump + interrupt -->
+  <rect x="350" y="80" width="130" height="28" rx="6" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="415" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">电荷泵（升压）</text>
+  
+  <rect x="350" y="120" width="130" height="28" rx="6" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="415" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">中断控制器 → INT</text>
+  
+  <!-- Communication section -->
+  <rect x="330" y="230" width="310" height="130" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="485" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0C447C">通信接口</text>
+  
+  <!-- Master I2C -->
+  <rect x="345" y="265" width="280" height="40" rx="6" fill="#EAF3DE" stroke="#639922"/>
+  <text x="485" y="278" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3B6D11">主机 I2C 接口 (SCL/SDA)</text>
+  <text x="485" y="294" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3B6D11">← 连接 STM32 主机</text>
+  
+  <!-- Aux I2C -->
+  <rect x="345" y="312" width="280" height="38" rx="6" fill="#EEEDFE" stroke="#534AB7"/>
+  <text x="485" y="325" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3C3489">辅助 I2C 接口 (AUX_CL/AUX_DA)</text>
+  <text x="485" y="341" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3C3489">→ 连接磁力计（作为主机）</text>
+  
+  <!-- Arrow DMP to Master I2C -->
+  <path d="M240,320 L240,380 L485,380 L485,263" stroke="#639922" stroke-width="1.5" fill="none"/>
+  <polygon points="281,263 485,256 489,263" fill="#639922"/> <!-- simplified arrow -->
+  
+  <!-- Self-test note -->
+  <rect x="350" y="170" width="130" height="28" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="415" y="188" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">自测单元</text>
+  
+  <!-- Legend -->
+  <rect x="40" y="380" width="380" height="120" rx="8" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="230" y="400" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#5F5E5A">寄存器速查</text>
+  
+  <text x="60" y="422" font-family="sans-serif" font-size="10" fill="#5F5E5A">0x6B PWR_MGMT_1</text>
+  <text x="220" y="422" font-family="sans-serif" font-size="10" fill="#A32D2D">→ 写 0x00 唤醒（必须第一步做！）</text>
+  
+  <text x="60" y="442" font-family="sans-serif" font-size="10" fill="#5F5E5A">0x75 WHO_AM_I</text>
+  <text x="220" y="442" font-family="sans-serif" font-size="10" fill="#3B6D11">→ 读回 0x68，验证 I2C 通信</text>
+  
+  <text x="60" y="462" font-family="sans-serif" font-size="10" fill="#5F5E5A">0x3B~0x40</text>
+  <text x="220" y="462" font-family="sans-serif" font-size="10" fill="#854F0B">→ 加速度计数据（X/Y/Z 各 2 字节）</text>
+  
+  <text x="60" y="482" font-family="sans-serif" font-size="10" fill="#5F5E5A">0x43~0x48</text>
+  <text x="220" y="482" font-family="sans-serif" font-size="10" fill="#854F0B">→ 陀螺仪数据（X/Y/Z 各 2 字节）</text>
+</svg>

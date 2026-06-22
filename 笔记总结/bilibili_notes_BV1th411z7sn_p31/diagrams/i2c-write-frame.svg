@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="100%" role="img">
+  <title>I2C 指定地址写帧格式</title>
+  <desc>起始 → 地址+W → ACK → 数据1 → ACK → 数据2 → ... → 停止</desc>
+
+  <rect x="0" y="0" width="680" height="260" fill="#FAFAFA" rx="12"/>
+  <text x="340" y="26" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="500" fill="#26215C">指定地址写 — 主机发，从机收</text>
+
+  <!-- Seven boxes in a row -->
+  <g font-family="sans-serif" text-anchor="middle">
+    <!-- Start -->
+    <rect x="20" y="55" width="68" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+    <text x="54" y="75" font-size="11" font-weight="500" fill="#0C447C">Start</text>
+
+    <!-- Address + W -->
+    <rect x="98" y="55" width="120" height="32" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+    <text x="158" y="72" font-size="10" font-weight="500" fill="#534AB7">从机地址(7bit)</text>
+    <text x="158" y="83" font-size="9" fill="#534AB7">+ W=0</text>
+
+    <!-- ACK from slave -->
+    <rect x="228" y="55" width="64" height="32" rx="6" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
+    <text x="260" y="72" font-size="10" font-weight="500" fill="#3B6D11">ACK</text>
+    <text x="260" y="83" font-size="8" fill="#639922">从机应答</text>
+
+    <!-- Data 1 -->
+    <rect x="302" y="55" width="72" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+    <text x="338" y="72" font-size="10" font-weight="500" fill="#72243E">数据1</text>
+    <text x="338" y="83" font-size="8" fill="#D4537E">MSB先发</text>
+
+    <!-- ACK -->
+    <rect x="384" y="55" width="64" height="32" rx="6" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
+    <text x="416" y="72" font-size="10" font-weight="500" fill="#3B6D11">ACK</text>
+    <text x="416" y="83" font-size="8" fill="#639922">从机应答</text>
+
+    <!-- Data 2 ... -->
+    <rect x="458" y="55" width="72" height="32" rx="6" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.8" stroke-dasharray="4,2"/>
+    <text x="494" y="72" font-size="10" font-weight="500" fill="#72243E">数据2</text>
+    <text x="494" y="83" font-size="8" fill="#D4537E">...</text>
+
+    <!-- Stop -->
+    <rect x="550" y="55" width="68" height="32" rx="6" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+    <text x="584" y="75" font-size="11" font-weight="500" fill="#993C1D">Stop</text>
+  </g>
+
+  <!-- Arrows between boxes -->
+  <g stroke="#888780" stroke-width="1.2" fill="none">
+    <line x1="88" y1="71" x2="98" y2="71"/>
+    <line x1="218" y1="71" x2="228" y2="71"/>
+    <line x1="292" y1="71" x2="302" y2="71"/>
+    <line x1="374" y1="71" x2="384" y2="71"/>
+    <line x1="448" y1="71" x2="458" y2="71"/>
+    <line x1="530" y1="71" x2="550" y2="71"/>
+  </g>
+
+  <!-- Legend below -->
+  <text x="340" y="115" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">← 主机发送 →</text>
+
+  <!-- Flow description -->
+  <g font-family="sans-serif" font-size="10" fill="#5F5E5A">
+    <text x="340" y="148" text-anchor="middle">1. 主机发 Start → 所有从机"注意听"</text>
+    <text x="340" y="165" text-anchor="middle">2. 主机发 7位地址 + W=0 → 被点名的从机匹配成功</text>
+    <text x="340" y="182" text-anchor="middle">3. 从机拉低 SDA (ACK) → 主机收到"我在"</text>
+    <text x="340" y="199" text-anchor="middle">4. 主机逐字节发送数据，每字节从机应答一次</text>
+    <text x="340" y="216" text-anchor="middle">5. 主机发 Stop → 本次通信结束</text>
+  </g>
+</svg>
