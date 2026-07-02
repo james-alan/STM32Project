@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 240" width="100%" role="img">
+  <title>I2C 起始条件 Start Condition</title>
+  <desc>SCL高电平期间，SDA从高变低</desc>
+
+  <rect x="0" y="0" width="680" height="240" fill="#FAFAFA" rx="12"/>
+
+  <text x="340" y="26" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="500" fill="#26215C">起始条件 Start Condition</text>
+  <text x="340" y="46" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">SCL 高电平时，SDA 从高变低 → 主机发起通信</text>
+
+  <!-- SCL line -->
+  <text x="55" y="82" font-family="sans-serif" font-size="12" font-weight="500" fill="#185FA5">SCL</text>
+  <polyline points="90,76 300,76 300,125 480,125" fill="none" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- SDA line -->
+  <text x="55" y="170" font-family="sans-serif" font-size="12" font-weight="500" fill="#E24B4A">SDA</text>
+  <polyline points="90,165 240,165 240,125 400,125" fill="none" stroke="#E24B4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dashed vertical at the start moment -->
+  <line x1="240" y1="60" x2="240" y2="210" stroke="#534AB7" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <!-- Arrow pointing to the transition -->
+  <text x="260" y="70" font-family="sans-serif" font-size="11" font-weight="500" fill="#534AB7">Start!</text>
+
+  <!-- Label: high to low -->
+  <text x="340" y="200" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">SCL 高电平期间，SDA 由高变低 → 起始条件</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>I2C 通信协议全景</title>
+  <desc>设计目标驱动三大支柱：硬件规定、软件时序、数据帧格式</desc>
+
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="500" fill="#26215C">I2C 通信协议全景</text>
+
+  <!-- Top root -->
+  <rect x="190" y="40" width="300" height="36" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+  <text x="340" y="62" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#3C3489">设计目标: 少引脚 + 可靠 + 多设备 + 同步</text>
+
+  <!-- Arrow down -->
+  <line x1="340" y1="76" x2="340" y2="90" stroke="#534AB7" stroke-width="1.5"/>
+  <line x1="340" y1="90" x2="320" y2="90" stroke="#534AB7" stroke-width="1.5"/>
+  <line x1="340" y1="90" x2="340" y2="90" stroke="#534AB7" stroke-width="1.5"/>
+  <line x1="340" y1="90" x2="360" y2="90" stroke="#534AB7" stroke-width="1.5"/>
+
+  <!-- Three columns -->
+  <!-- Column 1: 硬件规定 -->
+  <rect x="30" y="100" width="180" height="46" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="120" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#0C447C">硬件规定</text>
+  <text x="120" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#378ADD">Physical Layer</text>
+
+  <g font-family="sans-serif" font-size="10">
+    <rect x="30" y="155" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="120" y="169" text-anchor="middle" fill="#5F5E5A">开漏输出模式</text>
+
+    <rect x="30" y="183" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="120" y="197" text-anchor="middle" fill="#5F5E5A">外接上拉电阻 (4.7kΩ)</text>
+
+    <rect x="30" y="211" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="120" y="225" text-anchor="middle" fill="#5F5E5A">线"与"逻辑</text>
+
+    <rect x="30" y="239" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="120" y="253" text-anchor="middle" fill="#5F5E5A">SCL + SDA 两线制</text>
+  </g>
+
+  <!-- Column 2: 软件时序 -->
+  <rect x="250" y="100" width="180" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="340" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#3C3489">软件时序</text>
+  <text x="340" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7F77DD">Protocol Timing</text>
+
+  <g font-family="sans-serif" font-size="10">
+    <rect x="250" y="155" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="340" y="169" text-anchor="middle" fill="#5F5E5A">起始条件 Start</text>
+
+    <rect x="250" y="183" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="340" y="197" text-anchor="middle" fill="#5F5E5A">停止条件 Stop</text>
+
+    <rect x="250" y="211" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="340" y="225" text-anchor="middle" fill="#5F5E5A">主机发送一字节</text>
+
+    <rect x="250" y="239" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="340" y="253" text-anchor="middle" fill="#5F5E5A">主机接收一字节</text>
+
+    <rect x="250" y="267" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="340" y="281" text-anchor="middle" fill="#5F5E5A">发送/接收应答</text>
+  </g>
+
+  <!-- Column 3: 数据帧格式 -->
+  <rect x="470" y="100" width="180" height="46" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
+  <text x="560" y="122" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#3B6D11">数据帧格式</text>
+  <text x="560" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#639922">Frame Format</text>
+
+  <g font-family="sans-serif" font-size="10">
+    <rect x="470" y="155" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="560" y="169" text-anchor="middle" fill="#5F5E5A">地址字节 (7bit + R/W)</text>
+
+    <rect x="470" y="183" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="560" y="197" text-anchor="middle" fill="#5F5E5A">数据字节 + ACK</text>
+
+    <rect x="470" y="211" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="560" y="225" text-anchor="middle" fill="#5F5E5A">指定地址写</text>
+
+    <rect x="470" y="239" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="560" y="253" text-anchor="middle" fill="#5F5E5A">指定地址读</text>
+
+    <rect x="470" y="267" width="180" height="22" rx="4" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+    <text x="560" y="281" text-anchor="middle" fill="#5F5E5A">复合格式 (Repeated Start)</text>
+  </g>
+
+  <!-- Connecting lines from root -->
+  <line x1="120" y1="90" x2="120" y2="100" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="90" x2="340" y2="100" stroke="#534AB7" stroke-width="1.5"/>
+  <line x1="560" y1="90" x2="560" y2="100" stroke="#639922" stroke-width="1.5"/>
+
+  <!-- Bottom: memory aid -->
+  <rect x="50" y="308" width="580" height="60" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="340" y="328" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#534AB7">核心记忆口诀</text>
+  <text x="340" y="346" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#534AB7">低电平变数据 → 高电平读数据 → 起始是SDA高变低 → 停止是SDA低变高</text>
+  <text x="340" y="362" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#534AB7">每发一字节等应答 → 每收一字节给应答 → 地址在前数据在后 → MSB先发</text>
+
+  <!-- Bottom bar -->
+  <rect x="50" y="384" width="580" height="26" rx="6" fill="#534AB7"/>
+  <text x="340" y="401" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#EEEDFE">I2C = 开漏输出(物理) + 时序规则(协议) + 帧格式(数据) 三位一体</text>
+</svg>

@@ -1,0 +1,10 @@
+CompileFlags:
+  Add:
+    - -DSTM32F10X_MD
+    - -DUSE_STDPERIPH_DRIVER
+    - -D__CC_ARM
+    - -IStart
+    - -IUser
+    - -ILibrary
+    - -ISystem
+    - -IHardware

@@ -1,0 +1,441 @@
+
+=== P27 start 2026-05-25T16:27:51 ===
+
+$ videocaptioner download https://www.bilibili.com/video/BV1th411z7sn?p=27 -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1th411z7sn?p=27
+[BiliBili] 1th411z7sn: Downloading webpage
+
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[BiliBili] BV1th411z7sn: Extracting videos in anthology
+[BiliBili] BV1th411z7sn: Downloading wbi sign
+
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[BiliBili] BV1th411z7sn: Downloading video formats for cid 799369670
+
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[BiliBili] Format(s) 1080P ����, 720P ׼���� are missing; you have to become a premium member to download them. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+[BiliBili] 206940155: Extracting chapters
+[info] BV1th411z7sn_p27: Downloading 1 format(s): 30032+30280
+
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.f30032.mp4
+
+[download]   0.0% of   37.46MiB at  759.84KiB/s ETA 00:50
+[download]   0.0% of   37.46MiB at    1.73MiB/s ETA 00:21
+[download]   0.0% of   37.46MiB at    4.04MiB/s ETA 00:09
+[download]   0.0% of   37.46MiB at    6.67MiB/s ETA 00:05
+[download]   0.1% of   37.46MiB at   13.79MiB/s ETA 00:02
+[download]   0.2% of   37.46MiB at    6.97MiB/s ETA 00:05
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   0.3% of   37.46MiB at    6.31MiB/s ETA 00:05
+[download]   0.7% of   37.46MiB at    8.12MiB/s ETA 00:04
+[download]   1.3% of   37.46MiB at   11.93MiB/s ETA 00:03
+[download]   2.7% of   37.46MiB at   17.83MiB/s ETA 00:02
+[download]   5.3% of   37.46MiB at   25.47MiB/s ETA 00:01
+[download]  10.7% of   37.46MiB at   34.34MiB/s ETA 00:00
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  21.4% of   37.46MiB at   39.81MiB/s ETA 00:00
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  32.0% of   37.46MiB at   40.03MiB/s ETA 00:00
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  42.7% of   37.46MiB at   45.40MiB/s ETA 00:00
+[download]  53.4% of   37.46MiB at   46.44MiB/s ETA 00:00
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  64.1% of   37.46MiB at   46.73MiB/s ETA 00:00
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  74.7% of   37.46MiB at   46.02MiB/s ETA 00:00
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  85.4% of   37.46MiB at   47.63MiB/s ETA 00:00
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  96.1% of   37.46MiB at   41.19MiB/s ETA 00:00
+[download] 100.0% of   37.46MiB at   41.55MiB/s ETA 00:00
+[download] 100% of   37.46MiB in 00:00:00 at 38.68MiB/s  
+
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.f30280.m4a
+
+[download]   0.0% of   49.71MiB at  988.99KiB/s ETA 00:51
+[download]   0.0% of   49.71MiB at    1.41MiB/s ETA 00:35
+[download]   0.0% of   49.71MiB at    1.91MiB/s ETA 00:26
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   0.0% of   49.71MiB at  274.54KiB/s ETA 03:07
+[download]   0.1% of   49.71MiB at  395.12KiB/s ETA 02:08
+[download]   0.1% of   49.71MiB at  513.72KiB/s ETA 01:38
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   0.2% of   49.71MiB at  752.58KiB/s ETA 01:07
+[download]   0.5% of   49.71MiB at    1.12MiB/s ETA 00:44
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   1.0% of   49.71MiB at    1.79MiB/s ETA 00:27
+[download]   2.0% of   49.71MiB at    2.93MiB/s ETA 00:16
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   4.0% of   49.71MiB at    4.87MiB/s ETA 00:09
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]   8.0% of   49.71MiB at    8.28MiB/s ETA 00:05
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  16.1% of   49.71MiB at   12.40MiB/s ETA 00:03
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  24.1% of   49.71MiB at   16.99MiB/s ETA 00:02
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  32.2% of   49.71MiB at   17.44MiB/s ETA 00:01
+[download]  40.2% of   49.71MiB at   20.94MiB/s ETA 00:01
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  48.3% of   49.71MiB at   24.16MiB/s ETA 00:01
+[download]  56.3% of   49.71MiB at   26.24MiB/s ETA 00:00
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  64.4% of   49.71MiB at   24.68MiB/s ETA 00:00
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  72.4% of   49.71MiB at   25.94MiB/s ETA 00:00
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[download]  80.5% of   49.71MiB at   26.16MiB/s ETA 00:00
+[download]  88.5% of   49.71MiB at   28.29MiB/s ETA 00:00
+[download]  96.6% of   49.71MiB at   30.28MiB/s ETA 00:00
+[download] 100.0% of   49.71MiB at   30.95MiB/s ETA 00:00
+[download] 100% of   49.71MiB in 00:00:01 at 26.91MiB/s  
+[Merger] Merging formats into "C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.mp4"
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[KDeleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.f30280.m4a (pass -k to keep)
+Deleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.f30032.mp4 (pass -k to keep)
+
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=27[K
+[K\u2713 Downloaded to C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27/
+
+$ videocaptioner transcribe C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32入门教程-2023版 细致讲解 中文字幕 p27 [9-3] 串口发送&串口发送+接收.mp4 --asr bijian --language zh -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27
+
+\u280b Transcribing [bijian][K��ȡ�������� 0
+ת��Ϊ��Ƶִ������: ffmpeg -i C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.mp4 -map 0:a:0 -vn -ac 1 -ar 16000 -y C:\Users\Xch\AppData\Local\Temp\tmpm60mrz6x.wav
+
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K��Ƶת���ɹ�
+
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K��Ƶ��ʱ��: 3600.0s, �ֿ鳤��: 600.0s, �ص�: 10.0s
+
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian][K
+\u283c Transcribing [bijian][K
+\u2834 Transcribing [bijian][K
+\u2826 Transcribing [bijian][K��Ƶ��Ϊ 7 �飬��ʼ����ת¼
+��ʼת¼ chunk 1/7 (offset=0ms)
+��ʼת¼ chunk 2/7 (offset=590000ms)
+��ʼת¼ chunk 3/7 (offset=1180000ms)
+
+\u2827 Transcribing [bijian][K
+\u2807 Transcribing [bijian][K
+\u280f Transcribing [bijian][K
+\u280b Transcribing [bijian][K
+\u2819 Transcribing [bijian][K
+\u2839 Transcribing [bijian][K
+\u2838 Transcribing [bijian] 1/7: uploading [1%][K
+\u283c Transcribing [bijian] 3/7: uploading [4%][K
+\u2834 Transcribing [bijian] 3/7: uploading [4%][K
+\u2826 Transcribing [bijian] 3/7: uploading [4%][K
+\u2827 Transcribing [bijian] 3/7: uploading [4%][K
+\u2807 Transcribing [bijian] 3/7: uploading [4%][K
+\u280f Transcribing [bijian] 2/7: transcribing [15%][K
+\u280b Transcribing [bijian] 1/7: transcribing [18%][K
+\u2819 Transcribing [bijian] 3/7: creating_task [22%][K
+\u2839 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2838 Transcribing [bijian] 3/7: transcribing [25%][K
+\u283c Transcribing [bijian] 3/7: transcribing [25%][K
+\u2834 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2826 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2827 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2807 Transcribing [bijian] 3/7: transcribing [25%][K
+\u280f Transcribing [bijian] 3/7: transcribing [25%][K
+\u280b Transcribing [bijian] 3/7: transcribing [25%][K
+\u2819 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2839 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2838 Transcribing [bijian] 3/7: transcribing [25%][K
+\u283c Transcribing [bijian] 3/7: transcribing [25%][K
+\u2834 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2826 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2827 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2807 Transcribing [bijian] 3/7: transcribing [25%][K
+\u280f Transcribing [bijian] 3/7: transcribing [25%][K
+\u280b Transcribing [bijian] 3/7: transcribing [25%][K
+\u2819 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2839 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2838 Transcribing [bijian] 3/7: transcribing [25%][K
+\u283c Transcribing [bijian] 3/7: transcribing [25%][K
+\u2834 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2826 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2827 Transcribing [bijian] 3/7: transcribing [25%][K
+\u2807 Transcribing [bijian] 3/7: transcribing [25%][K
+\u280f Transcribing [bijian] 3/7: transcribing [25%][K
+\u280b Transcribing [bijian] 3/7: transcribing [25%][KChunk 2/7 ת¼��ɣ���� 230 ��Ƭ��
+��ʼת¼ chunk 4/7 (offset=1770000ms)
+
+\u2819 Transcribing [bijian] 2/7: completed [31%][K
+\u2839 Transcribing [bijian] 2/7: completed [31%][K
+\u2838 Transcribing [bijian] 2/7: completed [31%][K
+\u283c Transcribing [bijian] 2/7: completed [31%][K
+\u2834 Transcribing [bijian] 2/7: completed [31%][K
+\u2826 Transcribing [bijian] 4/7: uploading [32%][K
+\u2827 Transcribing [bijian] 4/7: uploading [32%][K
+\u2807 Transcribing [bijian] 4/7: uploading [32%][K
+\u280f Transcribing [bijian] 4/7: uploading [32%][K
+\u280b Transcribing [bijian] 4/7: creating_task [37%][K
+\u2819 Transcribing [bijian] 4/7: transcribing [40%][K
+\u2839 Transcribing [bijian] 4/7: transcribing [40%][K
+\u2838 Transcribing [bijian] 4/7: transcribing [40%][KChunk 3/7 ת¼��ɣ���� 216 ��Ƭ��
+��ʼת¼ chunk 5/7 (offset=2360000ms)
+
+\u283c Transcribing [bijian] 3/7: completed [45%][K
+\u2834 Transcribing [bijian] 3/7: completed [45%][K
+\u2826 Transcribing [bijian] 3/7: completed [45%][K
+\u2827 Transcribing [bijian] 3/7: completed [45%][K
+\u2807 Transcribing [bijian] 5/7: uploading [47%][K
+\u280f Transcribing [bijian] 5/7: uploading [47%][K
+\u280b Transcribing [bijian] 5/7: uploading [47%][KChunk 1/7 ת¼��ɣ���� 227 ��Ƭ��
+��ʼת¼ chunk 6/7 (offset=2950000ms)
+
+\u2819 Transcribing [bijian] 1/7: completed [52%][K
+\u2839 Transcribing [bijian] 1/7: completed [52%][K
+\u2838 Transcribing [bijian] 5/7: creating_task [57%][K
+\u283c Transcribing [bijian] 5/7: transcribing [60%][K
+\u2834 Transcribing [bijian] 5/7: transcribing [60%][K
+\u2826 Transcribing [bijian] 6/7: uploading [61%][K
+\u2827 Transcribing [bijian] 6/7: uploading [61%][K
+\u2807 Transcribing [bijian] 6/7: uploading [61%][K
+\u280f Transcribing [bijian] 6/7: creating_task [65%][K
+\u280b Transcribing [bijian] 6/7: transcribing [68%][K
+\u2819 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2839 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2838 Transcribing [bijian] 6/7: transcribing [68%][K
+\u283c Transcribing [bijian] 6/7: transcribing [68%][K
+\u2834 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2826 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2827 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2807 Transcribing [bijian] 6/7: transcribing [68%][K
+\u280f Transcribing [bijian] 6/7: transcribing [68%][K
+\u280b Transcribing [bijian] 6/7: transcribing [68%][K
+\u2819 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2839 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2838 Transcribing [bijian] 6/7: transcribing [68%][K
+\u283c Transcribing [bijian] 6/7: transcribing [68%][K
+\u2834 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2826 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2827 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2807 Transcribing [bijian] 6/7: transcribing [68%][K
+\u280f Transcribing [bijian] 6/7: transcribing [68%][K
+\u280b Transcribing [bijian] 6/7: transcribing [68%][K
+\u2819 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2839 Transcribing [bijian] 6/7: transcribing [68%][K
+\u2838 Transcribing [bijian] 6/7: transcribing [68%][K
+\u283c Transcribing [bijian] 6/7: transcribing [68%][KChunk 5/7 ת¼��ɣ���� 205 ��Ƭ��
+��ʼת¼ chunk 7/7 (offset=3540000ms)
+
+\u2834 Transcribing [bijian] 5/7: completed [74%][K
+\u2826 Transcribing [bijian] 5/7: completed [74%][K
+\u2827 Transcribing [bijian] 7/7: uploading [75%][K
+\u2807 Transcribing [bijian] 7/7: uploading [75%][K
+\u280f Transcribing [bijian] 7/7: uploading [75%][K
+\u280b Transcribing [bijian] 7/7: creating_task [80%][K
+\u2819 Transcribing [bijian] 7/7: transcribing [82%][K
+\u2839 Transcribing [bijian] 7/7: transcribing [82%][KChunk 4/7 ת¼��ɣ���� 201 ��Ƭ��
+
+\u2838 Transcribing [bijian] 4/7: completed [88%][K
+\u283c Transcribing [bijian] 4/7: completed [88%][K
+\u2834 Transcribing [bijian] 4/7: completed [88%][K
+\u2826 Transcribing [bijian] 4/7: completed [88%][K
+\u2827 Transcribing [bijian] 4/7: completed [88%][K
+\u2807 Transcribing [bijian] 4/7: completed [88%][K
+\u280f Transcribing [bijian] 4/7: completed [88%][K
+\u280b Transcribing [bijian] 4/7: completed [88%][K
+\u2819 Transcribing [bijian] 4/7: completed [88%][KChunk 6/7 ת¼��ɣ���� 192 ��Ƭ��
+
+\u2839 Transcribing [bijian] 6/7: completed [94%][K
+\u2838 Transcribing [bijian] 6/7: completed [94%][K
+\u283c Transcribing [bijian] 6/7: completed [94%][K
+\u2834 Transcribing [bijian] 6/7: completed [94%][K
+\u2826 Transcribing [bijian] 6/7: completed [94%][K
+\u2827 Transcribing [bijian] 6/7: completed [94%][K
+\u2807 Transcribing [bijian] 6/7: completed [94%][K
+\u280f Transcribing [bijian] 6/7: completed [94%][K
+\u280b Transcribing [bijian] 6/7: completed [94%][K
+\u2819 Transcribing [bijian] 6/7: completed [94%][K
+\u2839 Transcribing [bijian] 6/7: completed [94%][K
+\u2838 Transcribing [bijian] 6/7: completed [94%][KChunk 7/7 ת¼��ɣ���� 20 ��Ƭ��
+���� 7 ����ת¼���
+��⵽���Ӽ�ʱ�����ʹ��ģ��ƥ�䣨��ֵ=0.7��
+�ϲ� chunk 0 �� chunk 1
+2026-05-25 16:28:26 - chunk_merger - WARNING - δ�ҵ���Ч�ı�ƥ�䣬ʹ��ʱ��߽��з�
+ʱ��߽��з�: left[:225] + right
+�ϲ� chunk 1 �� chunk 2
+�ҵ����ƥ��: 4 ����, �ص�����=[0:4] vs [0:4], �зֵ�: left[:452] + right[2:]
+�ϲ� chunk 2 �� chunk 3
+�ҵ����ƥ��: 3 ����, �ص�����=[0:4] vs [0:4], �зֵ�: left[:663] + right[2:]
+�ϲ� chunk 3 �� chunk 4
+2026-05-25 16:28:26 - chunk_merger - WARNING - δ�ҵ���Ч�ı�ƥ�䣬ʹ��ʱ��߽��з�
+ʱ��߽��з�: left[:858] + right
+�ϲ� chunk 4 �� chunk 5
+�ҵ����ƥ��: 2 ����, �ص�����=[0:2] vs [1:3], �зֵ�: left[:1061] + right[2:]
+�ϲ� chunk 5 �� chunk 6
+2026-05-25 16:28:26 - chunk_merger - WARNING - δ�ҵ���Ч�ı�ƥ�䣬ʹ��ʱ��߽��з�
+ʱ��߽��з�: left[:1250] + right
+�ϲ���ɣ���Ƭ����: 1270
+�ֿ�ת¼��ɣ��� 1270 ��Ƭ��
+
+[K\u2713 Transcription complete -> C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p27 [9-3] ���ڷ���&���ڷ���+����.srt (1270 segments)
+
+$ C:\Users\Xch\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Xch\.workbuddy\skills\bilibili-to-notes\scripts\extract_srt.py C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32入门教程-2023版 细致讲解 中文字幕 p27 [9-3] 串口发送&串口发送+接收.srt C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\transcript.txt
+Extracted 16011 characters �� C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\transcript.txt
+deleted mp4: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p27\STM32入门教程-2023版 细致讲解 中文字幕 p27 [9-3] 串口发送&串口发送+接收.mp4

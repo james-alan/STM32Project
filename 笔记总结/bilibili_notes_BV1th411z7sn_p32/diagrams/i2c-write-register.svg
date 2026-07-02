@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 160" width="100%" role="img">
+  <title>I2C 写寄存器时序</title>
+  <desc>I2C write register timing: Start → Slave Addr+W → ACK → Reg Addr → ACK → Data → ACK → Stop</desc>
+  <rect x="0" y="0" width="680" height="160" fill="#FAFAFA" rx="12"/>
+  
+  <text x="340" y="22" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a1a1a">I2C 写寄存器（MCU → MPU6050）</text>
+  
+  <text x="340" y="42" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A">SDA 数据方向：MCU发送 → MPU6050接收</text>
+  
+  <!-- Master/Slave labels -->
+  <text x="45" y="68" font-family="sans-serif" font-size="10" fill="#185FA5">MCU 发送:</text>
+  <text x="45" y="90" font-family="sans-serif" font-size="10" fill="#E24B4A">MCU 接收:</text>
+  
+  <!-- Start -->
+  <rect x="110" y="58" width="46" height="28" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="133" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">START</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="156" y1="72" x2="178" y2="72" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="175,68 182,72 175,76" fill="#D3D1C7"/>
+  
+  <!-- Address + W -->
+  <rect x="182" width="96" y="58" height="28" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="230" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#0C447C">0x68+W</text>
+  <text x="230" y="84" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#185FA5">从机地址+写</text>
+  
+  <!-- Arrow -->
+  <line x1="278" y1="72" x2="300" y2="72" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="297,68 304,72 297,76" fill="#D3D1C7"/>
+  
+  <!-- ACK -->
+  <rect x="304" y="58" width="54" height="28" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="331" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">ACK</text>
+  <text x="331" y="88" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#E24B4A">← 从机</text>
+  
+  <!-- Arrow -->
+  <line x1="358" y1="72" x2="380" y2="72" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="377,68 384,72 377,76" fill="#D3D1C7"/>
+  
+  <!-- Reg Addr -->
+  <rect x="384" y="58" width="96" height="28" rx="6" fill="#EAF3DE" stroke="#639922"/>
+  <text x="432" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3B6D11">0x3B</text>
+  <text x="432" y="84" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#639922">寄存器地址</text>
+  
+  <!-- Arrow -->
+  <line x1="480" y1="72" x2="502" y2="72" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="499,68 506,72 499,76" fill="#D3D1C7"/>
+  
+  <!-- ACK -->
+  <rect x="506" y="58" width="54" height="28" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="533" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">ACK</text>
+  
+  <!-- Arrow -->
+  <line x1="560" y1="72" x2="582" y2="72" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="579,68 586,72 579,76" fill="#D3D1C7"/>
+  
+  <!-- Data -->
+  <rect x="124" y="102" width="72" height="26" rx="6" fill="#FAEEDA" stroke="#BA7517"/>
+  <text x="160" y="119" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#854F0B">数据字节</text>
+  
+  <!-- Arrow data to ACK -->
+  <line x1="196" y1="115" x2="218" y2="115" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="215,111 222,115 215,119" fill="#D3D1C7"/>
+  
+  <rect x="222" y="102" width="54" height="26" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="249" y="119" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">ACK</text>
+  
+  <!-- Arrow -->
+  <line x1="276" y1="115" x2="298" y2="115" stroke="#D3D1C7" stroke-width="1.5"/>
+  <polygon points="295,111 302,115 295,119" fill="#D3D1C7"/>
+  
+  <!-- Stop -->
+  <rect x="302" y="102" width="50" height="26" rx="6" fill="#FCEBEB" stroke="#E24B4A"/>
+  <text x="327" y="119" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A32D2D">STOP</text>
+  
+  <!-- Legend -->
+  <rect x="380" y="100" width="270" height="50" rx="6" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="400" y="118" font-family="sans-serif" font-size="9" fill="#5F5E5A">蓝=MCU发送 | 红=从机应答</text>
+  <text x="400" y="134" font-family="sans-serif" font-size="9" fill="#5F5E5A">START后第一步=地址；第二步=寄存器；第三步=数据</text>
+</svg>

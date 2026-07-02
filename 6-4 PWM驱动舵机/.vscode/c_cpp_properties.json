@@ -12,6 +12,7 @@
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw"
             ],
             "defines": [
+                "STM32F10X_MD",
                 "USE_STDPERIPH_DRIVER",
                 "__CC_ARM",
                 "__arm__",
@@ -86,7 +87,7 @@
                 "__yield()=",
                 "__vfp_status(x,y)=0"
             ],
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "gcc-arm"
         }
     ],
     "version": 4

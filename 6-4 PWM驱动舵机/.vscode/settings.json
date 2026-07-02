@@ -13,5 +13,6 @@
         "stm32f10x_tim.h": "c",
         "servo.h": "c",
         "key.h": "c"
-    }
+    },
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe"
 }

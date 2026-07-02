@@ -1,0 +1,65 @@
+[info] Log at : 2025/9/18|10:51:43|GMT+0800
+
+[info] Log at : 2025/9/18|11:15:30|GMT+0800
+
+[info] Log at : 2025/9/18|14:19:09|GMT+0800
+
+[info] Log at : 2025/9/18|14:35:08|GMT+0800
+
+[info] Log at : 2025/9/18|14:35:54|GMT+0800
+
+[info] Log at : 2025/9/18|14:35:58|GMT+0800
+
+[info] Log at : 2025/9/18|16:38:30|GMT+0800
+
+[info] Log at : 2025/9/18|16:38:37|GMT+0800
+
+[info] Log at : 2025/9/19|17:01:16|GMT+0800
+
+[info] Log at : 2025/9/19|17:01:20|GMT+0800
+
+[info] Log at : 2026/5/12|10:52:11|GMT+0800
+
+[info] Log at : 2026/5/12|10:52:17|GMT+0800
+
+[info] Log at : 2026/5/12|13:29:25|GMT+0800
+
+[info] Log at : 2026/5/12|13:31:10|GMT+0800
+
+[info] Log at : 2026/5/14|09:41:44|GMT+0800
+
+[info] Log at : 2026/5/18|13:33:37|GMT+0800
+
+[info] Log at : 2026/5/18|17:10:01|GMT+0800
+
+[info] Log at : 2026/5/18|17:10:37|GMT+0800
+
+[info] Log at : 2026/5/18|17:19:05|GMT+0800
+
+[SyntaxError: Unexpected token '﻿', "﻿{
+    "co"... is not valid JSON
+	at JSON.parse (<anonymous>)
+	at F.updateCppProperties (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:10849)
+	at F.<anonymous> (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:12579)
+	at Generator.next (<anonymous>)
+	at c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4480
+	at new Promise (<anonymous>)
+	at r (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4225)
+	at F.load (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:11310)
+	at w.<anonymous> (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:8737)
+	at Generator.next (<anonymous>)
+	at a (c:\Users\Xch\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4282)]
+[info] Log at : 2026/5/19|22:05:15|GMT+0800
+
+[info] Log at : 2026/5/19|23:16:13|GMT+0800
+
+[info] Log at : 2026/5/29|14:49:13|GMT+0800
+
+[info] Log at : 2026/5/29|14:49:52|GMT+0800
+
+[info] Log at : 2026/5/29|15:15:58|GMT+0800
+
+[info] Log at : 2026/5/29|15:20:29|GMT+0800
+
+[info] Log at : 2026/5/29|15:54:25|GMT+0800
+

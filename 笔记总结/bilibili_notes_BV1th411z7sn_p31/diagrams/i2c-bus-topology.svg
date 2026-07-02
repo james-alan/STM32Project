@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="100%" role="img">
+  <title>I2C 总线拓扑图</title>
+  <desc>VCC经上拉电阻接SDA总线，总线上挂载1个主机和3个从机</desc>
+
+  <rect x="0" y="0" width="680" height="320" fill="#FAFAFA" rx="12"/>
+
+  <text x="340" y="26" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="500" fill="#26215C">I2C 总线拓扑 — 开漏输出 + 上拉电阻</text>
+
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A">VCC</text>
+  <line x1="310" y1="58" x2="370" y2="58" stroke="#444441" stroke-width="1.5"/>
+
+  <rect x="320" y="64" width="40" height="36" rx="5" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="340" y="79" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#534AB7">Rp</text>
+  <text x="340" y="93" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#534AB7">4.7k</text>
+
+  <line x1="340" y1="100" x2="340" y2="118" stroke="#534AB7" stroke-width="1.5"/>
+  <circle cx="340" cy="121" r="3" fill="#534AB7"/>
+
+  <line x1="60" y1="121" x2="620" y2="121" stroke="#444441" stroke-width="2"/>
+  <text x="50" y="125" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="500" fill="#444441">SDA</text>
+
+  <!-- Master device -->
+  <line x1="140" y1="121" x2="140" y2="148" stroke="#444441" stroke-width="1.5"/>
+  <rect x="85" y="148" width="110" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="140" y="168" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#0C447C">主机 Master</text>
+  <text x="140" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#378ADD">MCU</text>
+
+  <!-- Slave 1 -->
+  <line x1="280" y1="121" x2="280" y2="148" stroke="#444441" stroke-width="1.5"/>
+  <rect x="230" y="148" width="100" height="52" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
+  <text x="280" y="168" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#3B6D11">从机 #1</text>
+  <text x="280" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#639922">传感器</text>
+
+  <!-- Slave 2 -->
+  <line x1="420" y1="121" x2="420" y2="148" stroke="#444441" stroke-width="1.5"/>
+  <rect x="370" y="148" width="100" height="52" rx="8" fill="#EAE3DE" stroke="#BA7517" stroke-width="1"/>
+  <text x="420" y="168" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#854F0B">从机 #2</text>
+  <text x="420" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#BA7517">OLED</text>
+
+  <!-- Slave 3 -->
+  <line x1="560" y1="121" x2="560" y2="148" stroke="#444441" stroke-width="1.5"/>
+  <rect x="510" y="148" width="100" height="52" rx="8" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+  <text x="560" y="168" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#72243E">从机 #3</text>
+  <text x="560" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#D4537E">EEPROM</text>
+
+  <!-- SCL line -->
+  <line x1="60" y1="230" x2="620" y2="230" stroke="#444441" stroke-width="2"/>
+  <text x="50" y="234" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="500" fill="#444441">SCL</text>
+
+  <rect x="320" y="208" width="40" height="20" rx="5" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="340" y="221" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#534AB7">Rp</text>
+
+  <line x1="340" y1="208" x2="340" y2="188" stroke="#534AB7" stroke-width="1"/>
+  <text x="340" y="184" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">VCC</text>
+
+  <line x1="140" y1="230" x2="140" y2="202" stroke="#444441" stroke-width="1.5"/>
+  <line x1="280" y1="230" x2="280" y2="202" stroke="#444441" stroke-width="1.5"/>
+  <line x1="420" y1="230" x2="420" y2="202" stroke="#444441" stroke-width="1.5"/>
+  <line x1="560" y1="230" x2="560" y2="202" stroke="#444441" stroke-width="1.5"/>
+
+  <!-- Key insight -->
+  <rect x="100" y="270" width="480" height="36" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="340" y="284" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#534AB7">所有设备都是开漏输出 — 只能拉低，不能主动拉高</text>
+  <text x="340" y="298" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#534AB7">高电平全靠上拉电阻被动拉高 → 永不短路（线"与"逻辑）</text>
+</svg>

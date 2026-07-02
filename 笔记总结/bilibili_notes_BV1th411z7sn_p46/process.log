@@ -1,0 +1,112 @@
+
+=== P46 start 2026-05-25T18:42:39 ===
+
+$ videocaptioner download https://www.bilibili.com/video/BV1th411z7sn?p=46 -o C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46
+
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[BiliBili] Extracting URL: https://www.bilibili.com/video/BV1th411z7sn?p=46
+[BiliBili] 1th411z7sn: Downloading webpage
+
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[BiliBili] BV1th411z7sn: Extracting videos in anthology
+
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[BiliBili] BV1th411z7sn: Downloading wbi sign
+
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[BiliBili] BV1th411z7sn: Downloading video formats for cid 1260999250
+
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[BiliBili] Format(s) 1080P ����, 720P ׼���� are missing; you have to become a premium member to download them. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+[BiliBili] 206940155: Extracting chapters
+
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[info] BV1th411z7sn_p46: Downloading 1 format(s): 100023+30280
+
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p46 [14-1] WDG���Ź�.f100023.mp4
+
+[download]   0.0% of   21.41MiB at  Unknown B/s ETA Unknown
+[download]   0.0% of   21.41MiB at    2.06MiB/s ETA 00:10  
+[download]   0.0% of   21.41MiB at    3.54MiB/s ETA 00:06
+[download]   0.1% of   21.41MiB at    7.59MiB/s ETA 00:02
+[download]   0.1% of   21.41MiB at   15.69MiB/s ETA 00:01
+[download]   0.3% of   21.41MiB at    3.49MiB/s ETA 00:06
+[download]   0.6% of   21.41MiB at    3.41MiB/s ETA 00:06
+[download]   1.2% of   21.41MiB at    4.58MiB/s ETA 00:04
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]   2.3% of   21.41MiB at    6.87MiB/s ETA 00:03
+[download]   4.7% of   21.41MiB at   10.84MiB/s ETA 00:01
+[download]   9.3% of   21.41MiB at   17.67MiB/s ETA 00:01
+[download]  18.7% of   21.41MiB at   26.79MiB/s ETA 00:00
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  37.4% of   21.41MiB at   26.28MiB/s ETA 00:00
+[download]  56.1% of   21.41MiB at   34.51MiB/s ETA 00:00
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  74.7% of   21.41MiB at   36.96MiB/s ETA 00:00
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  93.4% of   21.41MiB at   39.35MiB/s ETA 00:00
+[download] 100.0% of   21.41MiB at   40.05MiB/s ETA 00:00
+[download] 100% of   21.41MiB in 00:00:00 at 30.25MiB/s  
+
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K[download] Destination: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p46 [14-1] WDG���Ź�.f30280.m4a
+
+[download]   0.0% of   25.38MiB at   25.30KiB/s ETA 17:07
+[download]   0.0% of   25.38MiB at   73.65KiB/s ETA 05:52
+[download]   0.0% of   25.38MiB at  171.84KiB/s ETA 02:31
+[download]   0.1% of   25.38MiB at  368.23KiB/s ETA 01:10
+[download]   0.1% of   25.38MiB at  436.04KiB/s ETA 00:59
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]   0.2% of   25.38MiB at  602.59KiB/s ETA 00:43
+[download]   0.5% of   25.38MiB at  749.26KiB/s ETA 00:34
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]   1.0% of   25.38MiB at    1.20MiB/s ETA 00:21
+[download]   2.0% of   25.38MiB at    1.83MiB/s ETA 00:13
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]   3.9% of   25.38MiB at    2.73MiB/s ETA 00:08
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]   7.9% of   25.38MiB at    4.61MiB/s ETA 00:05
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  15.8% of   25.38MiB at    7.38MiB/s ETA 00:02
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  31.5% of   25.38MiB at   11.17MiB/s ETA 00:01
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  47.3% of   25.38MiB at   12.70MiB/s ETA 00:01
+[download]  63.0% of   25.38MiB at   15.85MiB/s ETA 00:00
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  78.8% of   25.38MiB at   16.10MiB/s ETA 00:00
+\u2807 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u280f Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download]  94.6% of   25.38MiB at   17.28MiB/s ETA 00:00
+\u280b Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[download] 100.0% of   25.38MiB at   17.00MiB/s ETA 00:00
+[download] 100% of   25.38MiB in 00:00:01 at 15.27MiB/s  
+[Merger] Merging formats into "C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p46 [14-1] WDG���Ź�.mp4"
+
+\u2819 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2839 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2838 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u283c Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2834 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+\u2826 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[KDeleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p46 [14-1] WDG���Ź�.f30280.m4a (pass -k to keep)
+Deleting original file C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32���Ž̳�-2023�� ϸ�½��� ������Ļ p46 [14-1] WDG���Ź�.f100023.mp4 (pass -k to keep)
+
+\u2827 Downloading https://www.bilibili.com/video/BV1th411z7sn?p=46[K
+[K\u2713 Downloaded to C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46/
+starting faster-whisper fallback model=tiny
+faster-whisper complete -> C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32入门教程-2023版 细致讲解 中文字幕 p46 [14-1] WDG看门狗.srt (885 segments)
+
+$ C:\Users\Xch\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Xch\.workbuddy\skills\bilibili-to-notes\scripts\extract_srt.py C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32入门教程-2023版 细致讲解 中文字幕 p46 [14-1] WDG看门狗.srt C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\transcript.txt
+Extracted 11191 characters �� C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\transcript.txt
+deleted mp4: C:\Users\Xch\Documents\New project\1615\bilibili_notes_BV1th411z7sn_p46\STM32入门教程-2023版 细致讲解 中文字幕 p46 [14-1] WDG看门狗.mp4
