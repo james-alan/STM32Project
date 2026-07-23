@@ -1,4 +1,5 @@
-#include "stm32f10x.h"
+ #include "Serial.h"
+ #include "stm32f10x.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -47,10 +48,10 @@ void Serial_SendArray(uint8_t *Array, uint8_t Length)
     }
 }
 
- void Serial_SendString(char *String)
- {
-    uint8_t i;
-    for (i = 0; String[i] != '\0'; i++)
+  void Serial_SendString(char *String)
+  {
+     uint16_t i;
+     for (i = 0; String[i] != '\0'; i++)
     {
         Serial_SendByte(String[i]);
     }
@@ -67,7 +68,7 @@ uint32_t Serial_Pow(uint32_t X, uint32_t Y)
     return Result;
 }
 // 数字只能一位一位发
-void Serial_Number(uint32_t Number, uint8_t Length)
+void Serial_SendNumber(uint32_t Number, uint8_t Length)
 {
     uint8_t i;
     for (i = 0; i < Length; i++)
@@ -75,3 +76,20 @@ void Serial_Number(uint32_t Number, uint8_t Length)
         Serial_SendByte(Number / Serial_Pow(10, Length - i - 1) % 10 + '0'); //
     }
 }
+
+
+//重定向printf
+ int fputc(int ch, FILE *f){
+     Serial_SendByte(ch);
+    return ch;
+}
+
+//自己封装printf
+void Serial_printf(char* format, ...){
+    char String[100];
+    va_list arg;
+    va_start(arg,format);
+    vsprintf(String,format,arg);
+     va_end(arg);
+     Serial_SendString(String);
+ }
