@@ -22,7 +22,7 @@ int main(void)
 		KeyNum = Key_GetNum();			//获取按键键码
 		if (KeyNum == 1)				//按键1按下
 		{
-			Angle += 30;				//角度变量自增30
+			Angle += 10;				//角度变量自增30
 			if (Angle > 180)			//角度变量超过180后
 			{
 				Angle = 0;				//角度变量归零
