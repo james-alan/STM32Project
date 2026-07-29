@@ -34,13 +34,18 @@ void Serial_Init()
     USART_Initstructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;                 // 模式 输入和输出
     USART_Init(USART1, &USART_Initstructure);
 
+    //中断输出配置
+    USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+
+    //中断分组
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
     // 中断设置
     NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-
     NVIC_Init(&NVIC_InitStructure);
 
     // USART使能
