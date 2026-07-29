@@ -13,14 +13,13 @@ void Serial_Init()
 
     // GPIO初始化 TX
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; //复用推挽输出
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // 复用推挽输出
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-        // GPIO初始化 RX
-    GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; //上拉输入
+    // GPIO初始化 RX
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; // 上拉输入
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -32,15 +31,15 @@ void Serial_Init()
     USART_Initstructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None; // 硬件流控
     USART_Initstructure.USART_StopBits = USART_StopBits_1;                          // 停止位
     USART_Initstructure.USART_Parity = USART_Parity_No;                             // 奇偶校验
-    USART_Initstructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;                                 // 模式 输入和输出
+    USART_Initstructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;                 // 模式 输入和输出
     USART_Init(USART1, &USART_Initstructure);
 
-    //中断设置
+    // 中断设置
     NVIC_InitTypeDef NVIC_InitStructure;
-	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;		
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
-    NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
     NVIC_Init(&NVIC_InitStructure);
 
@@ -113,28 +112,31 @@ void Serial_printf(char *format, ...)
     Serial_SendString(String);
 }
 
+// 获取串口接收标识位
+uint8_t Serial_GetRxFlag(void)
+{
+    if (Serial_RxFlag == 1)
+    {
 
-//获取串口接收标识位
-uint8_t Serial_GetRxFlag(void){
-    if(Serial_RxFlag==1){
-
-        Serial_RxFlag=0;
+        Serial_RxFlag = 0;
         return 1;
     }
     return 0;
 }
 
-//获取串口接收的数据
-uint8_t Serial_GetRxData(){
+// 获取串口接收的数据
+uint8_t Serial_GetRxData()
+{
     return Serial_RxData;
 }
 
-
-//USART中断函数
-void USART1_IRQHandler(){
-    if(USART_GetITStatus(USART1,USART_IT_RXNE)==SET){
-        Serial_RxData=USART_ReceiveData(USART1);
-        Serial_RxFlag=1;
-        USART_ClearITPendingBit(USART1,USART_IT_RXNE);
+// USART中断函数
+void USART1_IRQHandler()
+{
+    if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+    {
+        Serial_RxData = USART_ReceiveData(USART1);
+        Serial_RxFlag = 1;
+        USART_ClearITPendingBit(USART1, USART_IT_RXNE);
     }
 }
