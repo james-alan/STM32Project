@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" role="img">
+  <title>SPI 通信协议知识总结</title>
+  <desc>SPI 核心：四线、一主多从、移位交换字节、四种模式、无应答、W25Q64 指令模型</desc>
+  <rect x="0" y="0" width="680" height="440" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">SPI 通信协议知识总结</text>
+
+  <!-- 根节点 -->
+  <rect x="240" y="56" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="82" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">SPI 通信协议</text>
+
+  <!-- 分支线 -->
+  <line x1="270" y1="98" x2="150" y2="136" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="320" y1="98" x2="320" y2="136" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="370" y1="98" x2="520" y2="136" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="410" y1="98" x2="580" y2="136" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="320" y1="98" x2="320" y2="300" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 节点 1：四根线 -->
+  <rect x="50" y="136" width="200" height="48" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="150" y="156" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">① 四根通信线</text>
+  <text x="150" y="174" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">SCK 时钟 / MOSI / MISO / SS(CS)</text>
+  <text x="150" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">SS 低有效，独立片选一主多从</text>
+
+  <!-- 节点 2：移位交换 -->
+  <rect x="230" y="136" width="200" height="48" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="330" y="156" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">② 核心原理</text>
+  <text x="330" y="174" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">两个移位寄存器"交换一个字节"</text>
+  <text x="330" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">发送=接收（全双工），SCK 驱动</text>
+
+  <!-- 节点 3：四种模式 -->
+  <rect x="455" y="136" width="200" height="48" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="555" y="156" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">③ 四种模式</text>
+  <text x="555" y="174" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">CPOL(空闲电平) × CPHA(采样边沿)</text>
+  <text x="555" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">模式0最常用，重点掌握</text>
+
+  <!-- 节点 4：W25Q64 -->
+  <rect x="455" y="240" width="200" height="48" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="555" y="260" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">④ W25Q64 指令模型</text>
+  <text x="555" y="278" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">指令码 + 数据（地址/写入内容）</text>
+  <text x="555" y="306" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">例：0x02 写数据 / 0x03 读数据</text>
+
+  <!-- 底部对比框 -->
+  <rect x="50" y="300" width="605" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="70" y="320" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">与 I2C 的对比：</text>
+  <text x="70" y="338" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">速度更快（可达数十 MHz）/ 全双工两条线 / 无 ACK 应答 / 硬件简单粗暴 / 占用引脚多、有资源浪费</text>
+
+  <!-- 底部口诀 -->
+  <rect x="50" y="362" width="605" height="60" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="70" y="384" font-family="sans-serif" font-size="11" fill="#0C447C" font-weight="bold">核心记忆口诀：</text>
+  <text x="70" y="402" font-family="sans-serif" font-size="10.5" fill="#0C447C">四线同步全双工 / 移位交换一字节 / SCK 掌控节奏 / CS 拉低选从机</text>
+  <text x="70" y="418" font-family="sans-serif" font-size="10.5" fill="#0C447C">无应答不回头 / 模式0最常用 / 指令加数据控制 W25Q64</text>
+</svg>

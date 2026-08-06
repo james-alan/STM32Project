@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>I2C 多主机模型：固定多主机 vs 可变多主机</title>
+  <desc>固定多主机：多个固定主机加多个从机；可变多主机：所有设备平等，谁要通信谁跳出来当主机（STM32 采用）</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">I2C 多主机模型对比</text>
+
+  <!-- 左栏：固定多主机 -->
+  <rect x="40" y="62" width="290" height="270" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="185" y="88" font-family="sans-serif" font-size="13" fill="#A32D2D" text-anchor="middle" font-weight="bold">固定多主机模型</text>
+  <!-- 总线 -->
+  <line x1="60" y1="112" x2="310" y2="112" stroke="#185FA5" stroke-width="2"/>
+  <text x="320" y="116" font-family="sans-serif" font-size="10" fill="#5F5E5A">I2C 总线</text>
+  <!-- 主机 -->
+  <rect x="70" y="128" width="100" height="38" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="6"/>
+  <text x="120" y="152" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle" font-weight="bold">主机 A（老师）</text>
+  <rect x="205" y="128" width="100" height="38" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="6"/>
+  <text x="255" y="152" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle" font-weight="bold">主机 B（老师）</text>
+  <line x1="120" y1="128" x2="120" y2="112" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="255" y1="128" x2="255" y2="112" stroke="#E24B4A" stroke-width="1.5"/>
+  <!-- 从机 -->
+  <rect x="70" y="215" width="80" height="32" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="110" y="235" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">从机 1（学生）</text>
+  <rect x="165" y="215" width="80" height="32" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="205" y="235" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">从机 2（学生）</text>
+  <rect x="260" y="215" width="45" height="32" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="283" y="235" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">…</text>
+  <line x1="110" y1="215" x2="110" y2="112" stroke="#D3D1C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="205" y1="215" x2="205" y2="112" stroke="#D3D1C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="185" y="185" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">两个老师同时说话 → 总线冲突 → 仲裁</text>
+  <text x="185" y="200" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">失败的一方让出总线控制权</text>
+  <text x="185" y="268" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">总线上的主机身份固定不变</text>
+  <text x="185" y="283" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">（类比：讲台上同时站着多个老师）</text>
+  <text x="185" y="310" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle" font-weight="bold">STM32 使用的不是这种模型</text>
+
+  <!-- 右栏：可变多主机 -->
+  <rect x="350" y="62" width="290" height="270" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="495" y="88" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">可变多主机模型（STM32 采用）</text>
+  <!-- 总线 -->
+  <line x1="370" y1="112" x2="620" y2="112" stroke="#185FA5" stroke-width="2"/>
+  <text x="630" y="116" font-family="sans-serif" font-size="10" fill="#5F5E5A">I2C 总线</text>
+  <!-- 设备 -->
+  <rect x="370" y="132" width="56" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="398" y="154" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">设备 1</text>
+  <rect x="436" y="132" width="56" height="36" fill="#FAEEDA" stroke="#BA7517" stroke-width="2" rx="6"/>
+  <text x="464" y="154" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle" font-weight="bold">设备 2</text>
+  <rect x="502" y="132" width="56" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="530" y="154" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">设备 3</text>
+  <rect x="568" y="132" width="56" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="596" y="154" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">设备 4</text>
+  <line x1="398" y1="132" x2="398" y2="112" stroke="#D3D1C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="464" y1="132" x2="464" y2="112" stroke="#BA7517" stroke-width="2"/>
+  <line x1="530" y1="132" x2="530" y2="112" stroke="#D3D1C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="596" y1="132" x2="596" y2="112" stroke="#D3D1C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="495" y="192" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle" font-weight="bold">设备 2 想发数据 → 跳出来当主机</text>
+  <text x="495" y="208" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">指定任意其他设备进行通信</text>
+  <text x="495" y="224" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">通信完成后 → 坐下退回从机</text>
+  <text x="495" y="252" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">多个设备同时跳出来 → 总线冲突 → 仲裁</text>
+  <text x="495" y="268" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">失败方让出总线控制权</text>
+  <text x="495" y="296" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">（类比：教室里没有固定老师，</text>
+  <text x="495" y="311" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">谁想发言谁就站出来）</text>
+
+  <!-- 底部 -->
+  <rect x="40" y="348" width="600" height="38" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="372" font-family="sans-serif" font-size="11" fill="#0C447C" font-weight="bold">结论：STM32 按可变多主机设计 —— 即使我们只用"一主一从"，写代码时也必须按"先跳出当主机"的流程来操作</text>
+</svg>

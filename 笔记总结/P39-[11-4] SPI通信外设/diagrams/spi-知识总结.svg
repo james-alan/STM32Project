@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" role="img">
+  <title>SPI 通信外设知识总结</title>
+  <desc>SPI 外设知识总结：软件vs硬件、功能特性、框图核心、收发流程、性能选择</desc>
+  <rect x="0" y="0" width="680" height="440" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">SPI 通信外设知识总结</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">核心脉络：软件 vs 硬件 → 功能特性 → 框图核心 → 收发流程 → 性能取舍</text>
+
+  <!-- 顶层：软件 vs 硬件 -->
+  <rect x="60" y="80" width="270" height="64" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="195" y="103" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">软件 SPI</text>
+  <text x="195" y="121" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">手动翻转电平，方便灵活</text>
+  <text x="195" y="136" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">适合学习、任意引脚</text>
+
+  <rect x="360" y="80" width="270" height="64" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="495" y="103" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">硬件 SPI（本课）</text>
+  <text x="495" y="121" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">外设自动收发，高性能省资源</text>
+  <text x="495" y="136" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">固定引脚（SPI1=APB2/SPI2=APB1）</text>
+
+  <!-- 箭头到核心 -->
+  <line x1="345" y1="130" x2="360" y2="130" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="345" y1="144" x2="360" y2="144" stroke="#185FA5" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- 中间：框图核心 -->
+  <rect x="60" y="170" width="570" height="80" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="345" y="192" font-family="sans-serif" font-size="12.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">框图核心：数据寄存器 DR + 移位寄存器 打配合（两级流水线）</text>
+  <text x="345" y="212" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">发送：写 DR(TDR) → 转移位寄存器 → 逐位移出 MOSI（置 TXE）</text>
+  <text x="345" y="230" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">接收：MISO 逐位移入 → 整体转 RDR（置 RXNE）→ 软件读 DR</text>
+  <text x="345" y="245" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">发送/接收同时进行（全双工），与 I2C 半双工、串口双工不同</text>
+
+  <!-- 下方三块 -->
+  <rect x="60" y="276" width="180" height="70" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="150" y="298" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">初始化配置</text>
+  <text x="150" y="316" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">8 位 / 高位先行</text>
+  <text x="150" y="331" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">CPOL/CPHA 选模式</text>
+  <text x="150" y="346" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">主模式 / 分频 / 使能</text>
+
+  <rect x="260" y="276" width="190" height="70" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="355" y="298" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">收发流程（四步）</text>
+  <text x="355" y="316" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">① 等待 TXE = 1</text>
+  <text x="355" y="331" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">② 写入发送数据到 DR</text>
+  <text x="355" y="346" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">③ 等待 RXNE = 1 ④ 读 DR</text>
+
+  <rect x="470" y="276" width="160" height="70" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="550" y="298" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">片选 NSS</text>
+  <text x="550" y="316" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">硬件 NSS 偏多主机</text>
+  <text x="550" y="331" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">实际用 GPIO 模拟</text>
+  <text x="550" y="346" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">一主多从最常见</text>
+
+  <!-- 底部：性能取舍 -->
+  <rect x="60" y="372" width="570" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="80" y="394" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">性能取舍：</text>
+  <text x="80" y="410" font-family="sans-serif" font-size="11" fill="#5F5E5A">连续传输（字节间无间隙、流程交错复杂）vs 非连续传输（四步循环、简单易写、高频下有间隙）</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>W25Q64 内部框图：SPI 控制逻辑、状态寄存器、地址锁存、页缓存与 Flash 阵列</title>
+  <desc>主控通过 SPI 通信引脚把指令和数据发给 SPI 控制逻辑（芯片管理员），由它自动完成地址锁存、数据读写、写保护与高压编程；数据读写都经过 256 字节页缓存区</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">W25Q64 内部框图（简化版）</text>
+
+  <!-- ① SPI 通信引脚 -->
+  <rect x="40" y="58" width="170" height="76" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="125" y="80" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">① SPI 通信引脚</text>
+  <text x="125" y="98" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">CS / CLK / DI / DO</text>
+  <text x="125" y="114" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">WP / HOLD（可复用为 IO2/IO3）</text>
+  <text x="125" y="129" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">与主控芯片相连</text>
+
+  <!-- ② SPI 控制逻辑 -->
+  <rect x="240" y="58" width="180" height="76" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="330" y="80" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">② SPI 控制逻辑</text>
+  <text x="330" y="98" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">＝整个芯片的管理员</text>
+  <text x="330" y="114" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">地址锁存、数据读写自动完成</text>
+  <text x="330" y="129" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">把指令和数据"翻译"成内部操作</text>
+
+  <!-- ③ 状态寄存器 -->
+  <rect x="450" y="58" width="190" height="76" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" rx="10"/>
+  <text x="545" y="80" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">③ 状态寄存器（重要）</text>
+  <text x="545" y="98" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">BUSY 忙状态 / WEL 写使能</text>
+  <text x="545" y="114" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">写保护状态位</text>
+  <text x="545" y="129" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">只能读、不能改，反映芯片状态</text>
+
+  <!-- 箭头 ①↔② -->
+  <line x1="210" y1="96" x2="238" y2="96" stroke="#185FA5" stroke-width="2"/>
+  <polygon points="238,96 228,91 228,101" fill="#185FA5"/>
+  <polygon points="210,96 220,91 220,101" fill="#185FA5"/>
+  <!-- 箭头 ②↔③ -->
+  <line x1="420" y1="96" x2="448" y2="96" stroke="#534AB7" stroke-width="2"/>
+  <polygon points="448,96 438,91 438,101" fill="#534AB7"/>
+  <polygon points="420,96 430,91 430,101" fill="#534AB7"/>
+
+  <!-- ④ 写控制逻辑 -->
+  <rect x="450" y="164" width="190" height="46" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="545" y="184" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">④ 写控制逻辑</text>
+  <text x="545" y="201" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">配合外部 WP 引脚 → 硬件写保护</text>
+  <line x1="420" y1="104" x2="545" y2="162" stroke="#A32D2D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="462" y="128" font-family="sans-serif" font-size="9.5" fill="#A32D2D">指令</text>
+
+  <!-- ⑤ 高电压发生器 -->
+  <rect x="450" y="220" width="190" height="46" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="545" y="240" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">⑤ 高电压发生器</text>
+  <text x="545" y="257" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">Flash 非易失编程需要高压，无需外接</text>
+
+  <!-- ⑥ 地址锁存计数器 -->
+  <rect x="40" y="164" width="360" height="64" fill="#EAF3DE" stroke="#639922" stroke-width="2" rx="10"/>
+  <text x="220" y="186" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">⑥ 页地址锁存/计数器 ＋ 字节地址锁存/计数器</text>
+  <text x="220" y="204" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">3 字节地址：前 2 字节 → 页地址；最后 1 字节 → 页内字节地址</text>
+  <text x="220" y="221" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">带计数器 → 读写后可自动加 1，方便连续读写多字节</text>
+  <line x1="330" y1="134" x2="220" y2="162" stroke="#639922" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="300" y="144" font-family="sans-serif" font-size="9.5" fill="#3B6D11">3 字节地址</text>
+
+  <!-- ⑦ 页缓存区 -->
+  <rect x="40" y="258" width="360" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="220" y="280" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">⑦ 256 字节页缓存区（RAM，速度跟得上 SPI 总线）</text>
+  <text x="220" y="299" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">→ 单次写时序最多 256 字节；写完要搬数据，芯片进入忙状态</text>
+  <line x1="240" y1="228" x2="220" y2="256" stroke="#5F5E5A" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ⑧ Flash 存储阵列 -->
+  <rect x="450" y="276" width="190" height="56" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="545" y="298" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">⑧ Flash 存储阵列（8MB）</text>
+  <text x="545" y="316" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">非易失，掉电不丢失</text>
+  <text x="545" y="331" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">写入很慢（毫秒级）</text>
+  <line x1="400" y1="284" x2="448" y2="298" stroke="#0C447C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="398" y="278" font-family="sans-serif" font-size="9.5" fill="#0C447C">页缓存 → 阵列</text>
+  <line x1="448" y1="306" x2="400" y2="296" stroke="#0C447C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="398" y="310" font-family="sans-serif" font-size="9.5" fill="#0C447C">读取</text>
+
+  <!-- 底部总结 -->
+  <rect x="40" y="340" width="600" height="118" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="60" y="364" font-family="sans-serif" font-size="12" fill="#333333" font-weight="bold">写入流程（理解 忙状态 的来源）：</text>
+  <text x="60" y="386" font-family="sans-serif" font-size="11" fill="#5F5E5A">① SPI 高速送来数据 → ② 先暂存在 256B 页缓存（RAM，速度快）→ ③ 时序结束后芯片再慢慢把数据</text>
+  <text x="60" y="403" font-family="sans-serif" font-size="11" fill="#5F5E5A">   从缓存搬到 Flash 阵列（慢，毫秒级）→ ④ 搬运期间芯片进入忙状态，状态寄存器 BUSY 位置 1。</text>
+  <text x="60" y="425" font-family="sans-serif" font-size="11" fill="#333333" font-weight="bold">读取流程：</text>
+  <text x="60" y="443" font-family="sans-serif" font-size="11" fill="#5F5E5A">读取只是看一下电路的状态，基本不花时间，所以读取几乎没有限制、速度非常快，也不会进入忙状态。</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>用 BKP 标志位防止 RTC 时间重置流程</title>
+  <desc>上电读 BKP_DR1 判断是否完全断电：标志位不是 0xA5 则重新初始化并写标志位，是 0xA5 则只等待不重置时间</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">用 BKP 标志位防止 RTC 时间重置</text>
+
+  <!-- 起点 -->
+  <rect x="240" y="60" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="21"/>
+  <text x="340" y="85" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">上电 / 复位</text>
+
+  <line x1="340" y1="102" x2="340" y2="130" stroke="#185FA5" stroke-width="1.5"/>
+  <polygon points="335,126 340,136 345,126" fill="#185FA5"/>
+
+  <!-- 判断框 -->
+  <rect x="140" y="130" width="400" height="56" fill="#FFFFFF" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="340" y="152" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">读 BKP_DR1</text>
+  <text x="340" y="172" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle">BKP_ReadBackupRegister(BKP_DR1)</text>
+
+  <!-- 分叉 -->
+  <line x1="340" y1="186" x2="340" y2="215" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="215" x2="160" y2="215" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="215" x2="520" y2="215" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="230" y="207" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">≠ 0xA5</text>
+  <text x="452" y="207" font-family="sans-serif" font-size="11" fill="#639922" text-anchor="middle">= 0xA5</text>
+
+  <!-- 左分支：重新初始化 -->
+  <rect x="40" y="225" width="240" height="120" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="160" y="247" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">系统完全断电过</text>
+  <text x="160" y="267" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">（或第一次上电）</text>
+  <text x="160" y="291" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">执行初始化 + RTC_SetTime()</text>
+  <text x="160" y="311" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">BKP_WriteBackupRegister</text>
+  <text x="160" y="327" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">(BKP_DR1, 0xA5)</text>
+
+  <!-- 右分支：不重置 -->
+  <rect x="400" y="225" width="240" height="120" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="520" y="247" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">备用电池一直有电</text>
+  <text x="520" y="267" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">（备份域没断电过）</text>
+  <text x="520" y="291" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">不重新初始化、不重置时间</text>
+  <text x="520" y="311" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">只调 RTC_WaitForSynchro()</text>
+  <text x="520" y="327" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">+ RTC_WaitForLastTask()</text>
+
+  <!-- 汇合 -->
+  <line x1="160" y1="345" x2="160" y2="400" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="520" y1="345" x2="520" y2="400" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="160" y1="400" x2="520" y2="400" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="400" x2="340" y2="420" stroke="#185FA5" stroke-width="1.5"/>
+  <polygon points="335,416 340,426 345,416" fill="#185FA5"/>
+
+  <!-- 结果 -->
+  <rect x="200" y="426" width="280" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="340" y="444" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">时间继续走，不复位不重置</text>
+  <text x="340" y="460" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">复位/主电源掉电 → 时间不丢</text>
+</svg>

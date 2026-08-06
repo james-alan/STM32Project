@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>RTC 三种时钟源</title>
+  <desc>RTC 时钟源三选一：HSE/128（62.5kHz）、LSE 32.768kHz（推荐）、LSI 40kHz，经 20 位预分频器分频出 1Hz 秒信号</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">RTC 三种时钟源的选择</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">最常用：LSE 外部 32.768kHz 低速晶振 —— 精度高，且掉电后可由 VBAT 维持</text>
+
+  <!-- 三路时钟源 -->
+  <rect x="40" y="100" width="180" height="86" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="130" y="126" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">HSE / 128</text>
+  <text x="130" y="146" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">8MHz ÷ 128 = 62.5kHz</text>
+  <text x="130" y="162" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">主晶振顺带提供</text>
+  <text x="130" y="178" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">VDD 掉电即停</text>
+
+  <rect x="250" y="100" width="180" height="86" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="340" y="126" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">LSE 32.768kHz</text>
+  <text x="340" y="146" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">外部低速晶振</text>
+  <text x="340" y="162" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">OSC32_IN / OUT 引脚</text>
+  <text x="340" y="178" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle" font-weight="bold">★ 首选（VBAT 可维持）</text>
+
+  <rect x="460" y="100" width="180" height="86" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="550" y="126" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">LSI 40kHz</text>
+  <text x="550" y="146" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">内部低速 RC</text>
+  <text x="550" y="162" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">精度较低，可作备用</text>
+  <text x="550" y="178" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">VDD 掉电即停</text>
+
+  <!-- 三选一 MUX -->
+  <rect x="270" y="220" width="140" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="340" y="242" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">选择器 MUX</text>
+  <text x="340" y="258" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">RCC 中配置选择</text>
+  <line x1="220" y1="160" x2="310" y2="220" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="186" x2="340" y2="220" stroke="#639922" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="160" x2="370" y2="220" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- RTCCLK -->
+  <rect x="250" y="310" width="180" height="46" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="340" y="332" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">RTCCLK</text>
+  <text x="340" y="348" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">RTC 输入时钟</text>
+  <line x1="340" y1="270" x2="340" y2="310" stroke="#D3D1C7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 预分频器 -->
+  <rect x="470" y="290" width="170" height="60" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="555" y="312" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle" font-weight="bold">20 位预分频器</text>
+  <text x="555" y="328" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">分频范围 1 ~ 2^20</text>
+  <text x="555" y="343" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">输出 1Hz 秒脉冲</text>
+  <line x1="430" y1="333" x2="470" y2="318" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+</svg>

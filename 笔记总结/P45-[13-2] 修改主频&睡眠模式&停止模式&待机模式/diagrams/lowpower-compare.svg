@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>三种低功耗模式对比</title>
+  <desc>睡眠、停止、待机三种低功耗模式在时钟、唤醒源、可唤醒外设上的对比</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">STM32 三种低功耗模式对比（本课核心）</text>
+
+  <!-- 表头 -->
+  <rect x="40" y="58" width="140" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="110" y="81" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">对比项</text>
+  <rect x="190" y="58" width="150" height="36" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="265" y="81" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">睡眠模式 Sleep</text>
+  <rect x="350" y="58" width="150" height="36" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="425" y="81" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">停止模式 Stop</text>
+  <rect x="510" y="58" width="130" height="36" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="575" y="81" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">待机模式 Standby</text>
+
+  <!-- 行1 时钟 -->
+  <rect x="40" y="104" width="140" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="110" y="125" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">CPU 时钟</text>
+  <text x="110" y="142" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">（本课：主循环停）</text>
+  <rect x="190" y="104" width="150" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="265" y="125" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">CPU 停，外设时钟不断</text>
+  <text x="265" y="142" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">外设可继续接收/产生中断</text>
+  <rect x="350" y="104" width="150" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="425" y="125" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">1.8V 区域时钟全关</text>
+  <text x="425" y="142" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">CPU + 外设都不能运行</text>
+  <rect x="510" y="104" width="130" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="575" y="125" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">全部断电（仅备份域）</text>
+  <text x="575" y="142" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">寄存器数据全部丢失</text>
+
+  <!-- 行2 唤醒源 -->
+  <rect x="40" y="166" width="140" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="110" y="187" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">唤醒源</text>
+  <rect x="190" y="166" width="150" height="52" fill="#EAF3DE" stroke="#639922" stroke-width="1" rx="6"/>
+  <text x="265" y="187" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">任意中断 / 事件</text>
+  <text x="265" y="204" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">例：USART 收到数据产生中断</text>
+  <rect x="350" y="166" width="150" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="425" y="187" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">任意外部中断</text>
+  <text x="425" y="204" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">EXTI 不需要时钟也能工作</text>
+  <rect x="510" y="166" width="130" height="52" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" rx="6"/>
+  <text x="575" y="187" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">仅四种：WKUP 上升沿</text>
+  <text x="575" y="204" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">RTC闹钟/NRST/IWDG</text>
+
+  <!-- 行3 唤醒后 -->
+  <rect x="40" y="228" width="140" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="110" y="249" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">唤醒后从哪继续</text>
+  <rect x="190" y="228" width="150" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="265" y="249" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">暂停处继续执行</text>
+  <text x="265" y="266" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">状态保持，时钟不重新配置</text>
+  <rect x="350" y="228" width="150" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="425" y="249" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">暂停处继续执行</text>
+  <text x="425" y="266" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">但主频退回 HSI 8MHz！</text>
+  <rect x="510" y="228" width="130" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="575" y="249" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">从 main 开头重新跑</text>
+  <text x="575" y="266" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">SystemInit 自动再执行</text>
+
+  <!-- 行4 电流 -->
+  <rect x="40" y="290" width="140" height="52" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1" rx="6"/>
+  <text x="110" y="311" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">省电程度</text>
+  <rect x="190" y="290" width="150" height="52" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1" rx="6"/>
+  <text x="265" y="311" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">最低（CPU 仍耗电）</text>
+  <text x="265" y="328" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">依赖外设时钟不关</text>
+  <rect x="350" y="290" width="150" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="425" y="311" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">中等</text>
+  <rect x="510" y="290" width="130" height="52" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" rx="6"/>
+  <text x="575" y="311" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">最省电</text>
+  <text x="575" y="328" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">实测约 3μA</text>
+
+  <!-- 底部 -->
+  <rect x="40" y="356" width="600" height="34" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="8"/>
+  <text x="60" y="378" font-family="sans-serif" font-size="11" fill="#5F5E5A">选型口诀：</text>
+  <text x="200" y="378" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">有外设中断 → 睡眠；有外部中断 → 停止；只靠 WKUP/RTC 唤醒 → 待机</text>
+</svg>

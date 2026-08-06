@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>P49 工程分层结构：应用层 / Store / MyFlash / 内部Flash</title>
+  <desc>读写内部FLASH的工程分层：应用层调用Store接口，Store管理参数与备份，MyFlash封装读取/擦除/编程，硬件为内部FLASH</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P49 工程分层结构：读写内部 FLASH</text>
+
+  <!-- 应用层 -->
+  <rect x="60" y="60" width="560" height="54" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="340" y="80" font-family="sans-serif" font-size="13" fill="#854F0B" text-anchor="middle" font-weight="bold">应用层（main.c）</text>
+  <text x="340" y="100" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">显示参数 / 按键变换参数 / 调 Store_Save 保存、Store_Clear 清零</text>
+
+  <!-- 箭头 -->
+  <line x1="340" y1="114" x2="340" y2="134" stroke="#854F0B" stroke-width="1.5" marker-end="none"/>
+  <polygon points="334,132 340,142 346,132" fill="#854F0B"/>
+
+  <!-- Store 层 -->
+  <rect x="60" y="142" width="560" height="68" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="340" y="162" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">Store 模块（参数管理）</text>
+  <text x="340" y="182" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">StoreData.Data[512]：Flash 最后一页的"分身"（半字 16 位 × 512）</text>
+  <text x="340" y="198" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">Store_Init 上电加载 / Store_Save 整体备份 / Store_Clear 清零</text>
+
+  <!-- 箭头 -->
+  <line x1="340" y1="210" x2="340" y2="230" stroke="#3B6D11" stroke-width="1.5"/>
+  <polygon points="334,228 340,238 346,228" fill="#3B6D11"/>
+
+  <!-- MyFlash 层 -->
+  <rect x="60" y="238" width="560" height="68" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="258" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">MyFlash 模块（Flash 底层封装）</text>
+  <text x="340" y="278" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">读：ReadWord / ReadHalfWord / ReadByte（指针直接读）</text>
+  <text x="340" y="294" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">擦：EraseAllPages / ErasePage　写：ProgramWord / ProgramHalfWord（内含解锁、加锁）</text>
+
+  <!-- 箭头 -->
+  <line x1="340" y1="306" x2="340" y2="326" stroke="#0C447C" stroke-width="1.5"/>
+  <polygon points="334,324 340,334 346,324" fill="#0C447C"/>
+
+  <!-- 硬件层 -->
+  <rect x="60" y="334" width="560" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="340" y="354" font-family="sans-serif" font-size="12.5" fill="#3C3489" text-anchor="middle" font-weight="bold">内部 FLASH（STM32F103C8T6，64KB）</text>
+  <text x="340" y="370" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">0x08000000 起始 · 最后一页用于保存参数 · 必须解锁 → 擦除 → 编程 → 加锁</text>
+</svg>

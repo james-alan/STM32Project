@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>P45 知识总结</title>
+  <desc>本课核心：修改主频流程、三种低功耗模式的选择与实现、唤醒后的注意事项、省电设计要点</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P45 知识总结：修改主频 + 三种低功耗模式</text>
+
+  <!-- 根 -->
+  <rect x="240" y="56" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="82" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">低功耗 = 省电主题</text>
+
+  <line x1="290" y1="98" x2="160" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="98" x2="340" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="390" y1="98" x2="520" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+
+  <!-- 分支1：改主频 -->
+  <rect x="50" y="132" width="230" height="96" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="165" y="152" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">① 修改主频（13-1）</text>
+  <text x="70" y="172" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· SystemInit 由启动文件自动调用</text>
+  <text x="70" y="190" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 改 SetSysClockToxx 前端的宏即可</text>
+  <text x="70" y="208" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 显示 SystemCoreClock 查看当前主频</text>
+  <text x="70" y="226" font-family="sans-serif" font-size="10.5" fill="#A32D2D">· 牵一发而动全身：定时器/延时要重配</text>
+
+  <!-- 分支2：睡眠模式 -->
+  <rect x="300" y="132" width="230" height="96" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="415" y="152" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">② 睡眠模式（13-2）</text>
+  <text x="320" y="172" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 主循环最后加 __WFI() 即可</text>
+  <text x="320" y="190" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 外设时钟不断，USART 等可中断唤醒</text>
+  <text x="320" y="208" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 唤醒后从暂停处继续执行</text>
+  <text x="320" y="226" font-family="sans-serif" font-size="10.5" fill="#3B6D11">· WFI=中断唤醒，WFE=事件唤醒，推荐 WFI</text>
+
+  <!-- 分支3：停止/待机 -->
+  <rect x="400" y="132" width="230" height="96" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="515" y="152" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">③ 停止 / 待机（13-3/13-4）</text>
+  <text x="420" y="172" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 都要 PWR 外设 + RCC 开时钟</text>
+  <text x="420" y="190" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 停止：PWR_EnterSTOPMode 退出后主频退回</text>
+  <text x="420" y="208" font-family="sans-serif" font-size="10.5" fill="#A32D2D">  HSI 8MHz → 需重调 SystemInit</text>
+  <text x="420" y="226" font-family="sans-serif" font-size="10.5" fill="#854F0B">· 待机：PWR_EnterSTANDBYMode 唤醒从 main 重跑</text>
+
+  <!-- 底部注意事项 -->
+  <rect x="50" y="250" width="580" height="70" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="70" y="272" font-family="sans-serif" font-size="12" fill="#A32D2D" font-weight="bold">⚠ 三个易错点</text>
+  <text x="70" y="292" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">1. PWR/外设时钟不开启，写寄存器无效、读全为 0（症状：代码"不生效"）</text>
+  <text x="70" y="308" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">2. 停止模式唤醒后主频自动退回 HSI 8MHz，程序会"变慢"——重新调用 SystemInit()</text>
+  <text x="70" y="324" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">3. 待机模式只写寄存器（如 RTC ALR）读不出来 → 写之前先存变量；唤醒后代码从 main 开头执行</text>
+
+  <!-- 口诀 -->
+  <rect x="50" y="340" width="580" height="66" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="70" y="362" font-family="sans-serif" font-size="12" fill="#5F5E5A" font-weight="bold">核心记忆口诀</text>
+  <text x="70" y="382" font-family="sans-serif" font-size="11" fill="#5F5E5A">改主频 → 动宏定义，记得重算延时；睡眠 → 主循环尾加 WFI；</text>
+  <text x="70" y="398" font-family="sans-serif" font-size="11" fill="#5F5E5A">停止 → PWR 函数 + 唤醒后重配时钟；待机 → 唤醒从 main 起，先清外部耗电模块</text>
+</svg>

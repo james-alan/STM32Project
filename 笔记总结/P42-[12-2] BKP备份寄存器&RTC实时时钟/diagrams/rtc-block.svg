@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" width="100%" role="img">
+  <title>RTC 内部结构框图</title>
+  <desc>RTC 内部结构：RTCCLK 时钟输入、预分频器（重装载 PRL + 余数 DIV）、32 位秒计数器 CNT、32 位闹钟 ALR、秒/溢出/闹钟三个中断源、APB1 接口与 PWR 管理</desc>
+  <rect x="0" y="0" width="680" height="560" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">RTC 内部结构框图（本节重点）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">灰色填充 = 后备区域（VDD 掉电后由 VBAT 维持工作）；闹钟信号还可唤醒设备退出待机</text>
+
+  <!-- APB1 接口（上） -->
+  <rect x="40" y="76" width="600" height="46" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="96" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">APB1 总线接口（程序读写寄存器的地方）</text>
+  <text x="340" y="113" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">PCLK1 = 36MHz，读/写 PRL、DIV、CNT、ALR、CR、CRL</text>
+
+  <!-- 后备区域灰色底 -->
+  <rect x="40" y="146" width="600" height="300" fill="#EEEDFE" fill-opacity="0.25" rx="10"/>
+
+  <!-- RTCCLK 输入 -->
+  <rect x="40" y="170" width="120" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="100" y="192" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">RTCCLK</text>
+  <text x="100" y="208" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">LSE 32.768kHz</text>
+
+  <!-- 预分频器 -->
+  <rect x="200" y="170" width="200" height="86" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="300" y="194" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">RTC 预分频器</text>
+  <text x="300" y="212" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">PRL 重装载（写计数目标，决定分频）</text>
+  <text x="300" y="228" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">DIV 余数计数器（递减计数）</text>
+  <text x="300" y="246" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">32768Hz → 输出 1Hz 秒脉冲</text>
+  <line x1="160" y1="196" x2="200" y2="196" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 32 位计数器 CNT -->
+  <rect x="440" y="160" width="190" height="60" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="535" y="182" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">32 位计数器 RTC_CNT</text>
+  <text x="535" y="200" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">= Unix 时间戳秒计数器，1s +1</text>
+  <line x1="400" y1="196" x2="440" y2="190" stroke="#639922" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 闹钟 ALR -->
+  <rect x="440" y="246" width="190" height="60" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="535" y="268" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">32 位闹钟寄存器 RTC_ALR</text>
+  <text x="535" y="286" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">写秒数设定闹钟（定值，只响一次）</text>
+  <!-- CNT 与 ALR 比较 -->
+  <text x="535" y="318" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle" font-weight="bold">CNT = ALR → 闹钟响</text>
+  <line x1="535" y1="220" x2="535" y2="246" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="535" y1="306" x2="535" y2="318" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 三个中断源 -->
+  <rect x="200" y="300" width="410" height="120" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="405" y="322" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">中断输出控制（三个中断源）</text>
+  <text x="240" y="346" font-family="sans-serif" font-size="10.5" fill="#854F0B">① 秒中断：每 1 秒触发</text>
+  <text x="240" y="366" font-family="sans-serif" font-size="10.5" fill="#854F0B">② 溢出中断：CNT 计满 0xFFFFFFFF 才触发</text>
+  <text x="240" y="386" font-family="sans-serif" font-size="10.5" fill="#854F0B">③ 闹钟中断：CNT = ALR 时触发 + 唤醒待机</text>
+  <text x="240" y="406" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">FLAG 标志位 + IE 中断使能 → 或门 → NVIC</text>
+  <line x1="400" y1="220" x2="380" y2="300" stroke="#D3D1C7" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="535" y1="318" x2="470" y2="340" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- NVIC / PWR 管理（下） -->
+  <rect x="200" y="446" width="190" height="52" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="295" y="468" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle" font-weight="bold">NVIC 中断控制器</text>
+  <text x="295" y="484" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">配置中断优先级</text>
+  <line x1="405" y1="420" x2="340" y2="446" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="446" width="220" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="530" y="468" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">PWR 管理：退出待机</text>
+  <text x="530" y="484" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">闹钟信号 / WKUP 引脚(PA0) 均可唤醒</text>
+  <line x1="535" y1="420" x2="530" y2="446" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="518" width="600" height="30" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.2" rx="6"/>
+  <text x="60" y="538" font-family="sans-serif" font-size="11" fill="#5F5E5A">用 RTC：配置时钟源 → 配置分频 → 读/写 CNT 实现时间戳 → 需要闹钟就配 ALR → 需要中断就开中断并配 NVIC</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+</svg>

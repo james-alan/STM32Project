@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>硬件 SPI 引脚映射</title>
+  <desc>STM32F103C8T6 SPI1、SPI2 默认引脚与 SPI1 重映射引脚对照</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 SPI 引脚映射（查引脚定义表"复用功能"栏）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">硬件外设引脚固定，不能随意选择；引脚资源充足时可用 AFIO 重映射换位置</text>
+
+  <!-- SPI1 默认 -->
+  <rect x="60" y="80" width="270" height="150" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="195" y="102" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">SPI1（本课使用）</text>
+  <text x="195" y="122" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">APB2 外设，PCLK = 72MHz</text>
+  <line x1="80" y1="132" x2="310" y2="132" stroke="#185FA5" stroke-width="0.8"/>
+  <text x="195" y="152" font-family="sans-serif" font-size="11" fill="#0C447C">NSS  → PA4</text>
+  <text x="195" y="172" font-family="sans-serif" font-size="11" fill="#0C447C">SCK  → PA5</text>
+  <text x="195" y="192" font-family="sans-serif" font-size="11" fill="#0C447C">MISO → PA6</text>
+  <text x="195" y="212" font-family="sans-serif" font-size="11" fill="#0C447C">MOSI → PA7</text>
+
+  <!-- SPI2 默认 -->
+  <rect x="350" y="80" width="270" height="150" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="485" y="102" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">SPI2</text>
+  <text x="485" y="122" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">APB1 外设，PCLK = 36MHz</text>
+  <line x1="370" y1="132" x2="600" y2="132" stroke="#185FA5" stroke-width="0.8"/>
+  <text x="485" y="152" font-family="sans-serif" font-size="11" fill="#0C447C">NSS  → PB12</text>
+  <text x="485" y="172" font-family="sans-serif" font-size="11" fill="#0C447C">SCK  → PB13</text>
+  <text x="485" y="192" font-family="sans-serif" font-size="11" fill="#0C447C">MISO → PB14</text>
+  <text x="485" y="212" font-family="sans-serif" font-size="11" fill="#0C447C">MOSI → PB15</text>
+
+  <!-- 重映射 -->
+  <rect x="60" y="260" width="560" height="130" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="340" y="284" font-family="sans-serif" font-size="13" fill="#854F0B" text-anchor="middle" font-weight="bold">SPI1 引脚重映射（AFIO 切换，可选）</text>
+  <text x="340" y="304" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">若 PA4~PA7 被其他外设占用，可把 SPI1 重映射到：</text>
+  <text x="340" y="328" font-family="sans-serif" font-size="11" fill="#854F0B">NSS → PA15　SCK → PB3　MISO → PB4　MOSI → PB5</text>
+  <text x="340" y="350" font-family="sans-serif" font-size="10.5" fill="#854F0B">重映射后的频率不受影响，还是 SPI1（72MHz 分频）</text>
+  <text x="340" y="370" font-family="sans-serif" font-size="10.5" fill="#854F0B">使用前需开启 AFIO 时钟并调用 GPIO_PinRemapConfig</text>
+
+  <!-- 底部 JTAG 警告 -->
+  <rect x="60" y="406" width="560" height="40" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="10"/>
+  <text x="80" y="422" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">注意：</text>
+  <text x="80" y="438" font-family="sans-serif" font-size="10.5" fill="#A32D2D">PA15 / PB3 / PB4 默认是 JTAG 调试口，用作 GPIO 或重映射功能前必须先解除 JTAG 复用（参考视频 6-4）</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+</svg>

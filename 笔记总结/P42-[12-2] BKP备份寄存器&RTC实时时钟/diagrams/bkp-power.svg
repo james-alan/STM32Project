@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" role="img">
+  <title>BKP 双电源供电与后备区域结构</title>
+  <desc>STM32 的 VDD 主电源与 VBAT 备用电池通过内部供电开关为后备区域供电：后备区域含 32.768kHz 振荡器、RTC、唤醒电路和备份寄存器 BKP</desc>
+  <rect x="0" y="0" width="680" height="430" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">BKP 双电源供电与后备区域结构</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">VDD 有电优先用 VDD；VDD 掉电自动切到 VBAT，保证备份寄存器数据不丢</text>
+
+  <!-- VDD 主电源 -->
+  <rect x="50" y="90" width="240" height="70" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="170" y="116" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">VDD 主电源</text>
+  <text x="170" y="136" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">电压 2.0 ~ 3.6V（系统正常供电）</text>
+  <text x="170" y="152" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">正常工作时为后备区域供电</text>
+
+  <!-- VBAT 备用电池 -->
+  <rect x="390" y="90" width="240" height="70" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="510" y="116" font-family="sans-serif" font-size="13" fill="#854F0B" text-anchor="middle" font-weight="bold">VBAT 备用电池</text>
+  <text x="510" y="136" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">电压 1.8 ~ 3.6V（常用 CR2032）</text>
+  <text x="510" y="152" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">VDD 掉电后继续为后备区域供电</text>
+
+  <!-- 内部供电开关 -->
+  <rect x="250" y="196" width="180" height="56" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="340" y="220" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">内部供电开关</text>
+  <text x="340" y="238" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">自动切换 VDD ↔ VBAT</text>
+  <line x1="290" y1="160" x2="320" y2="196" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="390" y1="160" x2="360" y2="196" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 后备区域 -->
+  <rect x="110" y="290" width="460" height="96" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="340" y="314" font-family="sans-serif" font-size="13" fill="#3C3489" text-anchor="middle" font-weight="bold">后备区域（灰色框，VBAT 供电范围）</text>
+  <line x1="340" y1="252" x2="340" y2="290" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 后备区域内部四个模块 -->
+  <rect x="130" y="332" width="100" height="40" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.2" rx="6"/>
+  <text x="180" y="349" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">32.768kHz</text>
+  <text x="180" y="363" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">LSE 振荡器</text>
+
+  <rect x="245" y="332" width="90" height="40" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.2" rx="6"/>
+  <text x="290" y="349" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">RTC</text>
+  <text x="290" y="363" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">实时时钟</text>
+
+  <rect x="350" y="332" width="90" height="40" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.2" rx="6"/>
+  <text x="395" y="349" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">唤醒电路</text>
+  <text x="395" y="363" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">WKUP 等</text>
+
+  <rect x="455" y="332" width="100" height="40" fill="#EAF3DE" stroke="#639922" stroke-width="1.2" rx="6"/>
+  <text x="505" y="349" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle" font-weight="bold">备份寄存器</text>
+  <text x="505" y="363" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">BKP（用户数据）</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#534AB7"/>
+    </marker>
+  </defs>
+</svg>

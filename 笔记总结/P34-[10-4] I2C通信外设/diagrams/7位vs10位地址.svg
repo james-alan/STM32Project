@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" width="100%" role="img">
+  <title>I2C 7 位地址与 10 位地址帧格式对比</title>
+  <desc>7 位地址：起始后 1 个字节为地址；10 位地址：起始后前两个字节为地址，第一字节前 5 位为 11110 标志</desc>
+  <rect x="0" y="0" width="680" height="350" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">I2C 地址模式：7 位 vs 10 位</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">起始条件后第一个字节必须是"地址 + 读写位"；10 位地址只是再规定第二个字节也作为地址</text>
+
+  <!-- ===== 7 位地址帧 ===== -->
+  <text x="40" y="92" font-family="sans-serif" font-size="12.5" fill="#3B6D11" font-weight="bold">7 位地址模式（本课重点 · 一主一从）</text>
+  <rect x="50" y="104" width="36" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="5"/>
+  <text x="68" y="131" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">S</text>
+  <rect x="92" y="104" width="206" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="5"/>
+  <text x="195" y="123" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle" font-weight="bold">第一字节：7 位地址 A6..A0</text>
+  <text x="195" y="140" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">+ 1 位读写位 R/W（0=写 1=读）</text>
+  <rect x="304" y="104" width="42" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="325" y="131" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">ACK</text>
+  <rect x="352" y="104" width="76" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="5"/>
+  <text x="390" y="131" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">数据 1</text>
+  <rect x="434" y="104" width="42" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="455" y="131" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">ACK</text>
+  <rect x="482" y="104" width="76" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="5"/>
+  <text x="520" y="131" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">数据 2</text>
+  <text x="568" y="131" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle">…</text>
+  <rect x="586" y="104" width="42" height="44" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="5"/>
+  <text x="607" y="131" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">P</text>
+  <text x="640" y="128" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="end">共 2^7 = 128 种地址</text>
+  <text x="640" y="142" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="end">S=起始 P=停止</text>
+
+  <!-- 箭头说明：数据段个数由从机芯片自行规定 -->
+  <text x="390" y="170" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">数据段个数由各芯片自行规定（如 MPU6050：数据1=寄存器地址，之后是寄存器数据）</text>
+
+  <!-- ===== 10 位地址帧 ===== -->
+  <text x="40" y="212" font-family="sans-serif" font-size="12.5" fill="#534AB7" font-weight="bold">10 位地址模式（了解即可 · 设备多于 128 个时使用）</text>
+  <rect x="50" y="224" width="36" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="5"/>
+  <text x="68" y="251" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">S</text>
+  <rect x="92" y="224" width="162" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="5"/>
+  <text x="173" y="242" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle" font-weight="bold">第一字节：11110（标志位）</text>
+  <text x="173" y="259" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">+ A9 A8 + R/W</text>
+  <rect x="260" y="224" width="42" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="281" y="251" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">ACK</text>
+  <rect x="308" y="224" width="130" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="5"/>
+  <text x="373" y="242" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">第二字节：A7..A0</text>
+  <text x="373" y="259" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">（8 位低位地址）</text>
+  <rect x="444" y="224" width="42" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="465" y="251" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">ACK</text>
+  <rect x="492" y="224" width="76" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="5"/>
+  <text x="530" y="251" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">数据…</text>
+  <rect x="586" y="224" width="42" height="44" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="5"/>
+  <text x="607" y="251" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">P</text>
+  <text x="640" y="248" font-family="sans-serif" font-size="10.5" fill="#534AB7" text-anchor="end">共 2^10 = 1024 种地址</text>
+
+  <!-- 底部说明 -->
+  <rect x="50" y="292" width="600" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="70" y="310" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" font-weight="bold">为什么第一字节前 5 位是 11110？</text>
+  <text x="70" y="326" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">收方需要区分"第一字节后还有没有地址字节"。11110 这个组合在 7 位地址模式下永远不会出现，因此可安全地用作 10 位模式的标志位。</text>
+</svg>

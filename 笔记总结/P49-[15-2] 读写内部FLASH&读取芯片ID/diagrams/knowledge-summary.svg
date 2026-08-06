@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" width="100%" role="img">
+  <title>P49 知识总结：读写内部FLASH 与 读取芯片ID</title>
+  <desc>Flash三大操作读取擦除编程、解锁加锁、页擦除先擦后写、Store掉电保存、ST-Link Utility调试、电子签名区读容量与UID</desc>
+  <rect x="0" y="0" width="680" height="470" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P49 知识总结：读写内部 FLASH &amp; 读取芯片 ID</text>
+
+  <!-- 根 -->
+  <rect x="240" y="56" width="200" height="38" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="80" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">内部 FLASH</text>
+
+  <line x1="280" y1="94" x2="130" y2="130" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="94" x2="340" y2="130" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="400" y1="94" x2="560" y2="130" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="400" y1="94" x2="620" y2="130" stroke="#185FA5" stroke-width="1.5"/>
+
+  <!-- 节点 1：三大操作 -->
+  <rect x="20" y="130" width="220" height="72" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="130" y="148" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">① 三大操作</text>
+  <text x="130" y="166" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">读取（指针直接读）</text>
+  <text x="130" y="182" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">擦除（页/全擦）· 编程（字/半字）</text>
+  <text x="130" y="196" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">无需初始化，但需解锁/加锁</text>
+
+  <!-- 节点 2：解锁加锁 -->
+  <rect x="230" y="130" width="220" height="72" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="340" y="148" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">② 解锁 / 加锁</text>
+  <text x="340" y="166" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">FLASH_Unlock：KEYR 先写 KEY1 再写 KEY2</text>
+  <text x="340" y="182" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">FLASH_Lock：CR 的 LOCK 位置 1</text>
+  <text x="340" y="196" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">防程序跑飞误改 Flash 内容</text>
+
+  <!-- 节点 3：先擦后写 -->
+  <rect x="480" y="130" width="180" height="72" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="570" y="148" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">③ 先擦后写</text>
+  <text x="570" y="166" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">Flash 只能把 1 写成 0</text>
+  <text x="570" y="182" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">写前必须擦除（擦后全 FF）</text>
+  <text x="570" y="196" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">最小擦除单位是 1 页</text>
+
+  <!-- 节点 4：Store 掉电保存 -->
+  <rect x="20" y="228" width="220" height="76" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="130" y="246" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">④ Store 掉电保存</text>
+  <text x="130" y="264" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">StoreData 是 Flash 的分身</text>
+  <text x="130" y="280" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">改完必 Store_Save，上电 Store_Init 加载</text>
+  <text x="130" y="296" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">标志位 0xA5 判断是否首次使用</text>
+
+  <!-- 节点 5：调试 -->
+  <rect x="260" y="228" width="180" height="76" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="350" y="246" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">⑤ 调试利器</text>
+  <text x="350" y="264" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">ST-Link Utility 直接看 Flash</text>
+  <text x="350" y="280" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">可改数据 / 配选项字节</text>
+  <text x="350" y="296" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">读保护锁死后可在此解</text>
+
+  <!-- 节点 6：芯片 ID -->
+  <rect x="460" y="228" width="200" height="76" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="560" y="246" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">⑥ 读取芯片 ID</text>
+  <text x="560" y="264" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">容量 0x1FFFF7E0（16 位）</text>
+  <text x="560" y="280" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">UID 0x1FFFF7E8（96 位）</text>
+  <text x="560" y="296" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">指针读取 + 小端对照验证</text>
+
+  <!-- 底部口诀 -->
+  <rect x="20" y="336" width="640" height="110" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="40" y="360" font-family="sans-serif" font-size="12" fill="#5F5E5A" font-weight="bold">核心记忆口诀：</text>
+  <text x="40" y="382" font-family="sans-serif" font-size="11" fill="#5F5E5A">读：指针转换随便读；　擦：解锁→擦→加锁；　写：解锁→擦除→写→加锁（先擦后写）</text>
+  <text x="40" y="402" font-family="sans-serif" font-size="11" fill="#5F5E5A">页：1KB=512 半字；　Save：改完必须备份；　Init：标志位 A5 定初次；　上电加载回 StoreData</text>
+  <text x="40" y="422" font-family="sans-serif" font-size="11" fill="#5F5E5A">调：ST-Link Utility 看真身；　ID：容量 1FFFF7E0，UID 1FFFF7E8；　避：程序空间与保存页不冲突</text>
+</svg>

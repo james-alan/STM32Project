@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" width="100%" role="img">
+  <title>time.h 数据类型与转换函数关系</title>
+  <desc>秒计数器 time_t、日期时间 struct tm、字符串 char* 三种数据类型，以及 time/gmtime/localtime/mktime/ctime/asctime/strftime 函数的转换关系</desc>
+  <rect x="0" y="0" width="680" height="470" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">time.h 中的三种数据类型与转换函数</text>
+
+  <!-- 三种数据类型节点 -->
+  <rect x="40" y="80" width="180" height="120" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="130" y="104" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">time_t</text>
+  <text x="130" y="122" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">秒计数器</text>
+  <text x="130" y="140" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">本质 typedef 自 int64_t</text>
+  <text x="130" y="156" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">64 位有符号，存储累计秒数</text>
+  <text x="130" y="172" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">随时钟/时区无关，全球统一</text>
+
+  <rect x="250" y="80" width="180" height="120" fill="#EAF3DE" stroke="#639922" stroke-width="2" rx="10"/>
+  <text x="340" y="104" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">struct tm</text>
+  <text x="340" y="122" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">日期时间结构体</text>
+  <text x="340" y="140" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">tm_sec/min/hour/mday</text>
+  <text x="340" y="156" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">tm_mon(0-11)/tm_year(1900起)</text>
+  <text x="340" y="172" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">tm_wday/tm_yday/tm_isdst</text>
+
+  <rect x="460" y="80" width="180" height="120" fill="#FAEEDA" stroke="#BA7517" stroke-width="2" rx="10"/>
+  <text x="550" y="104" font-family="sans-serif" font-size="13" fill="#854F0B" text-anchor="middle" font-weight="bold">char*</text>
+  <text x="550" y="122" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">时间字符串指针</text>
+  <text x="550" y="140" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">如 "Fri Jan 13 15:59:55 2023"</text>
+  <text x="550" y="156" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">英文格式，默认样式较奇怪</text>
+  <text x="550" y="172" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">实际使用不多</text>
+
+  <!-- 函数：time() -->
+  <rect x="40" y="240" width="250" height="52" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="165" y="262" font-family="sans-serif" font-size="11.5" fill="#0C447C" text-anchor="middle" font-weight="bold">time() 获取当前秒数</text>
+  <text x="165" y="280" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">time_t t = time(NULL);  或 time(&t)</text>
+
+  <!-- 函数：gmtime / localtime -->
+  <rect x="40" y="312" width="250" height="76" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="165" y="332" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">gmtime() / localtime()</text>
+  <text x="165" y="350" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">秒数 → 日期时间（struct tm*）</text>
+  <text x="165" y="366" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">localtime 会自动加时区偏移</text>
+  <text x="165" y="382" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">（东八区 +8 小时，返回结构体指针）</text>
+
+  <!-- 函数：mktime -->
+  <rect x="40" y="406" width="250" height="52" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="165" y="428" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">mktime() 日期时间 → 秒数</text>
+  <text x="165" y="446" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">必须传入当地时间，并自动回填星期</text>
+
+  <!-- 函数：ctime / asctime / strftime -->
+  <rect x="390" y="240" width="250" height="140" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="515" y="262" font-family="sans-serif" font-size="11.5" fill="#854F0B" text-anchor="middle" font-weight="bold">ctime() / asctime()</text>
+  <text x="515" y="280" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">time_t / struct tm → char*（默认格式）</text>
+  <text x="515" y="306" font-family="sans-serif" font-size="11.5" fill="#854F0B" text-anchor="middle" font-weight="bold">strftime()</text>
+  <text x="515" y="324" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">struct tm → char*（自定义格式）</text>
+  <text x="515" y="342" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">strftime(buf, 50, "%H:%M:%S", &t)</text>
+  <text x="515" y="358" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">%H 时 / %M 分 / %S 秒，类似 printf</text>
+
+  <!-- 连接箭头 -->
+  <line x1="130" y1="200" x2="130" y2="238" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="130" y1="292" x2="130" y2="310" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="165" y1="388" x2="165" y2="404" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="550" y1="200" x2="550" y2="238" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+
+  <!-- 底部重点 -->
+  <rect x="390" y="406" width="250" height="52" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="515" y="428" font-family="sans-serif" font-size="11.5" fill="#A32D2D" text-anchor="middle" font-weight="bold">重点函数</text>
+  <text x="515" y="446" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">localtime / mktime：STM32 RTC 程序要用</text>
+</svg>

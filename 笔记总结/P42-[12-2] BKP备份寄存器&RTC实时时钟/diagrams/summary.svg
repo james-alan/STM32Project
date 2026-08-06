@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>BKP 与 RTC 知识总结</title>
+  <desc>BKP 备份寄存器（VBAT 供电、DR1-DR10、侵入检测）与 RTC（三路时钟源、预分频、32 位秒计数器、闹钟、三步使能流程）核心要点</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">BKP &amp; RTC 知识总结</text>
+
+  <!-- BKP 卡片 -->
+  <rect x="40" y="60" width="290" height="230" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="185" y="86" font-family="sans-serif" font-size="13" fill="#3C3489" text-anchor="middle" font-weight="bold">BKP 备份寄存器（了解为主）</text>
+  <text x="60" y="112" font-family="sans-serif" font-size="11" fill="#3C3489">· 本质是 RAM，掉电靠 VBAT 维持</text>
+  <text x="60" y="134" font-family="sans-serif" font-size="11" fill="#3C3489">· C8T6：DR1~DR10 共 10 个 16 位寄存器</text>
+  <text x="60" y="156" font-family="sans-serif" font-size="11" fill="#3C3489">· 共 20 字节；大容量为 84 字节</text>
+  <text x="60" y="178" font-family="sans-serif" font-size="11" fill="#3C3489">· 侵入检测：TAMPER 触发清空全部数据</text>
+  <text x="60" y="200" font-family="sans-serif" font-size="11" fill="#3C3489">· VBAT 未接电池时：VBAT 接 VDD + 100nF</text>
+  <text x="60" y="222" font-family="sans-serif" font-size="11" fill="#3C3489">· 与 RTC 同在"后备区域"，VDD 掉电仍运行</text>
+  <text x="60" y="250" font-family="sans-serif" font-size="10.5" fill="#A32D2D">BKP 无独立时钟使能：需开启 PWR + BKP 时钟</text>
+  <text x="60" y="268" font-family="sans-serif" font-size="10.5" fill="#A32D2D">并置 PWR_CR 的 DBP 位才能访问</text>
+
+  <!-- RTC 卡片 -->
+  <rect x="350" y="60" width="290" height="230" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="495" y="86" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">RTC 实时时钟（本节重点）</text>
+  <text x="370" y="112" font-family="sans-serif" font-size="11" fill="#3B6D11">· 独立定时器，32 位 CNT 存 Unix 秒</text>
+  <text x="370" y="134" font-family="sans-serif" font-size="11" fill="#3B6D11">· 时钟源三选一：LSE 32.768kHz（首选）、</text>
+  <text x="385" y="152" font-family="sans-serif" font-size="11" fill="#3B6D11">HSE/128、LSI 40kHz（备用）</text>
+  <text x="370" y="174" font-family="sans-serif" font-size="11" fill="#3B6D11">· 20 位预分频器把 RTCCLK 降为 1Hz</text>
+  <text x="370" y="196" font-family="sans-serif" font-size="11" fill="#3B6D11">· 32 位闹钟 ALR：相等即闹钟 + 唤醒待机</text>
+  <text x="370" y="218" font-family="sans-serif" font-size="11" fill="#3B6D11">· 中断源：秒 / 溢出 / 闹钟</text>
+  <text x="370" y="240" font-family="sans-serif" font-size="11" fill="#A32D2D">· 读写三步：等同步 RSF → 进配置 CNF → 等 RTOFF</text>
+  <text x="370" y="258" font-family="sans-serif" font-size="10.5" fill="#3B6D11">· 溢出时间：2106 年（无符号 32 位秒）</text>
+
+  <!-- 底部核心流程 -->
+  <rect x="40" y="310" width="600" height="60" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="340" y="336" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">使用 BKP/RTC 的固定流程</text>
+  <text x="340" y="358" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">① 开启 PWR + BKP 时钟 → ② 置 DBP 使能访问 → ③ 选时钟源配分频 → ④ 等同步 → ⑤ 写 CNT（设置时间）/ 读 CNT（读取时间）</text>
+
+  <!-- 口诀 -->
+  <rect x="40" y="386" width="600" height="54" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="60" y="410" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">记忆口诀：</text>
+  <text x="60" y="430" font-family="sans-serif" font-size="11.5" fill="#854F0B">开钟开权（PWR+BKP 时钟、DBP 权）→ 同步配置等完成（RSF→CNF→RTOFF）→ 三二零零一秒（时钟三选一、20 位分频、32 位秒）</text>
+</svg>

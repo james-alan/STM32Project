@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>P44 PWR 电源控制知识总结</title>
+  <desc>PWR 三大功能：PVD 可编程电压检测器 + 三种低功耗模式对比</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P44 知识总结：PWR 电源控制</text>
+
+  <!-- 根节点 -->
+  <rect x="240" y="58" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="84" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">PWR 电源控制</text>
+
+  <!-- 分支线 -->
+  <line x1="300" y1="100" x2="170" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="100" x2="340" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="380" y1="100" x2="520" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="100" x2="340" y2="300" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 节点 1：PVD -->
+  <rect x="60" y="140" width="220" height="46" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="170" y="158" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">① PVD 可编程电压检测器</text>
+  <text x="170" y="176" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">阈值可编程 2.2~2.9V · 迟滞 100mV</text>
+  <text x="170" y="200" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">走 EXTI16 外部中断 · 电压过低警告</text>
+
+  <!-- 节点 2：睡眠模式 -->
+  <rect x="240" y="140" width="200" height="46" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="340" y="158" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">② 睡眠模式（打盹）</text>
+  <text x="340" y="176" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">只关 CPU 时钟 · 任意中断唤醒</text>
+  <text x="340" y="200" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">寄存器数据保持 · 一般省电</text>
+
+  <!-- 节点 3：停机模式 -->
+  <rect x="460" y="140" width="190" height="46" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="555" y="158" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">③ 停机模式（罢工）</text>
+  <text x="555" y="176" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">关 1.8V 区时钟 + 高速时钟</text>
+  <text x="555" y="200" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">仅 EXTI 唤醒 · 数据保持</text>
+
+  <!-- 节点 4：待机模式 -->
+  <rect x="60" y="300" width="220" height="46" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="170" y="318" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">④ 待机模式（下班回家）</text>
+  <text x="170" y="336" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">1.8V 区断电 · GPIO 高阻态</text>
+  <text x="170" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">WKUP/RTC闹钟/NRST/IWDG 唤醒 · 程序从头跑</text>
+
+  <!-- 节点 5：功耗对比 -->
+  <rect x="460" y="300" width="190" height="46" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="555" y="318" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">⑤ 电流数量级对比</text>
+  <text x="555" y="336" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">运行 ~mA 级（最高 50mA）</text>
+  <text x="555" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">停机 14~24µA · 待机 2~3µA</text>
+
+  <!-- 底部口诀 -->
+  <rect x="60" y="416" width="590" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="80" y="438" font-family="sans-serif" font-size="11.5" fill="#5F5E5A" font-weight="bold">核心记忆口诀：</text>
+  <text x="80" y="456" font-family="sans-serif" font-size="11" fill="#5F5E5A">PWR 管电源，PVD 盯电压；睡眠只关钟，停机全停钟，待机断电源；睡越深越省电、越难叫醒；唤醒后停机会掉主频，待机要重跑程序</text>
+</svg>

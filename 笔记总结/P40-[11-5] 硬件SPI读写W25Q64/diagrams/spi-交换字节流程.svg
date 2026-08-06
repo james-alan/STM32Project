@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>硬件 SPI 交换一个字节的四步流程</title>
+  <desc>非连续传输：等待 TXE → 写 DR → 等待 RXNE → 读 DR</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 SPI 交换一个字节（非连续传输，四步循环）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">封装成一个 SwapByte 函数，调用一次交换一个字节；发送与接收同步进行，全部由外设自动完成</text>
+
+  <!-- 四步 -->
+  <rect x="50" y="90" width="130" height="130" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="115" y="116" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">① 等待 TXE=1</text>
+  <text x="115" y="140" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">发送缓冲器 TDR 空</text>
+  <text x="115" y="158" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">不空则先不要写入</text>
+  <text x="115" y="180" font-family="sans-serif" font-size="10" fill="#5F5E5A">while(...TXE</text>
+  <text x="115" y="194" font-family="sans-serif" font-size="10" fill="#5F5E5A">== RESET);</text>
+
+  <rect x="195" y="90" width="130" height="130" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="260" y="116" font-family="sans-serif" font-size="12.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">② 写 DR</text>
+  <text x="260" y="140" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">写入要发的数据</text>
+  <text x="260" y="158" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">自动转移位寄存器</text>
+  <text x="260" y="176" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">自动产生时钟波形</text>
+  <text x="260" y="194" font-family="sans-serif" font-size="10" fill="#5F5E5A">SPI_I2S_SendData</text>
+
+  <rect x="340" y="90" width="130" height="130" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="405" y="116" font-family="sans-serif" font-size="12.5" fill="#854F0B" text-anchor="middle" font-weight="bold">③ 等待 RXNE=1</text>
+  <text x="405" y="140" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">接收缓冲器 RDR 非空</text>
+  <text x="405" y="158" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">发送完 = 接收完</text>
+  <text x="405" y="180" font-family="sans-serif" font-size="10" fill="#5F5E5A">while(...RXNE</text>
+  <text x="405" y="194" font-family="sans-serif" font-size="10" fill="#5F5E5A">== RESET);</text>
+
+  <rect x="485" y="90" width="130" height="130" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="550" y="116" font-family="sans-serif" font-size="12.5" fill="#3C3489" text-anchor="middle" font-weight="bold">④ 读 DR</text>
+  <text x="550" y="140" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">读出 RDR 收到的数据</text>
+  <text x="550" y="158" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">作为函数的返回值</text>
+  <text x="550" y="180" font-family="sans-serif" font-size="10" fill="#5F5E5A">return</text>
+  <text x="550" y="194" font-family="sans-serif" font-size="10" fill="#5F5E5A">ReceiveData();</text>
+
+  <!-- 箭头 -->
+  <line x1="180" y1="155" x2="195" y2="155" stroke="#5F5E5A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="325" y1="155" x2="340" y2="155" stroke="#5F5E5A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="470" y1="155" x2="485" y2="155" stroke="#5F5E5A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 循环回路 -->
+  <path d="M 550 220 L 550 255 L 115 255 L 115 220" fill="none" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowB)"/>
+  <text x="330" y="274" font-family="sans-serif" font-size="10.5" fill="#185FA5" text-anchor="middle">交换下一个字节时回到第 ① 步，循环四步即可</text>
+
+  <!-- 底部注意 -->
+  <rect x="50" y="300" width="565" height="100" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="70" y="322" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">两个注意点：</text>
+  <text x="70" y="342" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">1. 想接收必须先发送：只有写 TDR 才会触发时钟生成，不发送则时钟不动，接收无从谈起；</text>
+  <text x="70" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">2. TXE / RXNE 不需要手动清除：写 DR 会自动清 TXE，读 DR 会自动清 RXNE，顺序正好衔接；</text>
+  <text x="70" y="380" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">   对比：中断标志等大多数标志位必须手动清除，否则会一直进入中断导致主程序无法执行。</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+    <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+    </marker>
+  </defs>
+</svg>

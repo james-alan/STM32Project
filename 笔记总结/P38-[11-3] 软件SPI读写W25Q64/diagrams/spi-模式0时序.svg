@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>SPI 模式 0 交换一个字节时序图</title>
+  <desc>软件 SPI 模式0（CPOL=0, CPHA=0）交换一个字节的时序：SCK 空闲低电平，上升沿采样，下降沿移出</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">SPI 模式 0（CPOL=0，CPHA=0）交换一个字节时序</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">软件实现逻辑：SCK 低电平期间移出数据位 → 产生上升沿（从机采样） → 读入 MISO → 下降沿 → 移出下一位…</text>
+
+  <!-- 网格 -->
+  <line x1="60" y1="90" x2="660" y2="90" stroke="#D3D1C7" stroke-width="1"/>
+  <line x1="60" y1="210" x2="660" y2="210" stroke="#D3D1C7" stroke-width="1"/>
+
+  <!-- SCK 波形 (模式0: 空闲低) -->
+  <text x="20" y="128" font-family="sans-serif" font-size="12" fill="#0C447C" font-weight="bold">SCK</text>
+  <polyline points="60,150 105,150 105,90 150,90 150,150 195,150 195,90 240,90 240,150 285,150 285,90 330,90 330,150 375,150 375,90 420,90 420,150 465,150 465,90 510,90 510,150 555,150 555,90 600,90 600,150 645,150" fill="none" stroke="#185FA5" stroke-width="2.5"/>
+  <line x1="60" y1="150" x2="645" y2="150" stroke="#185FA5" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="60" y1="90" x2="645" y2="90" stroke="#185FA5" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- MOSI 波形 -->
+  <text x="20" y="248" font-family="sans-serif" font-size="12" fill="#3B6D11" font-weight="bold">MOSI</text>
+  <polyline points="60,270 105,270 105,240 150,240 150,270 195,270 195,270 240,270 240,240 285,240 285,270 330,270 330,270 375,270 375,240 420,240 420,270 465,270 465,270 510,270 510,240 555,240 555,270 600,270 600,270 645,270" fill="none" stroke="#639922" stroke-width="2.5"/>
+  <line x1="60" y1="270" x2="645" y2="270" stroke="#639922" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- MISO 波形（虚线表示从机放数据） -->
+  <text x="20" y="338" font-family="sans-serif" font-size="12" fill="#854F0B" font-weight="bold">MISO</text>
+  <polyline points="60,360 105,360 105,330 150,330 150,360 195,360 195,360 240,360 240,330 285,330 285,360 330,360 330,360 375,360 375,330 420,330 420,360 465,360 465,360 510,360 510,330 555,330 555,360 600,360 600,360 645,360" fill="none" stroke="#BA7517" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+  <!-- 位标号 -->
+  <text x="82" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">bit7</text>
+  <text x="172" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">bit6</text>
+  <text x="262" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">bit5</text>
+  <text x="352" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">…</text>
+  <text x="442" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">bit1</text>
+  <text x="532" y="80" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">bit0</text>
+
+  <!-- 上升沿/下降沿标注 -->
+  <rect x="120" y="60" width="56" height="16" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="4"/>
+  <text x="148" y="72" font-family="sans-serif" font-size="9.5" fill="#854F0B" text-anchor="middle" font-weight="bold">上升沿采样</text>
+  <rect x="214" y="60" width="56" height="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" rx="4"/>
+  <text x="242" y="72" font-family="sans-serif" font-size="9.5" fill="#3C3489" text-anchor="middle" font-weight="bold">下降沿移出</text>
+
+  <!-- 数据位标注 -->
+  <text x="127" y="262" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">D7（先发最高位）</text>
+  <text x="217" y="262" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">D6</text>
+  <text x="352" y="262" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">…</text>
+  <text x="487" y="262" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">D1</text>
+  <text x="577" y="262" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">D0</text>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="380" width="600" height="2" fill="none"/>
+  <text x="40" y="396" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">程序写法（软件 SPI 看成先后执行）：放数据位 → SCK=1（上升沿，从机采样+主机读入 MISO） → SCK=0（下降沿） → 放下一位…共循环 8 次</text>
+</svg>

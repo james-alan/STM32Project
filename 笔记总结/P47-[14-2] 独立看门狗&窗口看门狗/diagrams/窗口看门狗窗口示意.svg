@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>窗口看门狗喂狗窗口示意</title>
+  <desc>窗口看门狗计数器从118递减到63，0-30ms为过早喂狗复位区，30-50ms为合法喂狗窗口，50ms下溢复位</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">窗口看门狗（WWDG）喂狗窗口示意</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">预分频 ÷8 · 计数初值 T[6:0]=118(0x76) · 窗口值 W[6:0]=85(0x55) · 超时时间≈50ms · 窗口时间≈30ms</text>
+
+  <!-- 时间轴 -->
+  <rect x="40" y="150" width="600" height="60" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <!-- 过早喂狗区 (红) -->
+  <rect x="41" y="151" width="348" height="58" fill="#FCEBEB" rx="4"/>
+  <text x="215" y="176" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">过早喂狗区（立即复位）</text>
+  <text x="215" y="194" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">计数器 118 → 85 · 时间 0 → 30ms · 此时喂狗 = 提前喂狗</text>
+  <!-- 合法窗口 (绿) -->
+  <rect x="389" y="151" width="250" height="58" fill="#EAF3DE" rx="4"/>
+  <text x="514" y="176" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">合法喂狗窗口（喂狗有效）</text>
+  <text x="514" y="194" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">计数器 85 → 64 · 时间 30ms → 50ms</text>
+
+  <!-- 超时点 -->
+  <line x1="638" y1="145" x2="638" y2="215" stroke="#E24B4A" stroke-width="2"/>
+  <text x="638" y="230" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle" font-weight="bold">超时复位点</text>
+  <text x="638" y="246" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">计数器 63(0x3F)</text>
+
+  <!-- 时间刻度 -->
+  <text x="40" y="142" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">0ms（计数初值 118）</text>
+  <text x="389" y="142" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">30ms（到窗口值 85）</text>
+
+  <!-- 计数递减示意 -->
+  <rect x="40" y="270" width="600" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="6"/>
+  <text x="60" y="292" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">计数器每 (1/36MHz)×4096×8 ≈ 0.91ms 递减 1 次：</text>
+  <text x="60" y="310" font-family="sans-serif" font-size="11" fill="#5F5E5A">118 → 85（33 次，30ms 窗口开）→ 64（49ms）→ 63（50ms 下溢复位）</text>
+
+  <!-- 底部规则 -->
+  <rect x="40" y="340" width="600" height="58" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="362" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">WWDG 复位规则：</text>
+  <text x="60" y="380" font-family="sans-serif" font-size="11" fill="#5F5E5A">① 计数器 &gt; 窗口值 时写计数器（喂太早）→ 立即复位　② 计数器下溢到 0x3F 还没喂狗（喂太晚）→ 复位</text>
+  <text x="60" y="394" font-family="sans-serif" font-size="11" fill="#5F5E5A">③ 唯一能安全喂狗的时刻：计数器已递减到窗口值以下、又未下溢的 20ms 窗口内</text>
+</svg>

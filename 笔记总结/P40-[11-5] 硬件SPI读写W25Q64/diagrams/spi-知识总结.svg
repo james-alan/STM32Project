@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>硬件 SPI 读写 W25Q64 知识总结</title>
+  <desc>本节核心脉络：接线不变 → 改底层 → 初始化四步 → 交换字节四步 → 验证</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">[11-5] 硬件 SPI 读写 W25Q64 —— 知识总结</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">软件 SPI → 硬件 SPI：接线不用变，只改底层 MySPI.c，上层 W25Q64 业务代码零改动</text>
+
+  <!-- 顶部：本课主线 -->
+  <rect x="60" y="78" width="560" height="56" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="340" y="100" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">本课任务：把 MySPI 底层从"软件翻转 GPIO"换成"硬件 SPI 外设"</text>
+  <text x="340" y="120" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">保留：MySPI_W_CS / MySPI_Start / MySPI_Stop（片选仍是软件 GPIO 控制）</text>
+
+  <!-- 左：初始化四步 -->
+  <rect x="60" y="160" width="270" height="140" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="195" y="184" font-family="sans-serif" font-size="12.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">SPI 外设初始化四步</text>
+  <text x="80" y="206" font-family="sans-serif" font-size="10.5" fill="#3B6D11">① 开启时钟：SPI1 + GPIOA（SPI1 是 APB2）</text>
+  <text x="80" y="224" font-family="sans-serif" font-size="10.5" fill="#3B6D11">② GPIO：SCK/MOSI 复用推挽，MISO 上拉输入，</text>
+  <text x="80" y="238" font-family="sans-serif" font-size="10.5" fill="#3B6D11">    CS 通用推挽（软件控制）</text>
+  <text x="80" y="256" font-family="sans-serif" font-size="10.5" fill="#3B6D11">③ 配置结构体：主机 / 全双工 / 8位 / MSB /</text>
+  <text x="80" y="270" font-family="sans-serif" font-size="10.5" fill="#3B6D11">    分频 128（约562kHz）/ 模式0 / 软件 NSS</text>
+  <text x="80" y="288" font-family="sans-serif" font-size="10.5" fill="#3B6D11">④ 使能外设 + CS 置高（不选中从机）</text>
+
+  <!-- 右：交换字节四步 -->
+  <rect x="350" y="160" width="270" height="140" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="485" y="184" font-family="sans-serif" font-size="12.5" fill="#3C3489" text-anchor="middle" font-weight="bold">SwapByte 四步（非连续传输）</text>
+  <text x="370" y="206" font-family="sans-serif" font-size="10.5" fill="#3C3489">① 等待 TXE = 1（TDR 空）</text>
+  <text x="370" y="224" font-family="sans-serif" font-size="10.5" fill="#3C3489">② 写 DR → 自动移位 + 自动产生时钟</text>
+  <text x="370" y="242" font-family="sans-serif" font-size="10.5" fill="#3C3489">③ 等待 RXNE = 1（发送完=接收完）</text>
+  <text x="370" y="260" font-family="sans-serif" font-size="10.5" fill="#3C3489">④ 读 DR → 返回接收到的数据</text>
+  <text x="370" y="284" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">核心函数：SPI_I2S_SendData /</text>
+  <text x="370" y="298" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SPI_I2S_ReceiveData / SPI_I2S_GetFlagStatus</text>
+
+  <!-- 底部：验证与注意 -->
+  <rect x="60" y="326" width="270" height="80" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="195" y="350" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">验证结果</text>
+  <text x="195" y="370" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">读 ID = EF 4017（与软件 SPI 一致）</text>
+  <text x="195" y="388" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">写入 01 02 03 04 → 读回一致</text>
+
+  <rect x="350" y="326" width="270" height="80" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="10"/>
+  <text x="485" y="350" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">两大注意点</text>
+  <text x="485" y="370" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">想接收必须先发送（写 TDR 才有时钟）</text>
+  <text x="485" y="388" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">TXE/RXNE 顺序操作可自动清除，无需手动</text>
+
+  <!-- 底部总结 -->
+  <rect x="60" y="428" width="560" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="340" y="451" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">分层封装的好处：底层换实现、上层零改动 —— 这正是"通信协议层 / 设备驱动层"分开写的意义</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+</svg>

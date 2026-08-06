@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" role="img">
+  <title>P49 内存布局：Flash 程序区 / 参数保存页 / 电子签名区域</title>
+  <desc>内部Flash从0x08000000开始共64KB，前部程序代码，最后一页保存用户参数；电子签名区0x1FFFF7E0存放Flash容量、0x1FFFF7E8存放96位UID</desc>
+  <rect x="0" y="0" width="680" height="440" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P49 内存布局：程序区 / 参数保存页 / 电子签名区域</text>
+
+  <!-- 内部 Flash 大框 -->
+  <rect x="40" y="62" width="380" height="300" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="2" rx="10"/>
+  <text x="230" y="84" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">内部 FLASH（STM32F103C8T6，共 64KB）</text>
+
+  <!-- 程序区 -->
+  <rect x="60" y="96" width="340" height="170" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="6"/>
+  <text x="230" y="116" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">程序文件区（编译后约 4.5KB）</text>
+  <text x="230" y="138" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">起始地址 0x08000000，存放程序代码</text>
+  <text x="230" y="156" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">读取测试时：0x08000000 首个字 = 0x20000060</text>
+  <text x="230" y="174" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">（字节 0x60 → 半字 0x2000 → 字 0x20000060，小端）</text>
+  <text x="230" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">程序结束地址 ≈ 0x080011E0（4576 字节）</text>
+  <text x="230" y="218" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">工程可设置 IROM1 起始地址与 Size</text>
+  <text x="230" y="234" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">限定程序空间，避免占用保存页</text>
+  <text x="230" y="256" font-family="sans-serif" font-size="10" fill="#185FA5" text-anchor="middle">（大小端：低字节存低地址）</text>
+
+  <!-- 参数保存页 -->
+  <rect x="60" y="276" width="340" height="72" fill="#FAEEDA" stroke="#BA7517" stroke-width="2" rx="6"/>
+  <text x="230" y="296" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">参数保存页（最后一页，起始地址 0x0800F400）</text>
+  <text x="230" y="316" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">Data[0] = 0xA5 标志位　Data[1] = 1234　Data[2] = ABCD</text>
+  <text x="230" y="334" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">1 页 = 1024 字节 = 512 个半字（擦除单位）</text>
+
+  <!-- 电子签名区域 -->
+  <rect x="450" y="62" width="210" height="300" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" rx="10"/>
+  <text x="555" y="84" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">电子签名区域（出厂固化）</text>
+
+  <rect x="466" y="98" width="178" height="66" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="6"/>
+  <text x="555" y="116" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">Flash 容量</text>
+  <text x="555" y="134" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">地址 0x1FFFF7E0（16 位）</text>
+  <text x="555" y="152" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">C8T6 读出 0x0040 = 64KB</text>
+
+  <rect x="466" y="178" width="178" height="122" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="6"/>
+  <text x="555" y="196" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle" font-weight="bold">唯一 ID（UID，96 位）</text>
+  <text x="555" y="214" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">0x1FFFF7E8 + 0x00：16 位</text>
+  <text x="555" y="230" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">0x1FFFF7E8 + 0x02：16 位</text>
+  <text x="555" y="246" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">0x1FFFF7E8 + 0x04：32 位</text>
+  <text x="555" y="262" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">0x1FFFF7E8 + 0x08：32 位</text>
+  <text x="555" y="286" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">每颗芯片唯一，出厂烧录，</text>
+  <text x="555" y="300" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">不可修改，可做序列号</text>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="380" width="620" height="44" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="60" y="398" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">注意：</text>
+  <text x="60" y="414" font-family="sans-serif" font-size="10.5" fill="#A32D2D">参数保存页必须避开程序空间；若程序文件长大占用到保存页，会产生冲突。可在工程 IROM1 里把程序 Size 改小来规避。</text>
+</svg>

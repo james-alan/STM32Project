@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" role="img">
+  <title>P41 Unix 时间戳知识总结</title>
+  <desc>Unix 时间戳定义、计数系统、时区、存储溢出问题、time.h 转换函数的核心脉络</desc>
+  <rect x="0" y="0" width="680" height="430" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P41 知识总结：Unix 时间戳</text>
+
+  <!-- 根节点 -->
+  <rect x="240" y="56" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="82" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">Unix 时间戳</text>
+
+  <!-- 分支线 -->
+  <line x1="280" y1="98" x2="140" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="320" y1="98" x2="320" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="360" y1="98" x2="520" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="390" y1="98" x2="560" y2="132" stroke="#185FA5" stroke-width="1.5"/>
+
+  <!-- 节点 1：定义 -->
+  <rect x="40" y="132" width="200" height="76" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="140" y="152" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">① 定义</text>
+  <text x="140" y="170" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">从 UTC/GMT 的 1970-01-01</text>
+  <text x="140" y="186" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">00:00:00 起累计的秒数</text>
+  <text x="140" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">不考虑闰秒</text>
+
+  <!-- 节点 2：计数系统 -->
+  <rect x="220" y="132" width="200" height="76" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="320" y="152" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">② 计数系统</text>
+  <text x="320" y="170" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">永不进位的秒计数器</text>
+  <text x="320" y="186" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">与年月日时分秒可互转</text>
+  <text x="320" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">存储/间隔计算/硬件设计友好</text>
+
+  <!-- 节点 3：时区 -->
+  <rect x="440" y="132" width="200" height="76" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="540" y="152" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">③ 时区处理</text>
+  <text x="540" y="170" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">全球共用同一秒数</text>
+  <text x="540" y="186" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">加时区偏移得当地时间</text>
+  <text x="540" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">北京时间 = UTC + 8 小时</text>
+
+  <!-- 节点 4：存储与溢出 -->
+  <rect x="130" y="240" width="200" height="76" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="230" y="260" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">④ 存储与溢出</text>
+  <text x="230" y="278" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">32位有符号：2038 年溢出</text>
+  <text x="230" y="294" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">STM32 用无符号32位：2106 年</text>
+  <text x="230" y="310" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">现代设备用 64 位，高枕无忧</text>
+
+  <!-- 节点 5：time.h 转换 -->
+  <rect x="350" y="240" width="200" height="76" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="450" y="260" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">⑤ time.h 转换</text>
+  <text x="450" y="278" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">gmtime/localtime：秒→日期</text>
+  <text x="450" y="294" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">mktime：日期→秒（回填星期）</text>
+  <text x="450" y="310" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">ctime/asctime/strftime：转字符串</text>
+
+  <line x1="230" y1="208" x2="230" y2="238" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="450" y1="208" x2="450" y2="238" stroke="#534AB7" stroke-width="1.5"/>
+
+  <!-- 底部口诀 -->
+  <rect x="40" y="348" width="600" height="66" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="370" font-family="sans-serif" font-size="11.5" fill="#5F5E5A" font-weight="bold">核心记忆口诀：</text>
+  <text x="60" y="390" font-family="sans-serif" font-size="11" fill="#5F5E5A">一秒不落从 70 数 / 伦敦零点是起点 / 全球秒数同一个 / 时区偏移看本地</text>
+  <text x="60" y="406" font-family="sans-serif" font-size="11" fill="#5F5E5A">秒转日期用 localtime / 日期转秒找 mktime / 32 位有符号 38 年危 / 我们无符号到 2106</text>
+</svg>

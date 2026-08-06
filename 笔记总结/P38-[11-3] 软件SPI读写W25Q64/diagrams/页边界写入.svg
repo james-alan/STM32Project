@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" width="100%" role="img">
+  <title>页边界不能跨越写入示意图</title>
+  <desc>页编程从页最后一个字节开始写，跨页的数据会绕回本页页首</desc>
+  <rect x="0" y="0" width="680" height="380" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">页编程不能跨越页边界 —— 跨页数据绕回页首</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">W25Q64 每页 256 字节：第 0 页地址 0x000000~0x0000FF，第 1 页地址 0x000100~0x0001FF（其余页依此类推）</text>
+
+  <!-- 第0页 -->
+  <rect x="50" y="90" width="270" height="150" fill="#EAF3DE" stroke="#639922" stroke-width="2" rx="8"/>
+  <text x="185" y="112" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">第 0 页（256 字节）</text>
+  <text x="60" y="133" font-family="sans-serif" font-size="10.5" fill="#3B6D11">地址 0x000000（页首）… 0x0000FF（页末）</text>
+
+  <!-- 页内字节格子 -->
+  <rect x="60" y="145" width="40" height="24" fill="#FFFFFF" stroke="#639922" stroke-width="1" rx="3"/>
+  <text x="80" y="161" font-family="sans-serif" font-size="9.5" fill="#3B6D11" text-anchor="middle">…</text>
+  <rect x="110" y="145" width="40" height="24" fill="#FFFFFF" stroke="#639922" stroke-width="1" rx="3"/>
+  <text x="130" y="161" font-family="sans-serif" font-size="9.5" fill="#3B6D11" text-anchor="middle">…</text>
+  <rect x="160" y="145" width="50" height="24" fill="#FFFFFF" stroke="#639922" stroke-width="1" rx="3"/>
+  <text x="185" y="161" font-family="sans-serif" font-size="9.5" fill="#3B6D11" text-anchor="middle">0x0000</text>
+  <rect x="220" y="145" width="50" height="24" fill="#FFFFFF" stroke="#639922" stroke-width="1" rx="3"/>
+  <text x="245" y="161" font-family="sans-serif" font-size="9.5" fill="#3B6D11" text-anchor="middle">…</text>
+  <rect x="250" y="180" width="50" height="24" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="3"/>
+  <text x="275" y="196" font-family="sans-serif" font-size="9.5" fill="#854F0B" text-anchor="middle">0x00FF</text>
+
+  <!-- 写入数据标注 -->
+  <rect x="160" y="212" width="50" height="22" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="4"/>
+  <text x="185" y="227" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle" font-weight="bold">写 66</text>
+  <rect x="220" y="212" width="50" height="22" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="4"/>
+  <text x="245" y="227" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle" font-weight="bold">写 77</text>
+  <rect x="280" y="212" width="40" height="22" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="4"/>
+  <text x="300" y="227" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle" font-weight="bold">写 88</text>
+  <rect x="250" y="212" width="30" height="22" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="4"/>
+  <text x="265" y="227" font-family="sans-serif" font-size="9.5" fill="#A32D2D" text-anchor="middle" font-weight="bold">55</text>
+  <line x1="240" y1="204" x2="265" y2="180" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- 第1页 -->
+  <rect x="360" y="90" width="270" height="150" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" rx="8"/>
+  <text x="495" y="112" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">第 1 页（256 字节）</text>
+  <text x="370" y="133" font-family="sans-serif" font-size="10.5" fill="#3C3489">地址 0x000100（页首）… 0x0001FF（页末）</text>
+  <rect x="370" y="145" width="60" height="24" fill="#FFFFFF" stroke="#534AB7" stroke-width="1" rx="3"/>
+  <text x="400" y="161" font-family="sans-serif" font-size="9.5" fill="#3C3489" text-anchor="middle">0x0100</text>
+  <rect x="440" y="145" width="60" height="24" fill="#FFFFFF" stroke="#534AB7" stroke-width="1" rx="3"/>
+  <text x="470" y="161" font-family="sans-serif" font-size="9.5" fill="#3C3489" text-anchor="middle">…</text>
+  <rect x="510" y="145" width="60" height="24" fill="#FFFFFF" stroke="#534AB7" stroke-width="1" rx="3"/>
+  <text x="540" y="161" font-family="sans-serif" font-size="9.5" fill="#3C3489" text-anchor="middle">…</text>
+  <rect x="370" y="212" width="120" height="22" fill="#FFFFFF" stroke="#534AB7" stroke-width="1" rx="4"/>
+  <text x="430" y="227" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">读到 FF FF FF（未写入）</text>
+
+  <!-- 页边界高亮 -->
+  <line x1="330" y1="80" x2="330" y2="250" stroke="#E24B4A" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="345" y="268" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">页边界：0x00FF → 0x0100</text>
+
+  <!-- 绕回箭头 -->
+  <path d="M 245 198 C 245 290, 90 290, 80 240" fill="none" stroke="#E24B4A" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#arrRed)"/>
+  <text x="150" y="300" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">跨页数据 66 不写 0x0100，</text>
+  <text x="150" y="315" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">而是绕回本页页首 0x0000 开始</text>
+
+  <!-- 底部说明 -->
+  <rect x="50" y="340" width="580" height="28" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="70" y="358" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">实验现象：从 0x0000FF 写 55 66 77 88 → 读回 55 FF FF FF（55 在页末，66/77/88 绕回页首）</text>
+
+  <defs>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E24B4A"/>
+    </marker>
+  </defs>
+</svg>

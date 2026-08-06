@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" width="100%" role="img">
+  <title>低功耗模式选择判断流程</title>
+  <desc>WFI/WFE 触发低功耗，按 SLEEPDEEP、SLEEPONEXIT、PDDS、LPDS 逐步判断进入睡眠/停机/待机</desc>
+  <rect x="0" y="0" width="680" height="560" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">低功耗模式选择判断流程</text>
+
+  <!-- 起点 -->
+  <rect x="215" y="60" width="250" height="52" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="80" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">执行 WFI（等待中断）</text>
+  <text x="340" y="98" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">或 WFE（等待事件）指令</text>
+
+  <!-- 向下箭头到判断1 -->
+  <line x1="340" y1="112" x2="340" y2="136" stroke="#185FA5" stroke-width="1.5" marker-end="url(#af)"/>
+  <defs>
+    <marker id="af" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#185FA5"/></marker>
+  </defs>
+
+  <!-- 判断1：SLEEPDEEP -->
+  <rect x="230" y="140" width="220" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="340" y="160" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">SLEEPDEEP 位（睡眠深深度）</text>
+  <text x="340" y="176" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">= 0 → 浅睡眠 / = 1 → 深度睡眠</text>
+
+  <!-- 左分支 SLEEPDEEP=0 -->
+  <line x1="250" y1="184" x2="150" y2="220" stroke="#BA7517" stroke-width="1.5"/>
+  <text x="195" y="205" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">= 0</text>
+  <!-- 右分支 SLEEPDEEP=1 -->
+  <line x1="430" y1="184" x2="540" y2="220" stroke="#BA7517" stroke-width="1.5"/>
+  <text x="495" y="205" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">= 1</text>
+
+  <!-- 左：睡眠模式（浅睡眠） -->
+  <rect x="50" y="220" width="210" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="155" y="238" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">睡眠模式（浅睡眠）</text>
+  <text x="155" y="255" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">只关 CPU 时钟 · 任意中断可唤醒</text>
+
+  <!-- 左分支再分：SLEEPONEXIT -->
+  <line x1="155" y1="264" x2="155" y2="300" stroke="#639922" stroke-width="1.5" marker-end="url(#ag)"/>
+  <defs>
+    <marker id="ag" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#639922"/></marker>
+  </defs>
+  <rect x="40" y="300" width="230" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="155" y="318" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">SLEEPONEXIT 位</text>
+  <text x="155" y="334" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">=0 立即睡 / =1 等中断处理完再睡</text>
+
+  <!-- 右：深度睡眠（停机/待机） -->
+  <rect x="430" y="220" width="210" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="535" y="238" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">深度睡眠模式</text>
+  <text x="535" y="255" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">停机 或 待机（再判断 PDDS）</text>
+
+  <!-- 右：PDDS 判断 -->
+  <line x1="535" y1="264" x2="535" y2="300" stroke="#534AB7" stroke-width="1.5" marker-end="url(#av)"/>
+  <defs>
+    <marker id="av" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#534AB7"/></marker>
+  </defs>
+  <rect x="420" y="300" width="230" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="535" y="318" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">PDDS 位</text>
+  <text x="535" y="334" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">=0 停机模式 / =1 待机模式</text>
+
+  <!-- 右：PDDS 分支 -->
+  <line x1="440" y1="344" x2="340" y2="380" stroke="#534AB7" stroke-width="1.5"/>
+  <text x="380" y="362" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">= 0</text>
+  <line x1="620" y1="344" x2="620" y2="430" stroke="#534AB7" stroke-width="1.5"/>
+  <text x="638" y="390" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">= 1</text>
+
+  <!-- 右：待机模式 -->
+  <rect x="510" y="430" width="150" height="46" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="10"/>
+  <text x="585" y="450" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">待机模式</text>
+  <text x="585" y="467" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">1.8V 区断电·数据丢失</text>
+
+  <!-- 右：停机模式 + LPDS 判断 -->
+  <rect x="230" y="380" width="220" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="340" y="398" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">停机模式</text>
+  <text x="340" y="414" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">只关时钟·数据保持</text>
+
+  <line x1="340" y1="424" x2="340" y2="448" stroke="#534AB7" stroke-width="1.5" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#534AB7"/></marker>
+  </defs>
+  <rect x="215" y="450" width="250" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="340" y="468" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">LPDS 位（电压调节器）</text>
+  <text x="340" y="484" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">=0 开启（唤醒快）/ =1 低功耗（更省电）</text>
+
+  <!-- 底部提示 -->
+  <rect x="40" y="512" width="600" height="34" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="8"/>
+  <text x="56" y="533" font-family="sans-serif" font-size="11" fill="#5F5E5A">提示：所有控制位都必须在 WFI / WFE 之前配置好；库函数（如 PWR_EnterSTOPMode）已自动封装，通常无需手动配置。</text>
+</svg>

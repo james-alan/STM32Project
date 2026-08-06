@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" width="100%" role="img">
+  <title>SPI 外设内部结构框图</title>
+  <desc>STM32 硬件 SPI 外设结构：MOSI/MISO/SCK 引脚、移位寄存器、发送/接收数据寄存器 TDR/RDR、TXE/RXNE 标志、波特率发生器、控制逻辑、NSS</desc>
+  <rect x="0" y="0" width="680" height="500" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">STM32 SPI 外设内部结构框图</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">左上角：数据寄存器 + 移位寄存器打配合（核心）；右下角：控制逻辑与寄存器（黑盒）</text>
+
+  <!-- 标志位 -->
+  <rect x="90" y="80" width="150" height="36" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="6"/>
+  <text x="165" y="103" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">TXE = 发送寄存器空</text>
+  <rect x="270" y="80" width="160" height="36" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="6"/>
+  <text x="350" y="103" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">RXNE = 接收寄存器非空</text>
+  <line x1="165" y1="116" x2="165" y2="140" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrowO)"/>
+  <line x1="350" y1="116" x2="350" y2="140" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrowO)"/>
+
+  <!-- 移位寄存器 -->
+  <rect x="90" y="142" width="250" height="92" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="215" y="168" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">移位寄存器</text>
+  <text x="215" y="188" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">发送时逐位移出 MOSI，同时从 MISO 移入</text>
+  <text x="215" y="204" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">一个 SCK 时钟移 1 位，8 次移完 1 字节</text>
+  <text x="215" y="222" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">发送/接收共用（全双工同时进行）</text>
+
+  <!-- 数据寄存器 DR（TDR/RDR） -->
+  <rect x="400" y="142" width="220" height="92" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="510" y="166" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">数据寄存器 DR（同一地址）</text>
+  <rect x="415" y="176" width="100" height="26" fill="#EAF3DE" stroke="#639922" stroke-width="1.2" rx="5"/>
+  <text x="465" y="193" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle" font-weight="bold">写 → 发送缓冲 TDR</text>
+  <rect x="520" y="176" width="100" height="26" fill="#EAF3DE" stroke="#639922" stroke-width="1.2" rx="5"/>
+  <text x="570" y="193" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle" font-weight="bold">读 → 接收缓冲 RDR</text>
+  <text x="510" y="222" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">发送/接收缓冲地址共用</text>
+
+  <!-- 双向箭头 DR <-> 移位寄存器 -->
+  <line x1="340" y1="164" x2="400" y2="164" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="212" x2="340" y2="212" stroke="#639922" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <text x="370" y="156" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">发送: TDR→移位</text>
+  <text x="370" y="236" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">接收: 移位→RDR</text>
+
+  <!-- MOSI / MISO 引脚 -->
+  <rect x="28" y="156" width="50" height="26" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="53" y="173" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">MOSI</text>
+  <rect x="28" y="192" width="50" height="26" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="53" y="209" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">MISO</text>
+  <line x1="78" y1="169" x2="90" y2="169" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="78" y1="205" x2="90" y2="205" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="53" y="246" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">主机: MOSI出</text>
+  <text x="53" y="259" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">MISO入</text>
+
+  <!-- 波特率发生器 -->
+  <rect x="60" y="310" width="180" height="70" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="150" y="336" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">波特率发生器（分频器）</text>
+  <text x="150" y="354" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">PCLK 经 BR[2:0] 分频</text>
+  <text x="150" y="369" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">产生 SCK 时钟</text>
+  <line x1="150" y1="310" x2="150" y2="280" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- SCK 引脚 -->
+  <rect x="260" y="308" width="50" height="26" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="5"/>
+  <text x="285" y="325" font-family="sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="bold">SCK</text>
+  <line x1="240" y1="321" x2="260" y2="321" stroke="#D3D1C7" stroke-width="1.5"/>
+
+  <!-- 控制逻辑 -->
+  <rect x="270" y="308" width="190" height="70" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="365" y="334" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">控制逻辑（黑盒）</text>
+  <text x="365" y="352" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">写 CR1/CR2 控制，读 SR 查状态</text>
+  <text x="365" y="367" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">SPE 使能整个外设</text>
+
+  <!-- NSS -->
+  <rect x="490" y="308" width="160" height="70" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="570" y="334" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">NSS 片选</text>
+  <text x="570" y="352" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">低电平有效，多主机用</text>
+  <text x="570" y="367" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">本课用 GPIO 模拟</text>
+
+  <!-- 底部说明 -->
+  <rect x="60" y="408" width="590" height="62" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="80" y="430" font-family="sans-serif" font-size="11" fill="#5F5E5A">操作方式（开车类比）：</text>
+  <text x="80" y="448" font-family="sans-serif" font-size="11" fill="#5F5E5A">写入控制寄存器 CR1/数据寄存器 DR = 踩油门控制运行　读取状态寄存器 SR = 看仪表盘了解状态</text>
+  <text x="80" y="462" font-family="sans-serif" font-size="11" fill="#5F5E5A">TDR 转移位寄存器时置 TXE；移位寄存器转 RDR 时置 RXNE</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#639922"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#BA7517"/>
+    </marker>
+  </defs>
+</svg>

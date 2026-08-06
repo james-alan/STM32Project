@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" role="img">
+  <title>独立看门狗配置流程</title>
+  <desc>独立看门狗配置五步：LSI自动开启、解除写保护、写预分频与重装值、启动、主循环喂狗，标注键寄存器各键值</desc>
+  <rect x="0" y="0" width="680" height="430" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">独立看门狗（IWDG）配置流程</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">时钟来源 LSI（40kHz）· 喂狗时间间隔不得超过超时时间，否则复位</text>
+
+  <!-- 第 1 步 -->
+  <rect x="40" y="80" width="600" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="100" font-family="sans-serif" font-size="12" fill="#3C3489" font-weight="bold">① 开启 LSI 时钟（无需写代码）</text>
+  <text x="60" y="116" font-family="sans-serif" font-size="10.5" fill="#3C3489">一旦软件启动 IWDG，LSI 被强制打开且不可关闭；LSI 稳定后时钟自动供给 IWDG</text>
+
+  <line x1="340" y1="124" x2="340" y2="142" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrowA)"/>
+
+  <!-- 第 2 步 -->
+  <rect x="40" y="144" width="600" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="164" font-family="sans-serif" font-size="12" fill="#854F0B" font-weight="bold">② 解除写保护</text>
+  <text x="60" y="180" font-family="sans-serif" font-size="10.5" fill="#854F0B">键寄存器 IWDG_KR 写入 0x5555 → IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable)</text>
+
+  <line x1="340" y1="188" x2="340" y2="206" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrowB)"/>
+
+  <!-- 第 3 步 -->
+  <rect x="40" y="208" width="600" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="228" font-family="sans-serif" font-size="12" fill="#0C447C" font-weight="bold">③ 写预分频 + 重装值</text>
+  <text x="60" y="244" font-family="sans-serif" font-size="10.5" fill="#0C447C">IWDG_SetPrescaler(÷16) · IWDG_SetReload(2499) → 超时时间 T = 0.025ms × 16 × (2499+1) = 1s</text>
+
+  <line x1="340" y1="252" x2="340" y2="270" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+  <!-- 第 4 步 -->
+  <rect x="40" y="272" width="600" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="292" font-family="sans-serif" font-size="12" fill="#3B6D11" font-weight="bold">④ 启动看门狗（建议先喂一次狗）</text>
+  <text x="60" y="308" font-family="sans-serif" font-size="10.5" fill="#3B6D11">键寄存器写 0xCCCC → IWDG_Enable()；启动前先 IWDG_ReloadCounter()，让第一个周期也完整</text>
+
+  <line x1="340" y1="316" x2="340" y2="334" stroke="#639922" stroke-width="1.5" marker-end="url(#arrowD)"/>
+
+  <!-- 第 5 步 -->
+  <rect x="40" y="336" width="600" height="44" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="60" y="356" font-family="sans-serif" font-size="12" fill="#A32D2D" font-weight="bold">⑤ 主循环不断喂狗</text>
+  <text x="60" y="372" font-family="sans-serif" font-size="10.5" fill="#A32D2D">键寄存器写 0xAAAA → IWDG_ReloadCounter()；喂狗间隔必须 &lt; 超时时间</text>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="398" width="600" height="22" rx="6" fill="#F1EFE8"/>
+  <text x="60" y="413" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">键寄存器三键值：0x5555 解除写保护 / 0xAAAA 重装计数器（喂狗）/ 0xCCCC 启动看门狗</text>
+
+  <defs>
+    <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#534AB7"/></marker>
+    <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#BA7517"/></marker>
+    <marker id="arrowC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/></marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#639922"/></marker>
+  </defs>
+</svg>

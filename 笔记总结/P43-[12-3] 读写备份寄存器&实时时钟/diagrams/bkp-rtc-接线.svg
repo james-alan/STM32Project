@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>BKP / RTC 实验接线示意</title>
+  <desc>PB1 接按键控制，VBAT 引脚接 3.3V 备用电源（不可接 5V），OLED 显示，RTC 晶振板载自带</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">BKP / RTC 实验接线示意</text>
+
+  <!-- STM32 板 -->
+  <rect x="40" y="70" width="380" height="330" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="230" y="96" font-family="sans-serif" font-size="13" fill="#5F5E5A" text-anchor="middle" font-weight="bold">STM32F103C8T6 核心板</text>
+
+  <!-- PB1 按键 -->
+  <rect x="80" y="130" width="150" height="46" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="155" y="150" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">PB1 按键</text>
+  <text x="155" y="166" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">控制数据变化（仅 BKP 程序用）</text>
+
+  <!-- VBAT -->
+  <rect x="250" y="130" width="150" height="46" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="325" y="150" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">VBAT 引脚（右上角）</text>
+  <text x="325" y="166" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">备用电池供电脚</text>
+
+  <!-- 3.3V 供电 -->
+  <rect x="250" y="220" width="150" height="46" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="325" y="240" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">ST-Link 3.3V 输出</text>
+  <text x="325" y="256" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">母对母杜邦线连接</text>
+
+  <!-- 连接线 VBAT<->3.3V -->
+  <line x1="325" y1="176" x2="325" y2="220" stroke="#639922" stroke-width="2"/>
+  <text x="336" y="202" font-family="sans-serif" font-size="10" fill="#3B6D11">备用电源供电</text>
+
+  <!-- OLED -->
+  <rect x="80" y="300" width="300" height="50" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="230" y="320" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">OLED 显示屏</text>
+  <text x="230" y="336" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">显示写入/读出的数据、日期时间、CNT、DIV</text>
+
+  <!-- 晶振 -->
+  <rect x="80" y="370" width="150" height="46" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="155" y="390" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">RTC 晶振（LSE）</text>
+  <text x="155" y="406" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">板上自带，接线不用管</text>
+
+  <!-- 右侧警告 -->
+  <rect x="455" y="70" width="185" height="130" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="547" y="92" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">注意</text>
+  <text x="547" y="110" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">VBAT 只支持 3.3V</text>
+  <text x="547" y="126" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">绝不接 5V 引脚！</text>
+  <text x="547" y="142" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">7/8 号脚是 3.3V</text>
+  <text x="547" y="158" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle">下面两个是 5V</text>
+  <text x="547" y="182" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">接错可能烧坏芯片</text>
+
+  <!-- 底部说明 -->
+  <rect x="455" y="220" width="185" height="180" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="465" y="244" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="bold">实验接线要点：</text>
+  <text x="465" y="264" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· PB1 接按键（BKP 程序）</text>
+  <text x="465" y="284" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· VBAT 用杜邦线接 ST-Link 3.3V</text>
+  <text x="465" y="304" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· RTC 程序不用按键</text>
+  <text x="465" y="324" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 备用电池通常接 3V 纽扣电池</text>
+  <text x="465" y="344" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· 开发板无电池座时可</text>
+  <text x="465" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">  从 ST-Link 直接引 3.3V</text>
+  <text x="465" y="384" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">· BKP 掉电保持靠 VBAT</text>
+</svg>

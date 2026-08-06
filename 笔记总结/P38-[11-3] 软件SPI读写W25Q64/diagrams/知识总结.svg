@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>软件 SPI 读写 W25Q64 知识总结</title>
+  <desc>本节知识要点：接线、SPI 时序、W25Q64 指令、实验结论</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">[11-3] 软件 SPI 读写 W25Q64 —— 知识总结</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">一条主线：SPI 时序（起始/终止/交换字节）→ 拼接 W25Q64 指令 → 实验验证 Flash 特性</text>
+
+  <!-- 卡片1：接线 -->
+  <rect x="40" y="80" width="290" height="140" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="185" y="104" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">① 接线（任意 GPIO 即可）</text>
+  <text x="55" y="126" font-family="sans-serif" font-size="11" fill="#0C447C">PA4→CS（推挽输出）</text>
+  <text x="55" y="144" font-family="sans-serif" font-size="11" fill="#0C447C">PA5→SCK（推挽输出）</text>
+  <text x="55" y="162" font-family="sans-serif" font-size="11" fill="#0C447C">PA6←MISO（上拉输入）</text>
+  <text x="55" y="180" font-family="sans-serif" font-size="11" fill="#0C447C">PA7→MOSI（推挽输出）</text>
+  <text x="55" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">接在 SPI1 硬件引脚上，方便日后切换硬件 SPI</text>
+
+  <!-- 卡片2：SPI 时序 -->
+  <rect x="350" y="80" width="290" height="140" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="495" y="104" font-family="sans-serif" font-size="12.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">② SPI 三个基本时序</text>
+  <text x="365" y="126" font-family="sans-serif" font-size="11" fill="#3B6D11">起始：CS 拉低（选中从机）</text>
+  <text x="365" y="144" font-family="sans-serif" font-size="11" fill="#3B6D11">终止：CS 拉高（释放从机）</text>
+  <text x="365" y="162" font-family="sans-serif" font-size="11" fill="#3B6D11">交换字节：发一位收一位（全双工）</text>
+  <text x="365" y="180" font-family="sans-serif" font-size="11" fill="#3B6D11">模式0：上升沿采样，下降沿移出</text>
+  <text x="365" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">软件 SPI 看成"先后执行"，无需精确同时</text>
+
+  <!-- 卡片3：指令 -->
+  <rect x="40" y="240" width="290" height="140" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="185" y="264" font-family="sans-serif" font-size="12.5" fill="#3C3489" text-anchor="middle" font-weight="bold">③ W25Q64 关键指令</text>
+  <text x="55" y="286" font-family="sans-serif" font-size="11" fill="#3C3489">0x9F 读 JEDEC ID → EF 40 17</text>
+  <text x="55" y="304" font-family="sans-serif" font-size="11" fill="#3C3489">0x06 写使能（写操作前必须）</text>
+  <text x="55" y="322" font-family="sans-serif" font-size="11" fill="#3C3489">0x02 页编程 / 0x20 扇区擦除</text>
+  <text x="55" y="340" font-family="sans-serif" font-size="11" fill="#3C3489">0x03 读数据（可跨页连续读）</text>
+  <text x="55" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">接收时发送哑数据 0xFF（抛砖引玉）</text>
+
+  <!-- 卡片4：实验结论 -->
+  <rect x="350" y="240" width="290" height="140" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="495" y="264" font-family="sans-serif" font-size="12.5" fill="#854F0B" text-anchor="middle" font-weight="bold">④ Flash 特性（实验验证）</text>
+  <text x="365" y="286" font-family="sans-serif" font-size="11" fill="#854F0B">掉电不丢失（非易失）</text>
+  <text x="365" y="304" font-family="sans-serif" font-size="11" fill="#854F0B">擦除后全变 FF</text>
+  <text x="365" y="322" font-family="sans-serif" font-size="11" fill="#854F0B">只能写 0 不能写 1 → 写前必须擦除</text>
+  <text x="365" y="340" font-family="sans-serif" font-size="11" fill="#854F0B">页编程不能跨页（256B 一页）</text>
+  <text x="365" y="360" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">大块数据要软件分批、一页一页写</text>
+
+  <!-- 底部口诀 -->
+  <rect x="40" y="392" width="600" height="20" fill="none"/>
+  <text x="340" y="412" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">口诀：起始选从机、终止放从机、时钟沿采数据；写前先使能、擦完才能写、跨页必绕回</text>
+</svg>

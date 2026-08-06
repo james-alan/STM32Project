@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>P34 硬件 I2C 外设知识总结</title>
+  <desc>硬件 I2C 外设核心：DR+移位寄存器、写 CR 读 SR、主机收发事件流程、引脚映射、软件硬件对比</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P34 知识总结：STM32 硬件 I2C 外设</text>
+
+  <!-- 根节点 -->
+  <rect x="240" y="58" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="84" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">I2C 硬件外设</text>
+
+  <!-- 分支线 -->
+  <line x1="300" y1="100" x2="160" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="330" y1="100" x2="330" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="380" y1="100" x2="520" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="380" y1="100" x2="560" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="340" y1="100" x2="340" y2="290" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 节点 1：核心结构 -->
+  <rect x="60" y="140" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="160" y="158" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">① 核心结构</text>
+  <text x="160" y="174" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">数据寄存器 DR + 移位寄存器</text>
+  <text x="160" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">发送看 TXE、接收看 RXNE</text>
+  <text x="160" y="218" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">原理同串口，收发共用一组寄存器</text>
+
+  <!-- 节点 2：操作套路 -->
+  <rect x="240" y="140" width="200" height="44" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="340" y="158" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">② 操作套路</text>
+  <text x="340" y="174" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">写 CR 控制 → 读 SR 查状态 → DR 收发</text>
+  <text x="340" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">库函数封装后更简单（I2C_Init 等）</text>
+
+  <!-- 节点 3：主机发送 -->
+  <rect x="470" y="140" width="180" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="560" y="158" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">③ 主机发送</text>
+  <text x="560" y="174" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">EV5→EV6→EV8→EV8_2</text>
+  <text x="560" y="202" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">EV8 循环写数据 → 最后 STOP</text>
+
+  <!-- 节点 4：主机接收 -->
+  <rect x="470" y="230" width="180" height="44" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="560" y="248" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">④ 主机接收</text>
+  <text x="560" y="264" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">EV5→EV6→EV7→EV7_1</text>
+  <text x="560" y="292" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">EV7 循环读 DR → 最后 ACK=0+STOP</text>
+
+  <!-- 节点 5：引脚 -->
+  <rect x="60" y="290" width="200" height="44" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="160" y="308" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">⑤ 引脚固定</text>
+  <text x="160" y="324" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">I2C1=PB6/PB7（可重映射 PB8/9）</text>
+  <text x="160" y="352" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">I2C2=PB10/PB11 · 复用开漏</text>
+
+  <!-- 底部口诀 -->
+  <rect x="60" y="396" width="590" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="80" y="418" font-family="sans-serif" font-size="11.5" fill="#5F5E5A" font-weight="bold">核心记忆口诀：</text>
+  <text x="80" y="436" font-family="sans-serif" font-size="11" fill="#5F5E5A">写 CR 控制运行 / 读 SR 查看状态 / DR 负责收发 / 等事件按流程走 / 引脚固定查手册 / 一主一从最简单</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" width="100%" role="img">
+  <title>P49 Store 参数掉电保存流程：上电加载与保存备份</title>
+  <desc>上电调用Store_Init，读标志位判断首次使用则初始化Flash，之后从Flash加载数据到StoreData；修改参数后调用Store_Save擦除最后一页并整体备份</desc>
+  <rect x="0" y="0" width="680" height="470" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P49 Store 参数掉电保存：上电加载 / 保存备份</text>
+
+  <!-- 上电入口 -->
+  <rect x="270" y="56" width="140" height="36" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="18"/>
+  <text x="340" y="78" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">上电启动</text>
+
+  <line x1="340" y1="92" x2="340" y2="110" stroke="#5F5E5A" stroke-width="1.5"/>
+  <polygon points="334,108 340,118 346,108" fill="#5F5E5A"/>
+
+  <!-- Store_Init -->
+  <rect x="250" y="118" width="180" height="36" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="140" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">调用 Store_Init()</text>
+
+  <line x1="340" y1="154" x2="340" y2="172" stroke="#185FA5" stroke-width="1.5"/>
+  <polygon points="334,170 340,180 346,170" fill="#185FA5"/>
+
+  <!-- 判断标志位 -->
+  <rect x="240" y="180" width="200" height="36" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="340" y="202" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">读保存页第 1 个半字</text>
+
+  <!-- 分支 -->
+  <line x1="240" y1="198" x2="120" y2="250" stroke="#854F0B" stroke-width="1.5"/>
+  <text x="150" y="220" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">≠ 0xA5</text>
+  <line x1="440" y1="198" x2="560" y2="250" stroke="#3B6D11" stroke-width="1.5"/>
+  <text x="490" y="220" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">= 0xA5</text>
+
+  <!-- 第一次使用 -->
+  <rect x="20" y="250" width="200" height="72" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="120" y="268" font-family="sans-serif" font-size="11.5" fill="#A32D2D" text-anchor="middle" font-weight="bold">第一次使用：初始化 Flash</text>
+  <text x="120" y="286" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">① 擦除最后一页</text>
+  <text x="120" y="302" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">② 写标志位 0xA5</text>
+  <text x="120" y="318" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">③ 数据区全部清零</text>
+
+  <!-- 已保存 -->
+  <rect x="460" y="250" width="200" height="40" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="560" y="268" font-family="sans-serif" font-size="11.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">已保存过</text>
+  <text x="560" y="284" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">直接加载备份数据</text>
+
+  <!-- 汇合 -->
+  <line x1="120" y1="322" x2="340" y2="360" stroke="#5F5E5A" stroke-width="1.5"/>
+  <line x1="560" y1="290" x2="340" y2="360" stroke="#5F5E5A" stroke-width="1.5"/>
+
+  <rect x="250" y="360" width="180" height="34" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="340" y="381" font-family="sans-serif" font-size="11.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">Flash 数据 → StoreData</text>
+
+  <!-- 保存流程 -->
+  <line x1="340" y1="394" x2="340" y2="412" stroke="#3B6D11" stroke-width="1.5"/>
+  <rect x="250" y="412" width="180" height="36" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="434" font-family="sans-serif" font-size="11.5" fill="#0C447C" text-anchor="middle" font-weight="bold">StoreData → Flash 保存页</text>
+
+  <!-- 运行中的保存 -->
+  <rect x="60" y="118" width="160" height="80" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="140" y="138" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">运行中修改参数</text>
+  <text x="140" y="156" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">改 StoreData.Data[i]</text>
+  <text x="140" y="172" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">（别动 Data[0] 标志位）</text>
+  <text x="140" y="188" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">然后 Store_Save()</text>
+
+  <!-- 底部口诀 -->
+  <rect x="60" y="430" width="560" height="0" fill="none"/>
+  <text x="60" y="460" font-family="sans-serif" font-size="11" fill="#5F5E5A">核心：StoreData 是 Flash 的分身 —— 读写靠 StoreData，掉电靠 Flash；改完必 Store_Save，否则上电加载旧数据。</text>
+</svg>

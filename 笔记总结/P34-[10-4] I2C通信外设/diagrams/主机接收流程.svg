@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 700" width="100%" role="img">
+  <title>I2C 主机接收流程图（7 位地址）</title>
+  <desc>主机接收流程：起始条件 → EV5 → 发地址(读) → EV6 → EV7 读数据 → EV7_1(设 ACK=0 + 停止) → 停止条件</desc>
+  <rect x="0" y="0" width="680" height="700" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">I2C 主机接收流程（7 位地址 · 对应手册主接收器传送序列图）</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">与发送流程对称：发地址时 R/W 位 = 1（读方向）；接收方由从机放数据、主机读 DR</text>
+
+  <!-- 步骤 1 -->
+  <rect x="40" y="80" width="340" height="50" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="103" font-family="sans-serif" font-size="11.5" fill="#0C447C" font-weight="bold">① 写 CR1.START = 1</text>
+  <text x="60" y="121" font-family="sans-serif" font-size="10.5" fill="#0C447C">硬件自动产生起始条件，SDA 高→低</text>
+  <rect x="420" y="80" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="103" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">控制寄存器 CR1 的 START 位</text>
+
+  <!-- 步骤 2 -->
+  <rect x="40" y="158" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="181" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">② 等待 EV5 事件：SB = 1</text>
+  <text x="60" y="199" font-family="sans-serif" font-size="10.5" fill="#854F0B">起始条件已发送</text>
+  <rect x="420" y="158" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="181" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">状态寄存器 SR1 的 SB 位</text>
+
+  <!-- 步骤 3 -->
+  <rect x="40" y="236" width="340" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="259" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">③ 写 DR = 从机地址字节</text>
+  <text x="60" y="277" font-family="sans-serif" font-size="10.5" fill="#3B6D11">7 位地址 + 读位 1（如 0xD1 读 MPU6050）</text>
+  <rect x="420" y="236" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="259" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">数据寄存器 DR</text>
+
+  <!-- 步骤 4 -->
+  <rect x="40" y="314" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="337" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">④ 等待 EV6 事件：ADDR = 1</text>
+  <text x="60" y="355" font-family="sans-serif" font-size="10.5" fill="#854F0B">地址发送完成（此后 SDA 交给从机放数据）</text>
+  <rect x="420" y="314" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="337" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SR1 的 ADDR 位</text>
+
+  <!-- 步骤 5 -->
+  <rect x="40" y="392" width="340" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="415" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">⑤ 等待 EV7：RXNE = 1 → 读 DR 取数据 1</text>
+  <text x="60" y="433" font-family="sans-serif" font-size="10.5" fill="#3B6D11">从机逐位移入移位寄存器 → 整体转出到 DR</text>
+  <rect x="420" y="392" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="415" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SR1 的 RXNE 位（接收非空）</text>
+  <text x="440" y="431" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（读 DR 清除该事件）</text>
+
+  <!-- 步骤 6 -->
+  <rect x="40" y="470" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="493" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">⑥ 重复 ⑤：EV7 → 读 DR，数据 2、3…</text>
+  <text x="60" y="511" font-family="sans-serif" font-size="10.5" fill="#854F0B">每个字节收完硬件自动回 ACK（若 ACK 位=1）</text>
+  <rect x="420" y="470" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="493" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">重复直至收到想要的数据</text>
+  <text x="440" y="509" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（收 N 个字节：前 N-1 次给 ACK）</text>
+
+  <!-- 步骤 7 -->
+  <rect x="40" y="548" width="340" height="50" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="571" font-family="sans-serif" font-size="11.5" fill="#3C3489" font-weight="bold">⑦ 最后 1 字节前：设 ACK=0 + STOP=1</text>
+  <text x="60" y="589" font-family="sans-serif" font-size="10.5" fill="#3C3489">告诉从机"不再接收"，并准备停止</text>
+  <rect x="420" y="548" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="571" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">CR1 的 ACK 位 = 0（不给应答）</text>
+  <text x="440" y="587" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">→ 触发 EV7_1 事件</text>
+
+  <!-- 步骤 8 -->
+  <rect x="40" y="626" width="340" height="50" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="60" y="649" font-family="sans-serif" font-size="11.5" fill="#A32D2D" font-weight="bold">⑧ 收完最后 1 字节 → 硬件发 NACK</text>
+  <text x="60" y="667" font-family="sans-serif" font-size="10.5" fill="#A32D2D">停止条件产生，总线释放</text>
+  <rect x="420" y="626" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="649" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">NACK = 从机停止发送</text>
+  <text x="440" y="665" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（一帧完整接收完成）</text>
+
+  <!-- 箭头 -->
+  <line x1="210" y1="130" x2="210" y2="158" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="208" x2="210" y2="236" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="286" x2="210" y2="314" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="364" x2="210" y2="392" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="442" x2="210" y2="470" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="520" x2="210" y2="548" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="598" x2="210" y2="626" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+    </marker>
+  </defs>
+</svg>

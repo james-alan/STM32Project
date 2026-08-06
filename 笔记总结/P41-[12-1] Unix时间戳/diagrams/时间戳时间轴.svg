@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="100%" role="img">
+  <title>Unix 时间戳时间轴</title>
+  <desc>从1970年1月1日零点为起点的秒计数器时间轴，及其与日期时间两种表现形式的对应关系</desc>
+  <rect x="0" y="0" width="680" height="360" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">Unix 时间戳时间轴：从 1970 年起累计的秒数</text>
+
+  <!-- 时间轴 -->
+  <line x1="60" y1="130" x2="620" y2="130" stroke="#185FA5" stroke-width="3"/>
+  <polygon points="620,130 612,124 612,136" fill="#185FA5"/>
+  <text x="620" y="152" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="end">时间→</text>
+
+  <!-- 起点 -->
+  <circle cx="70" cy="130" r="6" fill="#E24B4A"/>
+  <text x="70" y="118" font-family="sans-serif" font-size="11" fill="#A32D2D" text-anchor="middle" font-weight="bold">1970-01-01 00:00:00</text>
+  <text x="70" y="105" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">（伦敦 UTC/GMT，秒数 = 0）</text>
+
+  <!-- 1970之前 -->
+  <text x="70" y="162" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">1970 年之前的时间无法用时间戳表示</text>
+
+  <!-- 刻度 10亿秒 -->
+  <line x1="280" y1="124" x2="280" y2="136" stroke="#BA7517" stroke-width="2"/>
+  <text x="280" y="118" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle" font-weight="bold">10 亿秒</text>
+  <text x="280" y="163" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">2001-09-09 01:46:40</text>
+
+  <!-- 刻度 1672588795 秒 -->
+  <line x1="500" y1="124" x2="500" y2="136" stroke="#185FA5" stroke-width="2"/>
+  <text x="500" y="118" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle" font-weight="bold">1672588795 秒</text>
+  <text x="500" y="163" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">伦敦 2023-01-01 15:59:55</text>
+  <text x="500" y="176" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">北京 23:59:55（+8 小时）</text>
+
+  <!-- 当前 16亿 -->
+  <line x1="560" y1="124" x2="560" y2="136" stroke="#639922" stroke-width="2"/>
+  <text x="560" y="118" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">当前约 16 亿秒</text>
+
+  <!-- 两种表现形式 -->
+  <rect x="40" y="208" width="290" height="64" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="185" y="230" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">表现形式一：秒计数器（基本形式）</text>
+  <text x="185" y="248" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">从 0 开始，每秒加 1，永不进位</text>
+  <text x="185" y="264" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">适合计算机存储与计算</text>
+
+  <rect x="350" y="208" width="290" height="64" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="495" y="230" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">表现形式二：日期时间</text>
+  <text x="495" y="248" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">秒数经计算翻译为年月日时分秒</text>
+  <text x="495" y="264" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">适合人类阅读，转换靠 time.h</text>
+
+  <!-- 双向箭头 -->
+  <line x1="335" y1="240" x2="345" y2="240" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="296" width="600" height="46" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="316" font-family="sans-serif" font-size="11" fill="#5F5E5A">起点是人为规定的：设计者选择了伦敦（UTC/GMT）的 1970 年 1 月 1 日零点。</text>
+  <text x="60" y="332" font-family="sans-serif" font-size="11" fill="#5F5E5A">秒数与日期时间的换算步骤固定，C 语言官方已在 time.h 中写好，直接调用即可。</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" role="img">
+  <title>SPI 一主多从硬件拓扑：SCK/MOSI/MISO 共享，CS 独立</title>
+  <desc>主机引出 SCK、MOSI、MISO 三条共享线与三根独立 CS 线，分别接到三个从机</desc>
+  <rect x="0" y="0" width="680" height="430" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">SPI 一主多从硬件拓扑（1 主 3 从）</text>
+
+  <!-- 主机 -->
+  <rect x="30" y="120" width="150" height="200" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="105" y="150" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">SPI 主机</text>
+  <text x="105" y="172" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">（STM32 控制器）</text>
+  <text x="105" y="220" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">SCK 输出</text>
+  <text x="105" y="252" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">MOSI 输出</text>
+  <text x="105" y="284" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">MISO 输入</text>
+  <text x="105" y="316" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle">CS1/CS2/CS3 输出</text>
+
+  <!-- 三条共享总线 -->
+  <line x1="180" y1="196" x2="520" y2="196" stroke="#185FA5" stroke-width="2.5"/>
+  <line x1="180" y1="236" x2="520" y2="236" stroke="#639922" stroke-width="2.5"/>
+  <line x1="180" y1="276" x2="520" y2="276" stroke="#639922" stroke-width="2.5"/>
+  <text x="350" y="188" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">SCK 时钟线（共享，主机掌控）</text>
+  <text x="350" y="228" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">MOSI 主机→从机（共享）</text>
+  <text x="350" y="290" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">MISO 从机→主机（共享）</text>
+
+  <!-- 从机 1 -->
+  <rect x="520" y="60" width="140" height="80" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="590" y="84" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">从机 1</text>
+  <text x="590" y="100" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">（W25Q64 等）</text>
+  <text x="590" y="122" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">CS1 低有效</text>
+  <!-- 从机 2 -->
+  <rect x="520" y="165" width="140" height="80" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="590" y="189" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">从机 2</text>
+  <text x="590" y="220" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">CS2 低有效</text>
+  <!-- 从机 3 -->
+  <rect x="520" y="270" width="140" height="80" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="590" y="294" font-family="sans-serif" font-size="11.5" fill="#3C3489" text-anchor="middle" font-weight="bold">从机 3</text>
+  <text x="590" y="325" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">CS3 低有效</text>
+
+  <!-- 从机接到总线的连线 -->
+  <line x1="520" y1="90" x2="520" y2="196" stroke="#D3D1C7" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="520" y1="195" x2="520" y2="196" stroke="#D3D1C7" stroke-width="1"/>
+  <line x1="520" y1="180" x2="520" y2="236" stroke="#D3D1C7" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="520" y1="245" x2="520" y2="236" stroke="#D3D1C7" stroke-width="1"/>
+  <line x1="520" y1="300" x2="520" y2="276" stroke="#D3D1C7" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- CS 独立线 -->
+  <line x1="180" y1="310" x2="520" y2="108" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="180" y1="316" x2="520" y2="212" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="180" y1="322" x2="520" y2="318" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="395" y="126" font-family="sans-serif" font-size="9.5" fill="#854F0B">CS1</text>
+  <text x="395" y="230" font-family="sans-serif" font-size="9.5" fill="#854F0B">CS2</text>
+  <text x="395" y="336" font-family="sans-serif" font-size="9.5" fill="#854F0B">CS3</text>
+
+  <!-- 底部说明 -->
+  <rect x="30" y="376" width="630" height="42" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="50" y="393" font-family="sans-serif" font-size="11" fill="#A32D2D" font-weight="bold">关键：SCK/MOSI/MISO 所有从机共享并联；每个从机独占一条 CS 片选线</text>
+  <text x="50" y="410" font-family="sans-serif" font-size="11" fill="#A32D2D">同一时刻只允许拉低一条 CS —— 否则多个从机同时驱动 MISO 会电平冲突</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>system 文件配置主频流程</title>
+  <desc>SystemInit 启动 HSE、恢复默认、调用 SetSysClock，SetSysClock 根据宏定义分发到 SetSysClockTo72，内部配置锁相环 PLL 实现 72MHz 主频</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">system_stm32f10x 配置主频流程（13-1）</text>
+
+  <!-- 第一阶段 SystemInit -->
+  <rect x="40" y="62" width="180" height="52" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="130" y="82" font-family="sans-serif" font-size="12.5" fill="#0C447C" text-anchor="middle" font-weight="bold">SystemInit()</text>
+  <text x="130" y="100" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">复位后由启动文件自动调用</text>
+
+  <rect x="40" y="126" width="180" height="70" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="130" y="146" font-family="sans-serif" font-size="11.5" fill="#3B6D11" text-anchor="middle" font-weight="bold">① 启动 HSI</text>
+  <text x="130" y="164" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">默认用内部 8MHz 晶振</text>
+  <text x="130" y="180" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">② 各种 Reset / De-Init</text>
+
+  <line x1="220" y1="88" x2="290" y2="88" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="240" y="80" font-family="sans-serif" font-size="10" fill="#5F5E5A">最后调用</text>
+
+  <!-- 第二阶段 SetSysClock -->
+  <rect x="290" y="62" width="180" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="2" rx="10"/>
+  <text x="380" y="82" font-family="sans-serif" font-size="12.5" fill="#854F0B" text-anchor="middle" font-weight="bold">SetSysClock()</text>
+  <text x="380" y="100" font-family="sans-serif" font-size="10" fill="#854F0B" text-anchor="middle">分配函数：按宏定义分发</text>
+
+  <text x="470" y="82" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">定义哪个宏</text>
+  <text x="470" y="96" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">就执行哪个函数</text>
+
+  <line x1="380" y1="114" x2="380" y2="140" stroke="#BA7517" stroke-width="1.5"/>
+  <text x="392" y="132" font-family="sans-serif" font-size="10" fill="#854F0B">当前默认 72MHz</text>
+
+  <!-- 第三阶段 To72 -->
+  <rect x="250" y="140" width="260" height="52" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" rx="10"/>
+  <text x="380" y="160" font-family="sans-serif" font-size="12.5" fill="#3C3489" text-anchor="middle" font-weight="bold">SetSysClockTo72()</text>
+  <text x="380" y="178" font-family="sans-serif" font-size="10" fill="#3C3489" text-anchor="middle">56 / 48 / 36 / 24 / 8MHz 同理，仅倍频系数不同</text>
+
+  <line x1="380" y1="192" x2="380" y2="216" stroke="#534AB7" stroke-width="1.5"/>
+
+  <!-- 内部步骤 -->
+  <rect x="250" y="216" width="390" height="150" fill="#FFFFFF" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="270" y="240" font-family="sans-serif" font-size="12" fill="#3C3489" font-weight="bold">内部步骤</text>
+  <text x="270" y="262" font-family="sans-serif" font-size="11" fill="#5F5E5A">① 使能 HSE（外部高速时钟）→ 循环等待就绪</text>
+  <text x="270" y="284" font-family="sans-serif" font-size="11" fill="#5F5E5A">② HSE 就绪 → 配置 Flash 等待周期 + AHB/APB 分频</text>
+  <text x="270" y="306" font-family="sans-serif" font-size="11" fill="#5F5E5A">③ 选择 HSE(8MHz) 作为 PLL 输入 → PLL ×9 倍频</text>
+  <text x="270" y="328" font-family="sans-serif" font-size="11" fill="#5F5E5A">④ PLL 输出 = 8 × 9 = 72MHz → 使能 PLL → 等待就绪</text>
+  <text x="270" y="350" font-family="sans-serif" font-size="11" fill="#5F5E5A">⑤ 选择 PLL 输出作为系统时钟 SystemClock</text>
+
+  <!-- HSE 失败 fallback -->
+  <rect x="40" y="216" width="180" height="80" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="130" y="238" font-family="sans-serif" font-size="11.5" fill="#A32D2D" text-anchor="middle" font-weight="bold">若 HSE 启动失败</text>
+  <text x="130" y="258" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">程序默认退回 HSI</text>
+  <text x="130" y="274" font-family="sans-serif" font-size="10" fill="#A32D2D" text-anchor="middle">内部 8MHz → 主频变 8MHz</text>
+  <text x="130" y="290" font-family="sans-serif" font-size="10" fill="#5F5E5A">排查方向：外部晶振问题</text>
+
+  <line x1="250" y1="245" x2="220" y2="258" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 分频结果 -->
+  <rect x="250" y="380" width="390" height="84" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="270" y="402" font-family="sans-serif" font-size="11.5" fill="#5F5E5A" font-weight="bold">分频器 1-1-2（HCLK=1 / PCLK2=1 / PCLK1=2）</text>
+  <text x="270" y="422" font-family="sans-serif" font-size="11" fill="#5F5E5A">SystemClock 72MHz → AHB(HCLK)=72MHz、APB2=72MHz、APB1=36MHz</text>
+  <text x="270" y="442" font-family="sans-serif" font-size="11" fill="#5F5E5A">修改主频 = 修改 SetSysClockToxx 前端的宏定义（默认 72MHz）</text>
+  <text x="270" y="458" font-family="sans-serif" font-size="10" fill="#A32D2D">注意：改主频牵一发而动全身，定时器/延时都要重配</text>
+</svg>

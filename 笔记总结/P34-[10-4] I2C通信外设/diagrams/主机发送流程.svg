@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 700" width="100%" role="img">
+  <title>I2C 主机发送流程图（7 位地址）</title>
+  <desc>主机发送流程：起始条件 → EV5 → 发地址 → EV6 → 发数据 → EV8 → EV8_2 → 停止条件</desc>
+  <rect x="0" y="0" width="680" height="700" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">I2C 主机发送流程（7 位地址 · 对应手册主发送器传送序列图）</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">套路：写控制寄存器 CR / 数据寄存器 DR → 硬件产生时序 → 检查事件（组合标志位的大标志位）→ 继续下一步</text>
+
+  <!-- 步骤 1 -->
+  <rect x="40" y="80" width="340" height="50" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="103" font-family="sans-serif" font-size="11.5" fill="#0C447C" font-weight="bold">① 写 CR1.START = 1</text>
+  <text x="60" y="121" font-family="sans-serif" font-size="10.5" fill="#0C447C">硬件自动产生起始条件，SDA 高→低</text>
+  <rect x="420" y="80" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="103" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">控制寄存器 CR1 的 START 位</text>
+  <text x="440" y="119" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（启动后可由硬件自动清除）</text>
+
+  <!-- 步骤 2 -->
+  <rect x="40" y="158" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="181" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">② 等待 EV5 事件：SB = 1</text>
+  <text x="60" y="199" font-family="sans-serif" font-size="10.5" fill="#854F0B">起始条件已发送（库函数 I2C_CheckEvent）</text>
+  <rect x="420" y="158" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="181" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">状态寄存器 SR1 的 SB 位</text>
+  <text x="440" y="197" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（读 SR1 后写 DR 自动清除）</text>
+
+  <!-- 步骤 3 -->
+  <rect x="40" y="236" width="340" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="259" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">③ 写 DR = 从机地址字节</text>
+  <text x="60" y="277" font-family="sans-serif" font-size="10.5" fill="#3B6D11">7 位地址 + 写位 0（如 0xD0 写 MPU6050）</text>
+  <rect x="420" y="236" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="259" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">数据寄存器 DR</text>
+  <text x="440" y="275" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">硬件自动转到移位寄存器逐位发送</text>
+
+  <!-- 步骤 4 -->
+  <rect x="40" y="314" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="337" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">④ 等待 EV6 事件：ADDR = 1</text>
+  <text x="60" y="355" font-family="sans-serif" font-size="10.5" fill="#854F0B">地址发送完成，收到从机 ACK</text>
+  <rect x="420" y="314" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="337" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SR1 的 ADDR 位</text>
+  <text x="440" y="353" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（读 SR1 再读 SR2 才清除）</text>
+
+  <!-- 步骤 5 -->
+  <rect x="40" y="392" width="340" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="415" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">⑤ 写 DR = 数据 1</text>
+  <text x="60" y="433" font-family="sans-serif" font-size="10.5" fill="#3B6D11">DR 先接收，移位寄存器空闲时转入发送</text>
+  <rect x="420" y="392" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="415" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">数据寄存器 DR</text>
+  <text x="440" y="431" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（写 DR 会清除 TXE 事件）</text>
+
+  <!-- 步骤 6 -->
+  <rect x="40" y="470" width="340" height="50" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="493" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">⑥ 等待 EV8 事件：TXE = 1</text>
+  <text x="60" y="511" font-family="sans-serif" font-size="10.5" fill="#854F0B">发送寄存器空 → 立即写下一个数据（流水线）</text>
+  <rect x="420" y="470" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="493" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SR1 的 TXE 位（数据 2、3…）</text>
+  <text x="440" y="509" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（数据写完前不断重复 ⑤⑥）</text>
+
+  <!-- 步骤 7 -->
+  <rect x="40" y="548" width="340" height="50" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="571" font-family="sans-serif" font-size="11.5" fill="#3C3489" font-weight="bold">⑦ 等待 EV8_2 事件：TXE=1 且 BTF=1</text>
+  <text x="60" y="589" font-family="sans-serif" font-size="10.5" fill="#3C3489">移位寄存器空且无新数据 → 发送结束</text>
+  <rect x="420" y="548" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="571" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">SR1 的 TXE + BTF 位</text>
+  <text x="440" y="587" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（BTF = 字节发送结束标志）</text>
+
+  <!-- 步骤 8 -->
+  <rect x="40" y="626" width="340" height="50" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="60" y="649" font-family="sans-serif" font-size="11.5" fill="#A32D2D" font-weight="bold">⑧ 写 CR1.STOP = 1</text>
+  <text x="60" y="667" font-family="sans-serif" font-size="10.5" fill="#A32D2D">当前字节发送完后产生停止条件，总线释放</text>
+  <rect x="420" y="626" width="220" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="440" y="649" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">控制寄存器 CR1 的 STOP 位</text>
+  <text x="440" y="665" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（一帧完整发送完成）</text>
+
+  <!-- 箭头 -->
+  <line x1="210" y1="130" x2="210" y2="158" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="208" x2="210" y2="236" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="286" x2="210" y2="314" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="364" x2="210" y2="392" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="442" x2="210" y2="470" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="520" x2="210" y2="548" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="210" y1="598" x2="210" y2="626" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+    </marker>
+  </defs>
+</svg>

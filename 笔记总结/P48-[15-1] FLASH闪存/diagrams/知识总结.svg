@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>STM32 内部 Flash 知识总结</title>
+  <desc>本节核心脉络：Flash 结构、页与地址、解锁上锁、指针读写、擦除编程流程、选项字节、电子签名</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">STM32 内部 Flash —— 本节知识总结</text>
+  <text x="40" y="58" font-family="sans-serif" font-size="11" fill="#5F5E5A">一句话：Flash 是掉电不丢失的存储器，内部自带"管理员"（FPEC），先解锁、擦除页、再写半字</text>
+
+  <!-- 第 1 行 -->
+  <rect x="30" y="80" width="300" height="92" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="180" y="104" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">① 三大组成部分</text>
+  <text x="180" y="124" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">主存储器 0x0800 0000（程序/参数）</text>
+  <text x="180" y="142" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">系统存储器 0x1FFF F000（BootROM 只读）</text>
+  <text x="180" y="160" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">选项字节 0x1FFF F800（独立配置）</text>
+
+  <rect x="350" y="80" width="300" height="92" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="500" y="104" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">② 页与地址规律</text>
+  <text x="500" y="124" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">C8T6：64 页 × 1KB = 64KB</text>
+  <text x="500" y="142" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">页起始地址低 10 位为 0</text>
+  <text x="500" y="160" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">擦除粒度 = 1 页；写前必须擦除</text>
+
+  <!-- 第 2 行 -->
+  <rect x="30" y="192" width="300" height="92" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="180" y="216" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">③ 解锁 → 操作 → 上锁</text>
+  <text x="180" y="236" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">KEYR 写 K1(0x45670123)+K2(0xCDEF89AB)</text>
+  <text x="180" y="254" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">两道锁，防误操作 / 防破解</text>
+  <text x="180" y="272" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">操作完置 CR 的 LOCK 位重新上锁</text>
+
+  <rect x="350" y="192" width="300" height="92" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="500" y="216" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">④ 指针读写</text>
+  <text x="500" y="236" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">读：data = *(__IO uint16_t*)0x0800 0000</text>
+  <text x="500" y="254" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">写：*(__IO uint16_t*)0x0800 0000 = 0x1234</text>
+  <text x="500" y="272" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">读免解锁；写需解锁 + 擦除 + 半字</text>
+
+  <!-- 第 3 行 -->
+  <rect x="30" y="304" width="300" height="92" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5" rx="8"/>
+  <text x="180" y="328" font-family="sans-serif" font-size="12" fill="#A32D2D" text-anchor="middle" font-weight="bold">⑤ 选项字节 &amp; 电子签名</text>
+  <text x="180" y="348" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">选项字节：RDP/USER/Data/WRP，反码校验</text>
+  <text x="180" y="366" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">Flash 容量：0x1FFF F7E0（16 位）</text>
+  <text x="180" y="384" font-family="sans-serif" font-size="10.5" fill="#A32D2D" text-anchor="middle">唯一 ID：0x1FFF F7E8（96 位）</text>
+
+  <rect x="350" y="304" width="300" height="92" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="500" y="328" font-family="sans-serif" font-size="12" fill="#5F5E5A" text-anchor="middle" font-weight="bold">⑥ 两大应用场景</text>
+  <text x="500" y="348" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">剩余空间存掉电不丢参数（避开程序）</text>
+  <text x="500" y="366" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">IAP 程序自我更新（自写 Bootloader）</text>
+  <text x="500" y="384" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">类似手机 OTA 升级</text>
+
+  <!-- 底部口诀 -->
+  <rect x="30" y="416" width="620" height="46" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="52" y="436" font-family="sans-serif" font-size="11" fill="#854F0B" font-weight="bold">记忆口诀：Flash 存程序不掉电，管理靠 FPEC 外设管；解锁写键 K1K2，写前先擦页，半字写入等不忙（BSY）</text>
+  <text x="52" y="454" font-family="sans-serif" font-size="10" fill="#854F0B">读指针直接来，写要解锁擦除排；选项字节带反码，唯一 ID 出厂埋</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>SPI 核心原理：主机与从机的 8 位移位寄存器交换一个字节</title>
+  <desc>两个 8 位移位寄存器首尾相连成环，SCK 驱动移位，MOSI/MISO 双向交换数据</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">SPI 核心：两个移位寄存器"交换一个字节"</text>
+
+  <!-- 主机移位寄存器 -->
+  <rect x="40" y="110" width="250" height="70" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="90" y="85" font-family="sans-serif" font-size="13" fill="#0C447C" font-weight="bold">SPI 主机</text>
+
+  <!-- 8 个单元格 -->
+  <g font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">
+    <rect x="48" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="61" y="153">1</text>
+    <rect x="76" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="89" y="153">0</text>
+    <rect x="104" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="117" y="153">1</text>
+    <rect x="132" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="145" y="153">0</text>
+    <rect x="160" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="173" y="153">0</text>
+    <rect x="188" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="201" y="153">1</text>
+    <rect x="216" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="229" y="153">0</text>
+    <rect x="244" y="126" width="26" height="40" fill="#FFFFFF" stroke="#185FA5"/><text x="257" y="153">1</text>
+  </g>
+  <text x="165" y="205" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">主机 8 位数据寄存器（如 0xA5）</text>
+  <text x="165" y="222" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">高位先行，最高位在最左</text>
+
+  <!-- 从机移位寄存器 -->
+  <rect x="390" y="110" width="250" height="70" fill="#EAF3DE" stroke="#639922" stroke-width="2" rx="10"/>
+  <text x="440" y="85" font-family="sans-serif" font-size="13" fill="#3B6D11" font-weight="bold">SPI 从机</text>
+
+  <g font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">
+    <rect x="398" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="411" y="153">0</text>
+    <rect x="426" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="439" y="153">1</text>
+    <rect x="454" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="467" y="153">1</text>
+    <rect x="482" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="495" y="153">0</text>
+    <rect x="510" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="523" y="153">1</text>
+    <rect x="538" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="551" y="153">1</text>
+    <rect x="566" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="579" y="153">1</text>
+    <rect x="594" y="126" width="26" height="40" fill="#FFFFFF" stroke="#639922"/><text x="607" y="153">0</text>
+  </g>
+  <text x="515" y="205" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">从机 8 位数据寄存器（如 0x5E）</text>
+
+  <!-- 连线 MOSI -->
+  <line x1="278" y1="146" x2="390" y2="146" stroke="#639922" stroke-width="2.5"/>
+  <polygon points="390,146 382,142 382,150" fill="#639922"/>
+  <text x="334" y="138" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">MOSI（主机最高位 → 从机最低位）</text>
+
+  <!-- 连线 MISO -->
+  <line x1="620" y1="146" x2="640" y2="146" stroke="#185FA5" stroke-width="2.5"/>
+  <text x="660" y="150" font-family="sans-serif" font-size="10.5" fill="#0C447C">MISO</text>
+  <line x1="640" y1="146" x2="640" y2="330" stroke="#185FA5" stroke-width="2"/>
+  <line x1="640" y1="330" x2="30" y2="330" stroke="#185FA5" stroke-width="2"/>
+  <line x1="30" y1="330" x2="30" y2="146" stroke="#185FA5" stroke-width="2.5"/>
+  <polygon points="30,146 38,142 38,150" fill="#185FA5"/>
+  <text x="335" y="322" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">MISO（从机最高位 → 主机最低位）→ 形成"环形移位"</text>
+
+  <!-- 时钟 -->
+  <line x1="280" y1="252" x2="620" y2="252" stroke="#BA7517" stroke-width="2"/>
+  <text x="450" y="242" font-family="sans-serif" font-size="11" fill="#854F0B" text-anchor="middle" font-weight="bold">SCK 时钟（由主机波特率发生器产生）</text>
+  <text x="450" y="270" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">每个时钟沿，两边寄存器同时左移一位</text>
+  <text x="450" y="286" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">8 个时钟后完成一个字节交换</text>
+
+  <!-- 说明框 -->
+  <rect x="40" y="310" width="560" height="70" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="332" font-family="sans-serif" font-size="11" fill="#854F0B" font-weight="bold">移位规则（以模式 0 为例）：</text>
+  <text x="60" y="350" font-family="sans-serif" font-size="10.5" fill="#854F0B">上升沿：所有移位寄存器左移一位，最高位移出到数据线上</text>
+  <text x="60" y="367" font-family="sans-serif" font-size="10.5" fill="#854F0B">下降沿：数据线上的位被采样输入到对方寄存器的最低位</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>P43 读写备份寄存器与实时时钟知识总结</title>
+  <desc>BKP 备份域特性、RTC 初始化六步、时间转换与时区偏移、防重置、DIV 亚秒</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="38" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">P43 知识总结：BKP 备份寄存器 + RTC 实时时钟</text>
+
+  <!-- 根节点 -->
+  <rect x="240" y="58" width="200" height="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="10"/>
+  <text x="340" y="84" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">BKP + RTC 备份域</text>
+
+  <!-- 分支线 -->
+  <line x1="290" y1="100" x2="150" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="350" y1="100" x2="350" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="400" y1="100" x2="530" y2="140" stroke="#185FA5" stroke-width="1.5"/>
+
+  <!-- 节点1：BKP -->
+  <rect x="40" y="140" width="220" height="120" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="150" y="160" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">① BKP 备份寄存器</text>
+  <text x="150" y="182" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">初始化两步：开时钟 + 解除写保护</text>
+  <text x="150" y="198" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">写 BKP_WriteBackupRegister</text>
+  <text x="150" y="214" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">读 BKP_ReadBackupRegister</text>
+  <text x="150" y="238" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">复位/主电源掉电不清空，只有</text>
+  <text x="150" y="252" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">VBAT 也断电才清空</text>
+
+  <!-- 节点2：RTC初始化 -->
+  <rect x="290" y="140" width="200" height="120" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="390" y="160" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">② RTC 初始化六步</text>
+  <text x="390" y="180" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">① 开时钟+解写保护</text>
+  <text x="390" y="194" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">② 启 LSE 等就绪</text>
+  <text x="390" y="208" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">③ 选时钟源+使能</text>
+  <text x="390" y="222" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">④ 等待同步/上次操作</text>
+  <text x="390" y="236" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">⑤ 预分频 32768→1Hz</text>
+  <text x="390" y="250" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">⑥ 写 CNT 初值</text>
+
+  <!-- 节点3：时间转换 -->
+  <rect x="520" y="140" width="140" height="120" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="590" y="160" font-family="sans-serif" font-size="12" fill="#3C3489" text-anchor="middle" font-weight="bold">③ 时间转换</text>
+  <text x="590" y="182" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">mktime 日期→秒</text>
+  <text x="590" y="198" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">localtime 秒→日期</text>
+  <text x="590" y="222" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">tm_year 从 1900 计</text>
+  <text x="590" y="238" font-family="sans-serif" font-size="10.5" fill="#5F5E5A" text-anchor="middle">tm_mon 从 0 计</text>
+
+  <!-- 下半部分节点 -->
+  <rect x="40" y="290" width="200" height="70" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="140" y="310" font-family="sans-serif" font-size="12" fill="#0C447C" text-anchor="middle" font-weight="bold">④ 时区偏移</text>
+  <text x="140" y="330" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">北京时间 = UTC + 8h</text>
+  <text x="140" y="346" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">秒数层面 ± 8×3600</text>
+
+  <rect x="270" y="290" width="200" height="70" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="370" y="310" font-family="sans-serif" font-size="12" fill="#3B6D11" text-anchor="middle" font-weight="bold">⑤ 防重置</text>
+  <text x="370" y="330" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">BKP_DR1 存标志位 0xA5</text>
+  <text x="370" y="346" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">判断是否完全断电</text>
+
+  <rect x="500" y="290" width="160" height="70" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="580" y="310" font-family="sans-serif" font-size="12" fill="#854F0B" text-anchor="middle" font-weight="bold">⑥ DIV 亚秒</text>
+  <text x="580" y="330" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">RTC_GetDivider()</text>
+  <text x="580" y="346" font-family="sans-serif" font-size="10.5" fill="#854F0B" text-anchor="middle">32767→0 换算毫秒</text>
+
+  <!-- 底部口诀 -->
+  <rect x="40" y="396" width="620" height="50" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="416" font-family="sans-serif" font-size="11.5" fill="#5F5E5A" font-weight="bold">核心记忆口诀：</text>
+  <text x="60" y="434" font-family="sans-serif" font-size="11" fill="#5F5E5A">BKP 掉电不丢靠 VBAT / RTC 时钟一开就跑 / 每次写寄存器后要等待 / 时间转换注意年份与偏移 / 数字前补 0 是八进制</text>
+</svg>

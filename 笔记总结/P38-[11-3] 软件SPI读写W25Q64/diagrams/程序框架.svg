@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" role="img">
+  <title>软件 SPI 程序分层框架</title>
+  <desc>MySPI 协议层、W25Q64 驱动层、主函数三层结构</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">软件 SPI 读写 W25Q64 —— 程序分层框架</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">与软件 I2C（p33）同样的三层结构：协议层 → 设备驱动层 → 应用层，上层只调用下层函数</text>
+
+  <!-- 应用层 -->
+  <rect x="60" y="80" width="560" height="70" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="340" y="102" font-family="sans-serif" font-size="13" fill="#3B6D11" text-anchor="middle" font-weight="bold">主函数（应用层）main.c</text>
+  <text x="340" y="122" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">调驱动层函数完成功能：读 ID、擦除扇区、写入数据、读回验证，OLED 显示结果</text>
+  <text x="340" y="138" font-family="sans-serif" font-size="10.5" fill="#3B6D11" text-anchor="middle">W25Q64_SectorErase(0x000000) → W25Q64_PageProgram(...) → W25Q64_ReadData(...)</text>
+
+  <!-- 驱动层 -->
+  <rect x="60" y="180" width="560" height="90" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="340" y="202" font-family="sans-serif" font-size="13" fill="#3C3489" text-anchor="middle" font-weight="bold">W25Q64 硬件驱动层（W25Q64.c + W25Q64_Ins.h）</text>
+  <text x="340" y="222" font-family="sans-serif" font-size="11" fill="#3C3489" text-anchor="middle">用底层 SPI 函数拼接各种指令的完整时序（本质就是按手册指令表交换字节）</text>
+  <text x="340" y="242" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">Init | ReadID | WriteEnable | WaitBusy | PageProgram | SectorErase | ReadData</text>
+  <text x="340" y="258" font-family="sans-serif" font-size="10.5" fill="#3C3489" text-anchor="middle">指令码宏定义：0x06 写使能 / 0x05 读状态 / 0x02 页编程 / 0x20 扇区擦除 / 0x03 读数据 / 0x9F 读 ID</text>
+
+  <!-- 协议层 -->
+  <rect x="60" y="300" width="560" height="80" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="340" y="322" font-family="sans-serif" font-size="13" fill="#0C447C" text-anchor="middle" font-weight="bold">MySPI 通信协议层（MySPI.c + MySPI.h）</text>
+  <text x="340" y="342" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">通信引脚封装 + 初始化 + SPI 三个基本时序（起始 / 终止 / 交换一个字节）</text>
+  <text x="340" y="362" font-family="sans-serif" font-size="10.5" fill="#0C447C" text-anchor="middle">Init | W_CS / W_SCK / W_MOSI / R_MISO | Start(CS=0) | Stop(CS=1) | SwapByte</text>
+
+  <!-- 依赖箭头 -->
+  <line x1="340" y1="150" x2="340" y2="180" stroke="#639922" stroke-width="2" marker-end="url(#arrUp)"/>
+  <line x1="340" y1="270" x2="340" y2="300" stroke="#534AB7" stroke-width="2" marker-end="url(#arrUp)"/>
+  <text x="355" y="168" font-family="sans-serif" font-size="10" fill="#639922">调用（依赖）</text>
+  <text x="355" y="290" font-family="sans-serif" font-size="10" fill="#534AB7">调用（依赖）</text>
+
+  <defs>
+    <marker id="arrUp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+</svg>
