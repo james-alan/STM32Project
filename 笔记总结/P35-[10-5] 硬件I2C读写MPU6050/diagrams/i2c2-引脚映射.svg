@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>STM32F103C8T6 硬件 I2C 引脚映射</title>
+  <desc>硬件 I2C 引脚是固定的：I2C1 默认 PB6/PB7 可重映射到 PB8/PB9，I2C2 只有 PB10/PB11 且无重映射</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">STM32F103C8T6 硬件 I2C 引脚映射（引脚不可任意更改）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">软件 I2C：任意 GPIO 都行；硬件 I2C：必须查表选固定引脚，且 SCL/SDA 不能互换</text>
+
+  <!-- I2C1 卡 -->
+  <rect x="40" y="80" width="280" height="170" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="60" y="106" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0C447C">I2C1（APB1 外设）</text>
+  <text x="60" y="126" font-family="sans-serif" font-size="11" fill="#0C447C">默认引脚（无重映射）：</text>
+  <rect x="60" y="136" width="240" height="34" fill="#FFFFFF" stroke="#185FA5" stroke-width="1" rx="6"/>
+  <text x="76" y="158" font-family="monospace" font-size="11.5" fill="#0C447C" font-weight="bold">PB6 = SCL  |  PB7 = SDA</text>
+  <text x="60" y="196" font-family="sans-serif" font-size="11" fill="#0C447C">重映射（AFIO 重映像）：</text>
+  <rect x="60" y="206" width="240" height="34" fill="#FFFFFF" stroke="#185FA5" stroke-width="1" rx="6"/>
+  <text x="76" y="228" font-family="monospace" font-size="11.5" fill="#0C447C" font-weight="bold">PB8 = SCL  |  PB9 = SDA</text>
+
+  <!-- 板级限制 -->
+  <rect x="360" y="80" width="280" height="170" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="380" y="106" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#854F0B">板上接线不方便（本板）</text>
+  <text x="380" y="130" font-family="sans-serif" font-size="11" fill="#854F0B">PB6/PB7/PB8/PB9 四个引脚位于</text>
+  <text x="380" y="148" font-family="sans-serif" font-size="11" fill="#854F0B">板子右下角，被外设占用 / 不便接线</text>
+  <rect x="380" y="164" width="240" height="40" fill="#FFFFFF" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="396" y="182" font-family="sans-serif" font-size="11" fill="#854F0B">→ 放弃 I2C1，改用 I2C2</text>
+  <text x="396" y="198" font-family="sans-serif" font-size="11" fill="#854F0B">→ 继续查表找 I2C2 的引脚</text>
+
+  <!-- I2C2 卡 -->
+  <rect x="40" y="280" width="600" height="140" fill="#EAF3DE" stroke="#639922" stroke-width="2" rx="10"/>
+  <text x="60" y="308" font-family="sans-serif" font-size="13.5" font-weight="bold" fill="#3B6D11">I2C2（APB1 外设）→ 本课选用</text>
+  <text x="60" y="330" font-family="sans-serif" font-size="11" fill="#3B6D11">查引脚定义表：I2C2 无重映射选项，唯一固定引脚</text>
+  <rect x="60" y="344" width="270" height="40" fill="#FFFFFF" stroke="#639922" stroke-width="1.5" rx="6"/>
+  <text x="80" y="369" font-family="monospace" font-size="13" fill="#2F5A0E" font-weight="bold">PB10 = SCL  |  PB11 = SDA</text>
+  <rect x="360" y="344" width="260" height="40" fill="#FFFFFF" stroke="#639922" stroke-width="1.5" rx="6"/>
+  <text x="380" y="363" font-family="sans-serif" font-size="11" fill="#2F5A0E">⚠ SCL 必须 PB10，SDA 必须 PB11</text>
+  <text x="380" y="379" font-family="sans-serif" font-size="11" fill="#2F5A0E">两者不能互换，私自改脚 I2C2 无法工作</text>
+
+  <!-- 底部说明 -->
+  <rect x="40" y="428" width="600" height="2" fill="none"/>
+  <text x="40" y="446" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">对应工程接线：MPU6050 模块 SCL → PB10，SDA → PB11，与软件 I2C 工程完全一致（硬件电路不变）</text>
+</svg>

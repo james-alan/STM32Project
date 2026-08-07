@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" role="img">
+  <title>P35 硬件 I2C 读写 MPU6050 知识总结</title>
+  <desc>硬件 I2C 读写 MPU6050 的核心知识点总结：引脚、初始化、写流程、读流程、超时</desc>
+  <rect x="0" y="0" width="680" height="480" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 I2C 读写 MPU6050 —— 知识总结</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">一句话：把软件 I2C 的手动时序交给 STM32 硬件外设，事件到位后一步步推进</text>
+
+  <!-- 模块1 -->
+  <rect x="40" y="76" width="290" height="120" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="10"/>
+  <text x="60" y="100" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#0C447C">① 引脚（唯一固定）</text>
+  <text x="60" y="124" font-family="sans-serif" font-size="11" fill="#0C447C">I2C2：PB10=SCL，PB11=SDA</text>
+  <text x="60" y="144" font-family="sans-serif" font-size="11" fill="#0C447C">SCL/SDA 不能互换，不能改脚</text>
+  <text x="60" y="164" font-family="sans-serif" font-size="11" fill="#0C447C">GPIO 配复用开漏 AF_OD</text>
+  <text x="60" y="184" font-family="sans-serif" font-size="11" fill="#0C447C">I2C2→APB1，GPIOB→APB2</text>
+
+  <!-- 模块2 -->
+  <rect x="350" y="76" width="290" height="120" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="10"/>
+  <text x="370" y="100" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#3B6D11">② 初始化四步</text>
+  <text x="370" y="124" font-family="sans-serif" font-size="11" fill="#3B6D11">开时钟 → GPIO AF_OD</text>
+  <text x="370" y="144" font-family="sans-serif" font-size="11" fill="#3B6D11">I2C_Init（模式/速度/占空比）</text>
+  <text x="370" y="164" font-family="sans-serif" font-size="11" fill="#3B6D11">I2C_Cmd 使能</text>
+  <text x="370" y="184" font-family="sans-serif" font-size="11" fill="#3B6D11">速度 ≤400kHz，100k 分标准/快速</text>
+
+  <!-- 模块3 -->
+  <rect x="40" y="212" width="290" height="150" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="10"/>
+  <text x="60" y="236" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#854F0B">③ 写寄存器（主机发送）</text>
+  <text x="60" y="260" font-family="sans-serif" font-size="11" fill="#854F0B">START → 等EV5 → 地址+写位 → 等EV6</text>
+  <text x="60" y="280" font-family="sans-serif" font-size="11" fill="#854F0B">→ 寄存器地址 → 等EV8 → 数据 → 等EV8_2</text>
+  <text x="60" y="300" font-family="sans-serif" font-size="11" fill="#854F0B">→ STOP</text>
+  <text x="60" y="324" font-family="sans-serif" font-size="10.5" fill="#854F0B">关键：中间字节等 EV8（发送中），</text>
+  <text x="60" y="342" font-family="sans-serif" font-size="10.5" fill="#854F0B">最后字节等 EV8_2（发完 BTF）</text>
+
+  <!-- 模块4 -->
+  <rect x="350" y="212" width="290" height="150" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="10"/>
+  <text x="370" y="236" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#3C3489">④ 读寄存器（主机接收）</text>
+  <text x="370" y="260" font-family="sans-serif" font-size="11" fill="#3C3489">… 寄存器地址 → 等EV8_2</text>
+  <text x="370" y="280" font-family="sans-serif" font-size="11" fill="#3C3489">→ Repeated START → 地址+读位 → 等EV6(接收)</text>
+  <text x="370" y="300" font-family="sans-serif" font-size="11" fill="#3C3489">→ 提前 ACK=0 + STOP → 等EV7 → 读 DR</text>
+  <text x="370" y="324" font-family="sans-serif" font-size="10.5" fill="#3C3489">关键：最后字节前提前 NACK+STOP</text>
+  <text x="370" y="342" font-family="sans-serif" font-size="10.5" fill="#3C3489">读多字节：循环 + 判断最后字节</text>
+
+  <!-- 模块5 -->
+  <rect x="40" y="378" width="600" height="88" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="10"/>
+  <text x="60" y="402" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#333333">⑤ 死等超时退出（防卡死）</text>
+  <text x="60" y="426" font-family="sans-serif" font-size="11" fill="#5F5E5A">大量 while(!CheckEvent) 死等很危险 → 加超时计数器，超时 break 跳出</text>
+  <text x="60" y="446" font-family="sans-serif" font-size="11" fill="#5F5E5A">更优雅：封装带超时的 WaitEvent 函数；实际项目超时后还应做错误处理（报错/复位/紧急停机）</text>
+</svg>

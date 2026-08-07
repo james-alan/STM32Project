@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" role="img">
+  <title>硬件 I2C 状态监控三种方案</title>
+  <desc>基本状态监控 I2C_CheckEvent、高级状态监控 I2C_GetLastEvent、标志位监控 I2C_GetFlagStatus</desc>
+  <rect x="0" y="0" width="680" height="460" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 I2C 状态监控 —— 三种方案对比（EV5/EV6/EV7/EV8 事件的检查方法）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">背景：一个事件可能同时置位多个标志位 → 只查单个标志位判断"事件发生"不够严谨</text>
+
+  <!-- 方案一 -->
+  <rect x="40" y="80" width="600" height="96" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" rx="8"/>
+  <rect x="60" y="96" width="96" height="22" fill="#185FA5" rx="11"/>
+  <text x="108" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">方案一 · 推荐</text>
+  <text x="60" y="140" font-family="monospace" font-size="11.5" fill="#0C447C" font-weight="bold">I2C_CheckEvent(I2C2, I2C_EVENT_xxx)</text>
+  <text x="60" y="162" font-family="sans-serif" font-size="10.5" fill="#0C447C">基本状态监控：同时判断一个或多个标志位的组合，与手册事件流程一一对应（EV5/EV6/EV7/EV8 宏）</text>
+
+  <!-- 方案二 -->
+  <rect x="40" y="192" width="600" height="96" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <rect x="60" y="208" width="96" height="22" fill="#8C8A82" rx="11"/>
+  <text x="108" y="224" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">方案二 · 了解</text>
+  <text x="60" y="252" font-family="monospace" font-size="11.5" fill="#5F5E5A" font-weight="bold">I2C_GetLastEvent(I2C2)</text>
+  <text x="60" y="274" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">高级状态监控：把 SR1 和 SR2 两个寄存器拼接成一个 32 位数据返回给你自行处理（其实并不"高级"）</text>
+
+  <!-- 方案三 -->
+  <rect x="40" y="304" width="600" height="96" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <rect x="60" y="320" width="112" height="22" fill="#BA7517" rx="11"/>
+  <text x="116" y="336" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">方案三 · 熟悉</text>
+  <text x="60" y="364" font-family="monospace" font-size="11.5" fill="#854F0B" font-weight="bold">I2C_GetFlagStatus(I2C2, I2C_FLAG_xxx)</text>
+  <text x="60" y="386" font-family="sans-serif" font-size="10.5" fill="#854F0B">基于标志位的监控：判断某一个标志位是否置 1（老方法，单标志位判断）</text>
+
+  <text x="40" y="432" font-family="sans-serif" font-size="11" fill="#3B6D11" font-weight="bold">选择建议：优先用 I2C_CheckEvent（方案一）按事件流程写代码，手册上有完整的事件名可以直接对照</text>
+</svg>

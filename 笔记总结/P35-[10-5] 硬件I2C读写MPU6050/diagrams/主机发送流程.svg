@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 620" width="100%" role="img">
+  <title>硬件 I2C 主机发送流程（写寄存器）</title>
+  <desc>硬件 I2C 写寄存器：起始 → EV5 → 发地址+写位 → EV6 → 发寄存器地址 → EV8 → 发数据 → EV8_2 → 停止</desc>
+  <rect x="0" y="0" width="680" height="620" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 I2C 主机发送流程 —— 写 MPU6050 寄存器（对照手册主机发送时序图）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">要点：库函数只写寄存器就返回（非阻塞式）→ 必须用 I2C_CheckEvent 等待事件到位，再继续下一步</text>
+
+  <!-- 步骤1 -->
+  <rect x="40" y="78" width="350" height="52" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="101" font-family="sans-serif" font-size="11.5" fill="#0C447C" font-weight="bold">① I2C_GenerateSTART(I2C2, ENABLE)</text>
+  <text x="60" y="119" font-family="sans-serif" font-size="10.5" fill="#0C447C">置 CR1.START=1 → 硬件产生起始条件波形</text>
+  <rect x="430" y="78" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="99" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">替换软件版 MyI2C_Start()</text>
+  <text x="448" y="115" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">函数只置位，不等波形完成</text>
+
+  <!-- 步骤2 -->
+  <rect x="40" y="150" width="350" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="173" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">② 等待 EV5：I2C_EVENT_MASTER_MODE_SELECT</text>
+  <text x="60" y="191" font-family="sans-serif" font-size="10.5" fill="#854F0B">SB=1：起始条件已发出，进入主机模式</text>
+  <rect x="430" y="150" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="171" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">用 while(!CheckEvent) 死等</text>
+  <text x="448" y="187" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">（后续可加超时保护）</text>
+
+  <!-- 步骤3 -->
+  <rect x="40" y="222" width="350" height="52" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="245" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">③ I2C_Send7bitAddress(Addr, Transmitter)</text>
+  <text x="60" y="263" font-family="sans-serif" font-size="10.5" fill="#3B6D11">发 7 位地址 + 写位(0)：如 MPU6050 → 0xD0</text>
+  <rect x="430" y="222" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="243" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">发送过程自动收 ACK，无需手动处理</text>
+  <text x="448" y="259" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">也可用 I2C_SendData 自拼地址</text>
+
+  <!-- 步骤4 -->
+  <rect x="40" y="294" width="350" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="317" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">④ 等待 EV6：I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED</text>
+  <text x="60" y="335" font-family="sans-serif" font-size="10.5" fill="#854F0B">ADDR=1：地址发完且收到 ACK（发送模式）</text>
+  <rect x="430" y="294" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="315" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">⚠ 与接收模式的 EV6 事件不同名</text>
+  <text x="448" y="331" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">别用错宏</text>
+
+  <!-- 步骤5 -->
+  <rect x="40" y="366" width="350" height="52" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="389" font-family="sans-serif" font-size="11.5" fill="#3B6D11" font-weight="bold">⑤ I2C_SendData(I2C2, RegAddr)</text>
+  <text x="60" y="407" font-family="sans-serif" font-size="10.5" fill="#3B6D11">写寄存器地址进 DR → 硬件自动发送</text>
+  <rect x="430" y="366" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="387" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">写 DR 自动启动传输</text>
+  <text x="448" y="403" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">DR 空后需立即补下一个字节</text>
+
+  <!-- 步骤6 -->
+  <rect x="40" y="438" width="350" height="52" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="461" font-family="sans-serif" font-size="11.5" fill="#854F0B" font-weight="bold">⑥ 等待 EV8：I2C_EVENT_MASTER_BYTE_TRANSMITTING</text>
+  <text x="60" y="479" font-family="sans-serif" font-size="10.5" fill="#854F0B">TXE=1：数据正从移位寄存器发送，可写下一字节</text>
+  <rect x="430" y="438" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="459" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">多字节连续发送时用（流水线）</text>
+  <text x="448" y="475" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">写寄存器地址后：发数据字节</text>
+
+  <!-- 步骤7 -->
+  <rect x="40" y="510" width="350" height="52" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="533" font-family="sans-serif" font-size="11.5" fill="#3C3489" font-weight="bold">⑦ 最后一个字节后：等待 EV8_2（BYTE_TRANSMITTED）</text>
+  <text x="60" y="551" font-family="sans-serif" font-size="10.5" fill="#3C3489">TXE=1 且 BTF=1：数据全发完（队尾清空）</text>
+  <rect x="430" y="510" width="210" height="52" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1.5" rx="8"/>
+  <text x="448" y="531" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">⚠ 最后一个字节等 EV8_2，不是 EV8</text>
+  <text x="448" y="547" font-family="sans-serif" font-size="10.5" fill="#5F5E5A">保证波形真正发完再 STOP</text>
+
+  <!-- 步骤8 -->
+  <rect x="40" y="582" width="350" height="0" fill="none"/>
+  <text x="40" y="606" font-family="sans-serif" font-size="11.5" fill="#3C3489" font-weight="bold">⑧ I2C_GenerateSTOP(I2C2, ENABLE) → 置 CR1.STOP=1 产生停止条件，总线释放</text>
+</svg>

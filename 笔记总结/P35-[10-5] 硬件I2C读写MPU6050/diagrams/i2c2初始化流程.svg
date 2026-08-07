@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" role="img">
+  <title>硬件 I2C2 外设初始化四步</title>
+  <desc>开启时钟→GPIO 复用开漏→I2C_Init 结构体配置→I2C_Cmd 使能</desc>
+  <rect x="0" y="0" width="680" height="420" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">硬件 I2C2 外设初始化 —— 四步走（与之前外设套路相同）</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">I2C2 是 APB1 外设，GPIOB 是 APB2 外设 —— 两条总线，不要写错时钟函数</text>
+
+  <!-- 第1步 -->
+  <rect x="40" y="80" width="600" height="64" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" rx="8"/>
+  <text x="60" y="102" font-family="sans-serif" font-size="12" fill="#0C447C" font-weight="bold">① 开启时钟</text>
+  <text x="60" y="122" font-family="monospace" font-size="10.5" fill="#0C447C">RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2, ENABLE);   // I2C2 → APB1</text>
+  <text x="60" y="138" font-family="monospace" font-size="10.5" fill="#0C447C">RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);  // GPIOB → APB2</text>
+
+  <!-- 第2步 -->
+  <rect x="40" y="158" width="600" height="64" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="60" y="180" font-family="sans-serif" font-size="12" fill="#854F0B" font-weight="bold">② GPIO 配置为复用开漏 AF_OD</text>
+  <text x="60" y="200" font-family="monospace" font-size="10.5" fill="#854F0B">GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;  // 复用开漏</text>
+  <text x="60" y="216" font-family="sans-serif" font-size="10.5" fill="#854F0B">开漏 = I2C 协议设计要求；复用 = 引脚控制权交给 I2C 外设（软件 I2C 用 GPIO_Mode_Out_OD）</text>
+
+  <!-- 第3步 -->
+  <rect x="40" y="236" width="600" height="80" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="60" y="258" font-family="sans-serif" font-size="12" fill="#3B6D11" font-weight="bold">③ I2C_Init 结构体配置（重点参数）</text>
+  <text x="60" y="278" font-family="monospace" font-size="10.5" fill="#3B6D11">I2C_Mode = I2C_Mode_I2C;                  // I2C 模式</text>
+  <text x="60" y="294" font-family="monospace" font-size="10.5" fill="#3B6D11">I2C_ClockSpeed = 50000;                   // ≤400kHz；&lt;100k 标准速度，&gt;100k 快速</text>
+  <text x="60" y="310" font-family="monospace" font-size="10.5" fill="#3B6D11">I2C_DutyCycle = I2C_DutyCycle_2;          // 占空比，仅快速模式有效（16:9 或 2:1）</text>
+
+  <!-- 第4步 -->
+  <rect x="40" y="330" width="600" height="64" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" rx="8"/>
+  <text x="60" y="352" font-family="sans-serif" font-size="12" fill="#3C3489" font-weight="bold">④ I2C_Cmd 使能外设</text>
+  <text x="60" y="372" font-family="monospace" font-size="10.5" fill="#3C3489">I2C_Cmd(I2C2, ENABLE);   // 使能 I2C2</text>
+  <text x="60" y="388" font-family="sans-serif" font-size="10.5" fill="#3C3489">还有 I2C_Ack / I2C_OwnAddress1 / I2C_AcknowledgedAddress 等参数（见正文表格）</text>
+</svg>

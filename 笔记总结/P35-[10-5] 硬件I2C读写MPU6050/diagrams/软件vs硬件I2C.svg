@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" width="100%" role="img">
+  <title>软件 I2C 与硬件 I2C 对比</title>
+  <desc>软件 I2C：GPIO 手动模拟时序，任意引脚；硬件 I2C：外设自动时序，固定引脚+事件等待</desc>
+  <rect x="0" y="0" width="680" height="380" fill="#FAFAFA" rx="12"/>
+  <text x="40" y="36" font-family="sans-serif" font-size="15" font-weight="bold" fill="#333333">软件 I2C vs 硬件 I2C —— 本课核心对比</text>
+  <text x="40" y="56" font-family="sans-serif" font-size="11" fill="#5F5E5A">同一个 MPU6050 工程，只替换通信底层，上层应用代码完全不用动</text>
+
+  <!-- 表头 -->
+  <rect x="40" y="74" width="200" height="30" fill="#333333" rx="6"/>
+  <text x="140" y="94" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">对比项</text>
+  <rect x="240" y="74" width="200" height="30" fill="#185FA5" rx="6"/>
+  <text x="340" y="94" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">软件 I2C（p33）</text>
+  <rect x="440" y="74" width="200" height="30" fill="#639922" rx="6"/>
+  <text x="540" y="94" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">硬件 I2C（本课）</text>
+
+  <!-- 行1 -->
+  <rect x="40" y="112" width="200" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="4"/>
+  <text x="140" y="132" font-family="sans-serif" font-size="11.5" fill="#333333" font-weight="bold" text-anchor="middle">引脚选择</text>
+  <text x="140" y="148" font-family="sans-serif" font-size="10" fill="#5F5E5A" text-anchor="middle">（下表小字）</text>
+  <rect x="240" y="112" width="200" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8" rx="4"/>
+  <text x="340" y="132" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">任意 GPIO 都可以，程序里改引脚定义即可</text>
+  <rect x="440" y="112" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="0.8" rx="4"/>
+  <text x="540" y="132" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">固定引脚，必须查表：I2C2 = PB10/PB11</text>
+
+  <!-- 行2 -->
+  <rect x="40" y="164" width="200" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="4"/>
+  <text x="140" y="190" font-family="sans-serif" font-size="11.5" fill="#333333" font-weight="bold" text-anchor="middle">时序产生</text>
+  <rect x="240" y="164" width="200" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8" rx="4"/>
+  <text x="340" y="184" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">CPU 逐位拉高拉低 GPIO</text>
+  <text x="340" y="200" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">+ 精确微秒延时模拟波形</text>
+  <rect x="440" y="164" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="0.8" rx="4"/>
+  <text x="540" y="184" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">写寄存器/数据 → 外设硬件</text>
+  <text x="540" y="200" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">自动产生完整波形</text>
+
+  <!-- 行3 -->
+  <rect x="40" y="216" width="200" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="4"/>
+  <text x="140" y="242" font-family="sans-serif" font-size="11.5" fill="#333333" font-weight="bold" text-anchor="middle">程序结构</text>
+  <rect x="240" y="216" width="200" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8" rx="4"/>
+  <text x="340" y="236" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">阻塞式：函数返回 = 波形已发完</text>
+  <text x="340" y="252" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">下一句可直接执行</text>
+  <rect x="440" y="216" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="0.8" rx="4"/>
+  <text x="540" y="236" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">非阻塞式：只写寄存器就返回</text>
+  <text x="540" y="252" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">必须等事件标志位（EV5/EV6…）</text>
+
+  <!-- 行4 -->
+  <rect x="40" y="268" width="200" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="4"/>
+  <text x="140" y="294" font-family="sans-serif" font-size="11.5" fill="#333333" font-weight="bold" text-anchor="middle">调试 / 容错</text>
+  <rect x="240" y="268" width="200" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8" rx="4"/>
+  <text x="340" y="288" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">代码即时序，逻辑分析仪直接对照</text>
+  <text x="340" y="304" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">死了只能看波形</text>
+  <rect x="440" y="268" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="0.8" rx="4"/>
+  <text x="540" y="288" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">死等在事件上 → 必须加超时退出</text>
+  <text x="540" y="304" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">否则事件不来程序就卡死</text>
+
+  <!-- 行5 -->
+  <rect x="40" y="320" width="200" height="44" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1" rx="4"/>
+  <text x="140" y="346" font-family="sans-serif" font-size="11.5" fill="#333333" font-weight="bold" text-anchor="middle">速度 / 资源</text>
+  <rect x="240" y="320" width="200" height="44" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8" rx="4"/>
+  <text x="340" y="340" font-family="sans-serif" font-size="11" fill="#0C447C" text-anchor="middle">较慢，受延时函数精度限制</text>
+  <text x="340" y="356" font-family="sans-serif" font-size="10" fill="#0C447C" text-anchor="middle">CPU 全程参与</text>
+  <rect x="440" y="320" width="200" height="44" fill="#EAF3DE" stroke="#639922" stroke-width="0.8" rx="4"/>
+  <text x="540" y="340" font-family="sans-serif" font-size="11" fill="#3B6D11" text-anchor="middle">最高 400kHz，可配占空比优化</text>
+  <text x="540" y="356" font-family="sans-serif" font-size="10" fill="#3B6D11" text-anchor="middle">外设自动收发，CPU 空闲</text>
+</svg>
