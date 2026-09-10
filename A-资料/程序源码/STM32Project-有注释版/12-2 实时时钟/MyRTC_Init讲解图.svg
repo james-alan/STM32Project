@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1800" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <title>MyRTC_Init() RTC 初始化讲解图</title>
+  <defs>
+    <marker id="ah" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L9,4 z" fill="#8895a1"/>
+    </marker>
+    <marker id="ahg" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L9,4 z" fill="#43a047"/>
+    </marker>
+    <marker id="ahgr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L9,4 z" fill="#7c8794"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1180" height="1800" fill="#f7f9fc"/>
+
+  <!-- 标题 -->
+  <text x="590" y="54" text-anchor="middle" font-size="30" font-weight="bold" fill="#1f2a37">MyRTC_Init() RTC 初始化讲解图</text>
+  <text x="590" y="86" text-anchor="middle" font-size="16" fill="#5a6572">STM32F10x 标准库 · 备份寄存器标志位驱动的“首次配置”逻辑</text>
+
+  <!-- 步骤条：① 开启时钟 -->
+  <rect x="150" y="120" width="120" height="26" rx="13" fill="#eef3f8" stroke="#c9d6e3"/>
+  <text x="210" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#33475b">① 开启时钟</text>
+
+  <!-- A1 -->
+  <g>
+    <rect x="150" y="158" width="640" height="82" rx="10" fill="#e8f1fb" stroke="#2f80c3" stroke-width="1.6"/>
+    <rect x="150" y="158" width="7" height="82" rx="3" fill="#2f80c3"/>
+    <text x="178" y="186" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#12395e" font-weight="bold">RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);</text>
+    <text x="178" y="208" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#12395e" font-weight="bold">RCC_APB1PeriphClockCmd(RCC_APB1Periph_BKP, ENABLE);</text>
+    <text x="178" y="228" font-size="12.5" fill="#4a5a70">PWR、BKP 都是 APB1 外设：读写它们寄存器之前必须先使能对应时钟</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="470" y1="240" x2="470" y2="278" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ② 备份寄存器访问使能 -->
+  <rect x="150" y="288" width="120" height="26" rx="13" fill="#e6f4f0" stroke="#b7dfd2"/>
+  <text x="210" y="306" text-anchor="middle" font-size="14" font-weight="bold" fill="#0c4a3c">② 访问使能</text>
+
+  <!-- A2 -->
+  <g>
+    <rect x="150" y="322" width="640" height="74" rx="10" fill="#e6f4f0" stroke="#129170" stroke-width="1.6"/>
+    <rect x="150" y="322" width="7" height="74" rx="3" fill="#129170"/>
+    <text x="178" y="348" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#0c4a3c" font-weight="bold">PWR_BackupAccessCmd(ENABLE);</text>
+    <text x="178" y="372" font-size="12.5" fill="#39776a">用 PWR 单元打开备份寄存器访问——备份寄存器默认带写保护需要先解锁</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="470" y1="396" x2="470" y2="430" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ③ 判断标志 -->
+  <rect x="30" y="486" width="150" height="28" rx="14" fill="#fff6e0" stroke="#e0a33c"/>
+  <text x="105" y="505" text-anchor="middle" font-size="14" font-weight="bold" fill="#7a4a00">③ 判断标志</text>
+
+  <!-- ③ 判断菱形 -->
+  <g>
+    <polygon points="470,430 724,500 470,570 216,500" fill="#fff6e0" stroke="#e0a33c" stroke-width="2"/>
+    <text x="470" y="486" text-anchor="middle" font-size="14" fill="#6b4a00">BKP_ReadBackupRegister(BKP_DR1)</text>
+    <text x="470" y="512" text-anchor="middle" font-size="19" font-weight="bold" fill="#6b4a00">!= 0xA5A5 ?</text>
+    <text x="470" y="534" text-anchor="middle" font-size="11.5" fill="#9a7b34">0xA5A5 = 已完成的初始化标志</text>
+  </g>
+
+  <!-- 菱形向右 → 不是第一次 -->
+  <line x1="724" y1="500" x2="980" y2="500" stroke="#7c8794" stroke-width="2"/>
+  <line x1="980" y1="500" x2="980" y2="556" stroke="#7c8794" stroke-width="2" marker-end="url(#ahgr)"/>
+  <text x="790" y="488" font-size="14" font-weight="bold" fill="#7c8794">否（不成立）→ 不是第一次</text>
+
+  <!-- 菱形向下 → 第一次配置 -->
+  <line x1="470" y1="570" x2="470" y2="608" stroke="#43a047" stroke-width="2" marker-end="url(#ahg)"/>
+  <text x="486" y="592" font-size="14" font-weight="bold" fill="#2e7d32">是（成立）→ 第一次配置</text>
+
+  <!-- ④ 不是第一次分支（右侧列） -->
+  <rect x="820" y="560" width="320" height="30" rx="13" fill="#eef3f8" stroke="#c9d6e3"/>
+  <text x="980" y="580" text-anchor="middle" font-size="14" font-weight="bold" fill="#33475b">④ else：不是第一次配置</text>
+
+  <g>
+    <rect x="820" y="604" width="320" height="54" rx="10" fill="#f3f4f6" stroke="#b8bec6" stroke-width="1.5"/>
+    <text x="838" y="628" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#333a42" font-weight="bold">RTC_WaitForSynchro();</text>
+    <text x="838" y="648" font-size="12" fill="#5a6572">等待 RTC 同步</text>
+  </g>
+  <line x1="980" y1="658" x2="980" y2="684" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="820" y="692" width="320" height="54" rx="10" fill="#f3f4f6" stroke="#b8bec6" stroke-width="1.5"/>
+    <text x="838" y="716" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#333a42" font-weight="bold">RTC_WaitForLastTask();</text>
+    <text x="838" y="736" font-size="12" fill="#5a6572">等待上一次操作完成</text>
+  </g>
+  <line x1="980" y1="746" x2="980" y2="772" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="820" y="780" width="320" height="72" rx="10" fill="#fbfcfd" stroke="#c7ccd3" stroke-dasharray="4 3"/>
+    <text x="838" y="802" font-size="12.5" fill="#4a5560">时间不重新设置，RTC 直接沿用</text>
+    <text x="838" y="822" font-size="12.5" fill="#4a5560">已保存的计数值继续走时</text>
+    <text x="838" y="842" font-size="12.5" fill="#4a5560">（因为备份寄存器里时间没丢）</text>
+  </g>
+  <line x1="980" y1="852" x2="980" y2="878" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="860" y="886" width="240" height="42" rx="21" fill="#e9f7ec" stroke="#46a25f" stroke-width="1.5"/>
+    <text x="980" y="912" text-anchor="middle" font-size="14" fill="#1e5e33" font-weight="bold">函数返回</text>
+  </g>
+
+  <!-- 第一次配置分支（主序列，10 步） -->
+  <g>
+    <!-- S1 -->
+    <rect x="150" y="608" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="608" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="634" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RCC_LSEConfig(RCC_LSE_ON);</text>
+    <text x="178" y="656" font-size="12.5" fill="#4a5f4e">开启 LSE 外部低速晶振（RTCCLK 的候选时钟源）</text>
+  </g>
+  <line x1="470" y1="668" x2="470" y2="690" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="690" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="690" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="716" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) != SET);</text>
+    <text x="178" y="738" font-size="12.5" fill="#4a5f4e">等待 LSE 就绪——外部晶振起振需要几十毫秒</text>
+  </g>
+  <line x1="470" y1="750" x2="470" y2="772" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="772" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="772" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="798" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);</text>
+    <text x="178" y="820" font-size="12.5" fill="#4a5f4e">把 RTC 的时钟源切换到 LSE</text>
+  </g>
+  <line x1="470" y1="832" x2="470" y2="854" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="854" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="854" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="880" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RCC_RTCCLKCmd(ENABLE);</text>
+    <text x="178" y="902" font-size="12.5" fill="#4a5f4e">使能 RTCCLK 时钟</text>
+  </g>
+  <line x1="470" y1="914" x2="470" y2="936" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="936" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="936" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="962" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RTC_WaitForSynchro();</text>
+    <text x="178" y="984" font-size="12.5" fill="#4a5f4e">等待 RTC 同步，进入可配置状态</text>
+  </g>
+  <line x1="470" y1="996" x2="470" y2="1018" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="1018" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="1018" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="1044" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RTC_WaitForLastTask();</text>
+    <text x="178" y="1066" font-size="12.5" fill="#4a5f4e">等待上一次寄存器操作完成（RTC 配置必须串行）</text>
+  </g>
+  <line x1="470" y1="1078" x2="470" y2="1100" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="1100" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="1100" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="1126" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RTC_SetPrescaler(32768 - 1);</text>
+    <text x="178" y="1148" font-size="12.5" fill="#4a5f4e">预分频 32768 → 计数频率 1Hz，即 RTC_CNT 每秒加 1</text>
+  </g>
+  <line x1="470" y1="1160" x2="470" y2="1182" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="1182" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="1182" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="1208" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">RTC_WaitForLastTask();</text>
+    <text x="178" y="1230" font-size="12.5" fill="#4a5f4e">等待上一次寄存器操作完成</text>
+  </g>
+  <line x1="470" y1="1242" x2="470" y2="1264" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="1264" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="1264" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="1290" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">MyRTC_SetTime();</text>
+    <text x="178" y="1312" font-size="12.5" fill="#4a5f4e">把全局时间数组换算成“秒”写入 RTC_CNT（初值）</text>
+  </g>
+  <line x1="470" y1="1324" x2="470" y2="1346" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="150" y="1346" width="640" height="60" rx="10" fill="#ffffff" stroke="#8fb997" stroke-width="1.5"/>
+    <rect x="150" y="1346" width="7" height="60" rx="3" fill="#43a047"/>
+    <text x="178" y="1372" font-family="Consolas,'Courier New',monospace" font-size="14" fill="#1b5e20" font-weight="bold">BKP_WriteBackupRegister(BKP_DR1, 0xA5A5);</text>
+    <text x="178" y="1394" font-size="12.5" fill="#4a5f4e">写入标志位 0xA5A5：下次上电进入 else，不再重复初始化</text>
+  </g>
+  <line x1="470" y1="1407" x2="470" y2="1415" stroke="#8895a1" stroke-width="2" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="300" y="1420" width="340" height="48" rx="24" fill="#e9f7ec" stroke="#46a25f" stroke-width="1.8"/>
+    <text x="470" y="1449" text-anchor="middle" font-size="15" fill="#1e5e33" font-weight="bold">RTC 初始化完成 · 函数返回</text>
+  </g>
+
+  <!-- 讲解要点 -->
+  <rect x="150" y="1508" width="920" height="272" rx="12" fill="#fffbea" stroke="#e7c96b" stroke-width="1.6"/>
+  <text x="178" y="1538" font-size="17" font-weight="bold" fill="#5a4a12">讲解要点</text>
+
+  <text x="178" y="1572" font-size="14" fill="#4a3a0c">
+    <tspan x="178" dy="0">① 先开时钟：PWR、BKP 是 APB1 外设，先使能时钟才能读写寄存器；备份寄存器默认写保护，</tspan>
+    <tspan x="196" dy="24">需 PWR_BackupAccessCmd(ENABLE) 解锁访问。</tspan>
+  </text>
+  <text x="178" y="1628" font-size="14" fill="#4a3a0c">
+    <tspan x="178" dy="0">② 判标志：BKP_DR1 由 VBAT 供电、掉电不丢数据，用它存 0xA5A5 判断“是否已初始化”。</tspan>
+  </text>
+  <text x="178" y="1664" font-size="14" fill="#4a3a0c">
+    <tspan x="178" dy="0">③ 等就绪：LSE 32.768kHz 外部晶振起振需时间，先等 LSERDY；每步操作 RTC 都要 WaitForSynchro / WaitForLastTask。</tspan>
+  </text>
+  <text x="178" y="1700" font-size="14" fill="#4a3a0c">
+    <tspan x="178" dy="0">④ 分频：预分频 32768 → 计数频率 1Hz，即 RTC_CNT 每秒 +1；用 LSE 而非 LSI，掉电后仍能走时。</tspan>
+  </text>
+  <text x="178" y="1736" font-size="14" fill="#4a3a0c">
+    <tspan x="178" dy="0">⑤ 写标志 0xA5A5：下次上电读到它就走 else，只做同步等待、不重设时间，从而保持连续走时。</tspan>
+  </text>
+</svg>
