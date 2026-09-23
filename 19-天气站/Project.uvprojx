@@ -52,7 +52,7 @@
           <OutputName>Project</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -662,6 +662,15 @@
               <FileType>5</FileType>
               <FilePath>.\System\Delay.h</FilePath>
             </File>
+                      <File>
+              <FileName>MyRTC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\System\MyRTC.c</FilePath>
+            </File>            <File>
+              <FileName>MyRTC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\MyRTC.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -721,6 +730,49 @@
               <FileName>OLED_Font.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\OLED_Font.h</FilePath>
+            </File>
+                      <File>
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Serial.c</FilePath>
+            </File>            <File>
+              <FileName>Serial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Serial.h</FilePath>
+            </File>            <File>
+              <FileName>Thermistor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Thermistor.c</FilePath>
+            </File>            <File>
+              <FileName>Thermistor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Thermistor.h</FilePath>
+            </File>            <File>
+              <FileName>W25Q64.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\W25Q64.c</FilePath>
+            </File>            <File>
+              <FileName>W25Q64.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\W25Q64.h</FilePath>
+            </File>
+                      <File>
+              <FileName>PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\PWM.c</FilePath>
+            </File>            <File>
+              <FileName>PWM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\PWM.h</FilePath>
+            </File>
+                      <File>
+              <FileName>History.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\History.c</FilePath>
+            </File>            <File>
+              <FileName>History.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\History.h</FilePath>
             </File>
           </Files>
         </Group>
